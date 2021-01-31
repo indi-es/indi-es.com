@@ -1,8 +1,6 @@
 <div align="center">
-  <h1>INDI·ES</h1>
-
   <a href="https://indi-es.com">
-    <img height="100" width="auto" alt="logo" src="/public/android-chrome-512x512.png?raw" />
+    <img height="100" width="auto" alt="INDI·ES" src="/public/android-chrome-512x512.png?raw" />
   </a>
   
   <br/>
