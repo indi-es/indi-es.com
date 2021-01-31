@@ -6,43 +6,66 @@ import Head from 'next/head';
 
 import style from './style.module.css';
 
-const Page = ({ header, footer, children, className, ...rest }) => (
-  <div className={`${style.page} ${className}`} {...rest}>
-    <Head>
-      <title>INDI·ES</title>
-      <link rel="icon" href="/favicon.ico" />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
-      />
-      <link rel="manifest" href="/site.webmanifest" />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="theme-color" content="#ffffff" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet"
-      />
-    </Head>
-    {/* {header ? <Header /> : null} */}
-    <main>{children}</main>
-    {/* {footer ? <footer id="footer" /> : null} */}
-  </div>
-);
+const Page = ({ header, footer, children, className, ...rest }) => {
+  const title = 'INDI·ES';
+  const description = 'Comunidad de desarrolladores de videojuegos en español';
+  const url = 'https://indi-es.com';
+  const image = `${url}/preview.png`;
+
+  return (
+    <div className={`${style.page} ${className}`} {...rest}>
+      <Head>
+        <title>title</title>
+        <meta name="description" content={description} />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content={image} />
+        <meta property="og:site_name" content={title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={url} />
+        <meta property="og:description" content={description} />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@afk_mario" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:image" content={image} />
+        <meta name="twitter:url" content={url} />
+        <meta name="twitter:description" content={description} />
+
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      {/* {header ? <Header /> : null} */}
+      <main>{children}</main>
+      {/* {footer ? <footer id="footer" /> : null} */}
+    </div>
+  );
+};
 
 Page.propTypes = {
   children: PropTypes.node,

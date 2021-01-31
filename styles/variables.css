@@ -3,9 +3,8 @@
   --bg-alt: #eee;
   --fg-01: #716c6c;
   --fg-02: #000;
-  --hl-01: #fdd000;
-  --hl-02: #ec008c;
-  --hl-03: #ec008c;
+  --hl-01: #f33bb6;
+  --hl-02: #aee73c;
   --border: var(--fg-02);
 
   --font-sans: 'Roboto', sans-serif;
@@ -34,7 +33,4 @@
   --hl-01: #ec008c;
   --hl-02: #fdd000;
   --border: var(--bg-alt);
-}
-
-@media (prefers-color-scheme: dark) {
 }
