@@ -10,7 +10,7 @@ export default function Home() {
     <Page className={style.page}>
       <main className="page -home">
         <div className="wrapper">
-          <h1 className={style.title}>INDI.ES</h1>
+          <h1 className={style.title}>INDI·ES</h1>
         </div>
       </main>
     </Page>
