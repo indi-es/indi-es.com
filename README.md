@@ -1,14 +1,29 @@
-# INDI·ES [![Netlify Status](https://api.netlify.com/api/v1/badges/e38bb41a-f95e-4ab1-b389-206fe979db98/deploy-status)](https://app.netlify.com/sites/indi-es/deploys)
+<div align="center">
+  <h1>INDI·ES</h1>
 
-Página web para la comunidad de INDI·ES hecha con [Next.js](https://nextjs.org/)
+  <a href="https://indi-es.com">
+    <img height="100" width="auto" alt="logo" src="/public/android-chrome-512x512.png?raw" />
+  </a>
+  
+  <br/>
+  <p>Página web para la comunidad de INDI·ES hecha con <a href="https://nextjs.org/">Next.js</a></p>
+</div>
+<hr />
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e38bb41a-f95e-4ab1-b389-206fe979db98/deploy-status)](https://app.netlify.com/sites/indi-es/deploys)
+
 
 ## Empezando
 
-Primero, corre el development server:
+Primero, instala las dependencias usando [yarn](https://yarnpkg.com/)
 
 ```bash
-npm run dev
-# or
+yarn
+```
+
+Segundo, corre el development server:
+
+```bash
 yarn dev
 ```
 
