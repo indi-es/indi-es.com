@@ -1,0 +1,40 @@
+:root {
+  --bg: #fff;
+  --bg-alt: #eee;
+  --fg-01: #716c6c;
+  --fg-02: #000;
+  --hl-01: #fdd000;
+  --hl-02: #ec008c;
+  --hl-03: #ec008c;
+  --border: var(--fg-02);
+
+  --font-sans: 'Roboto', sans-serif;
+  --font-mono: 'Roboto Mono', sans-serif;
+
+  --max-width: 800px;
+
+  --margin-q: calc(var(--margin-01) / 4);
+  --margin-h: calc(var(--margin-01) / 2);
+  --margin-01: 8px;
+  --margin-02: calc(var(--margin-01) * 2);
+  --margin-03: calc(var(--margin-01) * 3);
+  --margin-04: calc(var(--margin-01) * 4);
+  --margin-05: calc(var(--margin-01) * 5);
+  --margin-06: calc(var(--margin-01) * 6);
+  --margin-07: calc(var(--margin-01) * 7);
+  --margin-08: calc(var(--margin-01) * 8);
+  --margin-09: calc(var(--margin-01) * 9);
+  --margin-10: calc(var(--margin-01) * 10);
+}
+
+.-dark {
+  --bg: #000;
+  --fg-02: #fff;
+  --bg-alt: #1d1f21;
+  --hl-01: #ec008c;
+  --hl-02: #fdd000;
+  --border: var(--bg-alt);
+}
+
+@media (prefers-color-scheme: dark) {
+}
