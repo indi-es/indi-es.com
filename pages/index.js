@@ -1,10 +1,11 @@
 /* eslint filenames/match-exported: 0 */
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Page } from 'components/layouts';
 
-import style from '../styles/home.module.css';
+import style from 'styles/home.module.css';
 
 export default function Home() {
   return (
@@ -17,17 +18,22 @@ export default function Home() {
           width="200"
           height="200"
         />
-        <div className={style['iframe-container']}>
-          <iframe
-            title="discord"
-            src="https://discord.com/widget?id=323937940462108672&theme=dark"
-            width="350"
-            height="500"
-            allowtransparency="true"
-            frameBorder="0"
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-          />
-        </div>
+        <nav className={style.nav}>
+          <ul>
+            <li>
+              <Link href="/discord">Discod</Link>
+            </li>
+            <li>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://github.com/indi-es/estudios"
+              >
+                Estudios
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </Page>
   );

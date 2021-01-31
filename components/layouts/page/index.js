@@ -15,7 +15,7 @@ const Page = ({ header, footer, children, className, ...rest }) => {
   return (
     <div className={`${style.page} ${className}`} {...rest}>
       <Head>
-        <title>title</title>
+        <title>{title}</title>
         <meta name="description" content={description} />
 
         <meta property="og:title" content={title} />

@@ -7,6 +7,15 @@
   justify-content: center;
 }
 
+.logo {
+  margin-bottom: var(--margin-02);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: var(--margin-02);
+}
+
 .wrapper {
   flex: 1 0 auto;
   width: 100%;
@@ -16,19 +25,13 @@
   justify-content: center;
 }
 
-.logo {
-  margin-bottom: var(--margin-02);
-}
-
-.nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.iframe-container {
+  flex: 1 0 auto;
+  padding: var(--margin-04);
+  background: var(--fg-02);
+  width: 100%;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   align-items: center;
-}
-
-.nav li:not(:last-child) {
-  margin-right: var(--margin-02);
+  justify-content: center;
 }
