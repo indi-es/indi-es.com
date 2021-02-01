@@ -17,6 +17,8 @@
 }
 
 .logo {
+  cursor: pointer;
+  max-width: 200px;
   margin-bottom: var(--margin-02);
 }
 
