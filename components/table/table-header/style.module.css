@@ -1,7 +1,17 @@
 .table-header th {
   border-bottom: 2px solid var(--hl-01);
-  background: var(--fg-02);
-  color: var(--bg);
+  border-top: 2px solid var(--hl-01);
+  margin-bottom: var(--margin-01);
+}
+
+.table-header th:first-child {
+  border-left: 2px solid var(--hl-01);
+  border-radius: var(--margin-01) 0 0 var(--margin-01);
+}
+
+.table-header th:last-child {
+  border-radius: 0 var(--margin-01) var(--margin-01) 0;
+  border-right: 2px solid var(--hl-01);
 }
 
 .table-header-wrapper {
@@ -11,6 +21,6 @@
   justify-content: flex-start;
 }
 
-.table-header-wrapper > *:not(:first-child) {
+.table-header-wrapper svg {
   margin-left: var(--margin-01);
 }

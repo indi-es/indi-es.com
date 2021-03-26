@@ -11,6 +11,13 @@
   border-spacing: 0;
 }
 
+.table-container tbody:before {
+  content: '@';
+  display: block;
+  line-height: var(--margin-02);
+  text-indent: -99999px;
+}
+
 .table-container tr {
   transition: background-color 0.2s ease;
 }
@@ -27,7 +34,7 @@
 
 .table-container th:last-child,
 .table-container td:last-child {
-  border-right: 0;
+  /* border-right: 0; */
 }
 
 .table-container:not(.-loading) tr:hover {
