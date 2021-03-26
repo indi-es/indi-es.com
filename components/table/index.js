@@ -8,7 +8,7 @@ import TableRow from './table-row';
 
 import style from './style.module.css';
 
-const Table = ({ className, columns, data, loading }) => {
+const Table = ({ className, columns, data, loading, initialState }) => {
   const customClassName = classNames(
     style['table-container'],
     'table-container',
@@ -28,6 +28,7 @@ const Table = ({ className, columns, data, loading }) => {
     {
       columns,
       data,
+      initialState,
     },
     useSortBy
   );
@@ -52,11 +53,13 @@ Table.propTypes = {
   className: PropTypes.string,
   columns: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  initialState: PropTypes.shape({}),
 };
 
 Table.defaultProps = {
   loading: false,
   className: null,
+  initialState: {},
 };
 
 export default Table;

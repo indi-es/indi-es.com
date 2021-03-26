@@ -16,7 +16,21 @@ function StudiosTable({ studios, className }) {
     className
   );
 
-  return <Table columns={columns} data={studios} className={customClassName} />;
+  return (
+    <Table
+      columns={columns}
+      data={studios}
+      className={customClassName}
+      initialState={{
+        sortBy: [
+          {
+            id: 'name',
+            desc: false,
+          },
+        ],
+      }}
+    />
+  );
 }
 
 StudiosTable.propTypes = {
