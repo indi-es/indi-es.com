@@ -25,11 +25,7 @@ const TableHeader = ({ className, headerGroups, loading }) => {
           {headerGroup.headers.map((column) => (
             <th {...column.getHeaderProps(column.getSortByToggleProps())}>
               <div className={style['table-header-wrapper']}>
-                {loading ? (
-                  <Skeleton />
-                ) : (
-                  <span>{column.render('Header')}</span>
-                )}
+                {loading ? <Skeleton /> : column.render('Header')}
                 <span>
                   <SortIndicator
                     isSorted={column.isSorted}

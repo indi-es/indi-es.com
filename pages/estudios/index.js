@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FiGithub } from 'react-icons/fi';
 // import Link from 'next/link';
 
 import { Page } from 'components/layouts';
@@ -14,6 +15,14 @@ function Estudios({ data }) {
   return (
     <Page className={style.page}>
       <div className={`${style.wrapper}`}>
+        <a
+          className={style.support}
+          href="https://github.com/indi-es/estudios"
+          target="__blank"
+        >
+          Puedes aportar a la lista de estudios en Github
+          <FiGithub />
+        </a>
         <StudiosTable studios={studios} className={style.table} />
       </div>
     </Page>

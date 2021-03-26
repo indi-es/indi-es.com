@@ -11,6 +11,6 @@
   justify-content: flex-start;
 }
 
-.table-header-wrapper > *:not(:last-child) {
-  margin-right: var(--margin-01);
+.table-header-wrapper > *:not(:first-child) {
+  margin-left: var(--margin-01);
 }

@@ -9,16 +9,20 @@ export default function Header() {
     <header id="header" className={style.header}>
       <div className={`${style.wrapper}`}>
         <Link href="/">
-          <a>
+          <a className={style['logo-wrapper']}>
             <img className={style.logo} src="/icon.png" alt="INDI·ES" />
           </a>
         </Link>
         <nav className={style['nav-container']}>
           <ul className={style['nav-routes']}>
             <li>
-              <NavLink href="/discord" activeClassName="-active">
-                <a>Discord</a>
-              </NavLink>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://discord.com/invite/Z9eyP8A"
+              >
+                Discord
+              </a>
             </li>
             <li>
               <NavLink href="/estudios" activeClassName="-active">

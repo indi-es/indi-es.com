@@ -14,7 +14,13 @@ export default function Home() {
         <nav className={style.nav}>
           <ul>
             <li>
-              <Link href="/discord">Discord</Link>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://discord.com/invite/Z9eyP8A"
+              >
+                Discord
+              </a>
             </li>
             <li>
               <Link href="/estudios">Estudios</Link>

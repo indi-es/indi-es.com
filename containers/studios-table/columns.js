@@ -1,4 +1,6 @@
+import React from 'react';
 import { FbCell, IgCell, TwCell, WebCell } from 'components/cells';
+import { HeaderCenter } from 'components/table-headers';
 
 const columns = [
   {
@@ -18,28 +20,28 @@ const columns = [
   //   accessor: 'country',
   // },
   {
-    Header: 'Website',
+    Header: () => <HeaderCenter label="Website" />,
     accessor: 'website',
     headerClassName: '-center',
     disableSortBy: true,
     Cell: WebCell,
   },
   {
-    Header: 'Twitter',
+    Header: () => <HeaderCenter label="Twitter" />,
     accessor: 'twitter',
     headerClassName: '-center',
     disableSortBy: true,
     Cell: TwCell,
   },
   {
-    Header: 'Facebook',
+    Header: () => <HeaderCenter label="Facebook" />,
     accessor: 'facebook',
     headerClassName: '-center',
     disableSortBy: true,
     Cell: FbCell,
   },
   {
-    Header: 'instagram',
+    Header: () => <HeaderCenter label="Instagram" />,
     accessor: 'instagram',
     headerClassName: '-center',
     disableSortBy: true,
