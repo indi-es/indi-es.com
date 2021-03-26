@@ -26,6 +26,7 @@ a {
   transition: 0.2s ease all;
 }
 
-a:hover {
+a:hover,
+a.-active {
   color: var(--hl-01);
 }

@@ -1,0 +1,16 @@
+.table-header th {
+  border-bottom: 2px solid var(--hl-01);
+  background: var(--fg-02);
+  color: var(--bg);
+}
+
+.table-header-wrapper {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.table-header-wrapper > *:not(:last-child) {
+  margin-right: var(--margin-01);
+}

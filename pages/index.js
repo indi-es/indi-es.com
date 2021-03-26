@@ -8,7 +8,7 @@ import style from 'styles/home.module.css';
 
 export default function Home() {
   return (
-    <Page className={style.page}>
+    <Page className={style.page} header={false}>
       <div className={`${style.wrapper}`}>
         <img className={style.logo} src="/icon.png" alt="INDI·ES" />
         <nav className={style.nav}>
@@ -17,13 +17,7 @@ export default function Home() {
               <Link href="/discord">Discord</Link>
             </li>
             <li>
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/indi-es/estudios"
-              >
-                Estudios
-              </a>
+              <Link href="/estudios">Estudios</Link>
             </li>
             <li>
               <a

@@ -1,7 +1,7 @@
 .page main {
   width: 100%;
-  min-height: 100vh;
   display: flex;
+  flex: 1;
   flex-flow: column;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,6 @@
 .iframe-container {
   flex: 1 0 auto;
   padding: var(--margin-04);
-  background: var(--fg-02);
   width: 100%;
   display: flex;
   flex-flow: column;

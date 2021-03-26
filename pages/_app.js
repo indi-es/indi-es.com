@@ -11,7 +11,7 @@ function App({ Component, pageProps }) {
 }
 
 App.propTypes = {
-  Component: PropTypes.shape({}),
+  Component: PropTypes.func,
   pageProps: PropTypes.shape({}),
 };
 

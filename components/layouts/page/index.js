@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 
-// import Header from 'components/header';
+import Header from 'components/header';
 
 import style from './style.module.css';
 
@@ -60,7 +60,7 @@ const Page = ({ header, footer, children, className, ...rest }) => {
           rel="stylesheet"
         />
       </Head>
-      {/* {header ? <Header /> : null} */}
+      {header ? <Header /> : null}
       <main>{children}</main>
       {/* {footer ? <footer id="footer" /> : null} */}
     </div>

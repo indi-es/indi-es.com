@@ -1,6 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 
 import { Page } from 'components/layouts';
 
@@ -10,15 +8,6 @@ export default function Discord() {
   return (
     <Page className={style.page}>
       <div className={`${style.wrapper}`}>
-        <Link href="/">
-          <Image
-            className={style.logo}
-            src="/icon.png"
-            alt="INDI·ES"
-            width="200"
-            height="200"
-          />
-        </Link>
         <div className={style['iframe-container']}>
           <iframe
             title="discord"

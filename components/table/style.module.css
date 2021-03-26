@@ -1,0 +1,40 @@
+.table-container {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.table-container table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.table-container tr {
+  transition: background-color 0.2s ease;
+}
+
+.table-container th,
+.table-container td {
+  margin: 0;
+  padding: 0.5rem;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.table-container th:last-child,
+.table-container td:last-child {
+  border-right: 0;
+}
+
+.table-container:not(.-loading) tr:hover {
+  /* background-color: var(--bg-alt); */
+}
+
+.table-container th.-collapse,
+.table-container td.-collapse {
+  width: 0.0000000001%;
+}
