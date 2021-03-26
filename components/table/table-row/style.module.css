@@ -1,3 +1,45 @@
-.table-row:nth-child(odd) {
+.table-row {
+  --border-color: var(--bg-alt);
+
+  transition: background-color 0.2s ease;
+}
+
+.table-container td {
+  overflow: hidden;
+}
+
+.table-row:nth-child(odd) td {
   background-color: var(--bg-alt);
+}
+
+.table-row:first-child td {
+  border-top: 2px solid var(--border-color);
+}
+
+.table-row:last-child td {
+  border-bottom: 2px solid var(--border-color);
+}
+
+.table-row td:first-child {
+  border-left: 2px solid var(--border-color);
+}
+
+.table-row td:last-child {
+  border-right: 2px solid var(--border-color);
+}
+
+.table-row:first-child td:first-child {
+  border-radius: var(--margin-01) 0 0 0;
+}
+
+.table-row:first-child td:last-child {
+  border-radius: 0 var(--margin-01) 0 0;
+}
+
+.table-row:last-child td:first-child {
+  border-radius: 0 0 0 var(--margin-01);
+}
+
+.table-row:last-child td:last-child {
+  border-radius: 0 0 var(--margin-01) 0;
 }

@@ -11,7 +11,7 @@
   border-spacing: 0;
 }
 
-.table-container tbody:before {
+.table-container tbody::before {
   content: '@';
   display: block;
   line-height: var(--margin-02);

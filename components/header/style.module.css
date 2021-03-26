@@ -2,10 +2,8 @@
   width: 100%;
   z-index: 100;
   background: white;
-  position: sticky;
-  border-bottom: 1px solid var(--fg-02);
   padding: 0;
-  top: 0;
+  border-bottom: 2px solid var(--fg-01);
 }
 
 .wrapper {
