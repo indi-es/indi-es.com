@@ -8,11 +8,11 @@ const columns = [
     accessor: 'name',
   },
   {
-    Header: 'City',
+    Header: 'Ciudad',
     accessor: 'city',
   },
   {
-    Header: 'State',
+    Header: 'Estado',
     accessor: 'state',
   },
   // {
@@ -20,7 +20,7 @@ const columns = [
   //   accessor: 'country',
   // },
   {
-    Header: () => <HeaderCenter label="Website" />,
+    Header: () => <HeaderCenter label="Web" />,
     accessor: 'website',
     headerClassName: '-center',
     disableSortBy: true,
