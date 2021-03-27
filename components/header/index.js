@@ -16,6 +16,11 @@ export default function Header() {
         <nav className={style['nav-container']}>
           <ul className={style['nav-routes']}>
             <li>
+              <NavLink href="/estudios" activeClassName="-active">
+                <a>Estudios</a>
+              </NavLink>
+            </li>
+            <li>
               <a
                 rel="noopener noreferrer"
                 target="_blank"
@@ -23,11 +28,6 @@ export default function Header() {
               >
                 Discord
               </a>
-            </li>
-            <li>
-              <NavLink href="/estudios" activeClassName="-active">
-                <a>Estudios</a>
-              </NavLink>
             </li>
             <li>
               <a

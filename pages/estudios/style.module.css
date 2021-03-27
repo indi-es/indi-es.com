@@ -90,11 +90,13 @@
   .actions-view {
     flex-flow: column;
   }
+
+  .button {
+    padding: var(--margin-01) var(--margin-01);
+  }
+
   .button:first-child {
     border-right: 0;
     border-bottom: 2px solid var(--bg-alt);
-  }
-  .button {
-    padding: var(--margin-01) var(--margin-01);
   }
 }
