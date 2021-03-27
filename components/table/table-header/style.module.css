@@ -1,5 +1,5 @@
 .table-header {
-  --border-color: var(--fg-01);
+  --border-color: var(--fg);
 }
 
 .table-header:hover {

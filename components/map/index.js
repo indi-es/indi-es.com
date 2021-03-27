@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
 import L from 'leaflet';
 import { MapContainer, TileLayer } from 'react-leaflet';
+
+import usePrefersColorScheme from 'hooks/use-prefers-color-scheme';
 
 import style from './style.module.css';
 
 const Map = ({ children, className, center, zoom, ...rest }) => {
+  const preferredColorSchema = usePrefersColorScheme();
+  const isDarkMode = preferredColorSchema === 'dark';
   const customClassName = classNames(
     style['map-container'],
     'map-container',
@@ -31,11 +34,19 @@ const Map = ({ children, className, center, zoom, ...rest }) => {
       className={customClassName}
       {...rest}
     >
-      <TileLayer
-        attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}"
-        ext="png"
-      />
+      {isDarkMode ? (
+        <TileLayer
+          attribution={`&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>`}
+          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          ext="png"
+        />
+      ) : (
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          ext="png"
+        />
+      )}
       {children}
     </MapContainer>
   );

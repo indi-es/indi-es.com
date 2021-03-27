@@ -9,7 +9,7 @@
 }
 
 .studio-list a {
-  color: var(--fg-02);
+  color: var(--fg);
   transition: 0.2s ease all;
 }
 

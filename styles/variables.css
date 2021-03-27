@@ -1,11 +1,10 @@
 :root {
   --bg: #fff;
   --bg-alt: #f7f7f7;
-  --fg-01: #35363c;
-  --fg-02: #000;
+  --fg: #000;
   --hl-01: #f33bb6;
   --hl-02: #aee73c;
-  --border: var(--fg-02);
+  --border: var(--fg);
 
   --font-sans: 'Roboto', sans-serif;
   --font-mono: 'Roboto Mono', sans-serif;
@@ -28,11 +27,13 @@
   --max-width-wraper: 100em;
 }
 
-.-dark {
-  --bg: #000;
-  --fg-02: #fff;
-  --bg-alt: #1d1f21;
-  --hl-01: #ec008c;
-  --hl-02: #fdd000;
-  --border: var(--bg-alt);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000;
+    --fg: #fff;
+    --bg-alt: #1d1f21;
+    --hl-01: #ec008c;
+    --hl-02: #fdd000;
+    --border: var(--bg-alt);
+  }
 }
