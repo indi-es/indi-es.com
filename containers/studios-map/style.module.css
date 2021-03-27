@@ -1,0 +1,24 @@
+.popup {
+  padding: 0;
+  background: var(--bg);
+}
+
+.studio-list {
+  display: flex;
+  flex-flow: column;
+}
+
+.studio-list a {
+  color: var(--fg-02);
+  transition: 0.2s ease all;
+}
+
+.studio-list a:hover {
+  color: var(--hl-01);
+}
+
+.studios-map {
+  border-radius: var(--margin-01);
+  border: 2px solid var(--bg-alt);
+  overflow: hidden;
+}

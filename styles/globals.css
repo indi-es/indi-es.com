@@ -21,7 +21,8 @@ h1 {
   position: relative;
 }
 
-a {
+a,
+.leaflet-container a {
   color: var(--fg-02);
   transition: 0.2s ease all;
 }
@@ -29,4 +30,17 @@ a {
 a:hover,
 a.-active {
   color: var(--hl-01);
+}
+
+.leaflet-popup-content {
+  /* padding: var(--margin-01); */
+  padding: 0 var(--margin-01);
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup,
+.leaflet-popup-content-wrapper {
+  border-radius: var(--margin-01);
 }

@@ -16,6 +16,8 @@ module.exports = {
   plugins: ['prettier', 'filenames', 'react-hooks'],
   rules: {
     'arrow-body-style': 0,
+    'no-console': 0,
+
     'import/prefer-default-export': 'off',
     'filenames/match-regex': [2, '^([a-z][a-z0-9]*)(-[a-z0-9]+)*$', true],
     'jsx-a11y/anchor-is-valid': 0,

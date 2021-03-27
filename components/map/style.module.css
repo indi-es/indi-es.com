@@ -1,0 +1,9 @@
+.map-container {
+  height: 80vh;
+  width: 100%;
+  background: var(--bg-alt);
+}
+
+.map-container p {
+  margin: 0;
+}
