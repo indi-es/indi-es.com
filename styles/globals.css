@@ -48,3 +48,8 @@ a.-active {
 .leaflet-popup-content-wrapper {
   border-radius: var(--margin-01);
 }
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: var(--bg-alt);
+}
