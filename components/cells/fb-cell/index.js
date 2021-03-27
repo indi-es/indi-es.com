@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FiFacebook } from 'react-icons/fi';
+import { FaFacebookSquare } from 'react-icons/fa';
 
 import style from './style.module.css';
 
@@ -13,7 +13,7 @@ const FbCell = ({ cell: { value } }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <FiFacebook />
+      <FaFacebookSquare />
     </a>
   );
 };

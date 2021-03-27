@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FiTwitter } from 'react-icons/fi';
+import { FaTwitter } from 'react-icons/fa';
 
 import style from './style.module.css';
 
@@ -13,7 +13,7 @@ const TwCell = ({ cell: { value } }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <FiTwitter />
+      <FaTwitter />
     </a>
   );
 };
