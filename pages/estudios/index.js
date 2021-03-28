@@ -16,7 +16,7 @@ const StudiosMap = dynamic(() => import('containers/studios-map'), {
 });
 
 function Estudios({ data }) {
-  const { studios } = data;
+  const { developers = [] } = data;
   const router = useRouter();
   const { vista = 'tabla' } = router.query;
 
@@ -54,9 +54,9 @@ function Estudios({ data }) {
             </Link>
           </div>
         </header>
-        {isMap ? <StudiosMap studios={studios} /> : null}
+        {isMap ? <StudiosMap studios={developers} /> : null}
         {isTable ? (
-          <StudiosTable studios={studios} className={style.table} />
+          <StudiosTable studios={developers} className={style.table} />
         ) : null}
       </div>
     </Page>
@@ -65,7 +65,7 @@ function Estudios({ data }) {
 
 export async function getServerSideProps() {
   const url =
-    'https://raw.githubusercontent.com/indi-es/estudios/main/estudios-mexico.json';
+    'https://raw.githubusercontent.com/indi-es/estudios/main/developers.json';
   const res = await fetch(url);
   const data = await res.json();
 
@@ -76,7 +76,7 @@ export async function getServerSideProps() {
 
 Estudios.propTypes = {
   data: PropTypes.shape({
-    studios: PropTypes.arrayOf(
+    developers: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string,
       })
