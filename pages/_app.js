@@ -6,6 +6,7 @@ import 'leaflet/dist/leaflet.css';
 
 import 'styles/variables.css';
 import 'styles/globals.css';
+import 'styles/leaflet.css';
 
 function App({ Component, pageProps }) {
   return <Component {...pageProps} />;

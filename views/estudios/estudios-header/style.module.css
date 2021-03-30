@@ -1,12 +1,14 @@
-.wrapper {
-  max-width: var(--max-width-wraper);
-  margin: auto;
-  padding: 0 var(--margin-02);
-  padding-bottom: var(--margin-04);
+.header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--margin-02);
+  margin-bottom: var(--margin-02);
 }
 
-.table {
-  margin: auto;
+.header > *:not(:last-child) {
+  margin-right: var(--margin-02);
 }
 
 .support {
@@ -29,19 +31,6 @@
 .support svg {
   transform: translate(0, 3px);
   margin-left: var(--margin-01);
-}
-
-.header {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: var(--margin-02);
-  margin-bottom: var(--margin-02);
-}
-
-.header > *:not(:last-child) {
-  margin-right: var(--margin-02);
 }
 
 .actions-view {
@@ -82,8 +71,8 @@
   color: var(--hl-01);
 }
 
-.button:first-child {
-  border-right: 2px solid var(--bg-alt);
+.button:not(:last-child) {
+  border-right: 2px solid var(--border);
 }
 
 @media screen and (max-width: 900px) {

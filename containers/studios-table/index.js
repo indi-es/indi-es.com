@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-// import Link from 'next/link';
 
 import Table from 'components/table';
 

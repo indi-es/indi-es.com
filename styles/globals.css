@@ -7,18 +7,35 @@ body {
   color: var(--fg);
 }
 
-h1 {
-  width: 100%;
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  line-height: 1.3;
 }
 
-.wrapper {
-  width: 90vw;
-  width: clamp(16rem, 90vw, 70rem);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  position: relative;
+h1,
+h2 {
+  font-weight: 900;
+}
+
+h2,
+h3 {
+  max-width: 25ch;
+}
+
+h1 {
+  font-size: var(--size-700);
+  max-width: 15ch;
+}
+
+h2 {
+  font-size: var(--size-600);
+}
+
+h3 {
+  font-size: var(--size-600);
 }
 
 a,
@@ -32,24 +49,58 @@ a.-active {
   color: var(--hl-01);
 }
 
-.leaflet-bar a {
-  background-color: var(--bg-alt);
+img {
+  max-width: min(55rem, 100%);
 }
 
-.leaflet-popup-content {
-  /* padding: var(--margin-01); */
-  padding: 0 var(--margin-01);
-  overflow: hidden;
-  margin-left: 0;
-  margin-right: 0;
+figcaption {
+  font-size: var(--size-300);
+  font-style: italic;
+  margin-top: 1rem;
 }
 
-.leaflet-fade-anim .leaflet-map-pane .leaflet-popup,
-.leaflet-popup-content-wrapper {
-  border-radius: var(--margin-01);
+blockquote {
+  padding-left: var(--size-600);
+  border-left: 5px solid;
+  font-style: italic;
 }
 
-.leaflet-popup-content-wrapper,
-.leaflet-popup-tip {
-  background: var(--bg-alt);
+::selection {
+  color: var(--fg);
+  background: var(--hl-02);
+}
+
+p,
+li {
+  max-width: 60ch;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-gap: 0.8rem;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 0 1fr;
+  grid-gap: 1em;
+  align-items: start;
+}
+
+ul li::before {
+  content: '–';
+}
+
+.wrapper {
+  width: 90vw;
+  width: clamp(16rem, 90vw, 70rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
 }

@@ -4,10 +4,11 @@
   --fg: #000;
   --hl-01: #f33bb6;
   --hl-02: #aee73c;
-  --border: var(--fg);
+  --border: var(--bg-alt);
 
-  --font-sans: 'Roboto', sans-serif;
-  --font-mono: 'Roboto Mono', sans-serif;
+  --font-sans: sans-serif;
+  --font-mono: mono;
+  --font-serif: serif;
 
   --max-width: 800px;
 
@@ -25,6 +26,14 @@
   --margin-10: calc(var(--margin-01) * 10);
 
   --max-width-wraper: 100em;
+
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.33rem;
+  --size-600: 1.77rem;
+  --size-700: 2.36rem;
+  --size-800: 3.15rem;
+  --size-900: 4.2rem;
 }
 
 @media (prefers-color-scheme: dark) {

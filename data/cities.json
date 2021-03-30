@@ -27,7 +27,7 @@
     "lng": "-100.3000",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "admin",
     "population": "4295000",
     "population_proper": "1109171"
@@ -66,7 +66,7 @@
     "population_proper": "1434062"
   },
   {
-    "city": "Le\u00f3n de los Aldama",
+    "city": "León de los Aldama",
     "lat": "21.1167",
     "lng": "-101.6833",
     "country": "Mexico",
@@ -99,7 +99,7 @@
     "population_proper": "1155790"
   },
   {
-    "city": "Nezahualc\u00f3yotl",
+    "city": "Nezahualcóyotl",
     "lat": "19.4000",
     "lng": "-98.9889",
     "country": "Mexico",
@@ -110,7 +110,7 @@
     "population_proper": "1110565"
   },
   {
-    "city": "Ciudad Nezahualc\u00f3yotl",
+    "city": "Ciudad Nezahualcóyotl",
     "lat": "19.4100",
     "lng": "-99.0300",
     "country": "Mexico",
@@ -291,7 +291,7 @@
     "lng": "-100.2597",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "691931",
     "population_proper": "691931"
@@ -308,7 +308,7 @@
     "population_proper": "673478"
   },
   {
-    "city": "Torre\u00f3n",
+    "city": "Torreón",
     "lat": "25.5394",
     "lng": "-103.4486",
     "country": "Mexico",
@@ -412,7 +412,7 @@
     "lng": "-100.1833",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "523370",
     "population_proper": "523370"
@@ -484,7 +484,7 @@
     "population_proper": "495563"
   },
   {
-    "city": "Ciudad L\u00f3pez Mateos",
+    "city": "Ciudad López Mateos",
     "lat": "19.5500",
     "lng": "-99.2833",
     "country": "Mexico",
@@ -511,7 +511,7 @@
     "lng": "-100.2833",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "476761",
     "population_proper": "443273"
@@ -528,7 +528,7 @@
     "population_proper": "468469"
   },
   {
-    "city": "Ciudad Obreg\u00f3n",
+    "city": "Ciudad Obregón",
     "lat": "27.4939",
     "lng": "-109.9389",
     "country": "Mexico",
@@ -610,7 +610,7 @@
     "lng": "-100.1583",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "363436",
     "population_proper": "299364"
@@ -638,7 +638,7 @@
     "population_proper": "332863"
   },
   {
-    "city": "G\u00f3mez Palacio",
+    "city": "Gómez Palacio",
     "lat": "25.5611",
     "lng": "-103.4983",
     "country": "Mexico",
@@ -775,7 +775,7 @@
     "lng": "-100.0833",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "260683",
     "population_proper": "260683"
@@ -786,7 +786,7 @@
     "lng": "-100.4500",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "259896",
     "population_proper": "259896"
@@ -902,7 +902,7 @@
     "population_proper": "220292"
   },
   {
-    "city": "C\u00f3rdoba",
+    "city": "Córdoba",
     "lat": "18.8942",
     "lng": "-96.9347",
     "country": "Mexico",
@@ -1144,7 +1144,7 @@
     "population_proper": "139169"
   },
   {
-    "city": "San Crist\u00f3bal",
+    "city": "San Cristóbal",
     "lat": "16.7367",
     "lng": "-92.6383",
     "country": "Mexico",
@@ -1248,7 +1248,7 @@
     "lng": "-100.5833",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "145867",
     "population_proper": "145867"
@@ -1424,7 +1424,7 @@
     "lng": "-100.3000",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "122009",
     "population_proper": "122009"
@@ -1507,7 +1507,7 @@
     "population_proper": "102969"
   },
   {
-    "city": "San Francisco del Rinc\u00f3n",
+    "city": "San Francisco del Rincón",
     "lat": "21.0228",
     "lng": "-101.8600",
     "country": "Mexico",
@@ -1705,7 +1705,7 @@
     "population_proper": "99837"
   },
   {
-    "city": "Taxco de Alarc\u00f3n",
+    "city": "Taxco de Alarcón",
     "lat": "18.5564",
     "lng": "-99.6050",
     "country": "Mexico",
@@ -1809,7 +1809,7 @@
     "lng": "-100.0000",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "86445",
     "population_proper": "86445"
@@ -1991,7 +1991,7 @@
     "population_proper": "77714"
   },
   {
-    "city": "Ciudad de Huajuapam de Le\u00f3n",
+    "city": "Ciudad de Huajuapam de León",
     "lat": "17.8039",
     "lng": "-97.7758",
     "country": "Mexico",
@@ -2040,7 +2040,7 @@
     "lng": "-100.2500",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "",
     "population": "75000",
     "population_proper": "75000"
@@ -2337,7 +2337,7 @@
     "lng": "-99.5679",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "63104",
     "population_proper": "63104"
@@ -2381,7 +2381,7 @@
     "lng": "-99.8267",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "60829",
     "population_proper": "45108"
@@ -2849,7 +2849,7 @@
     "population_proper": "27079"
   },
   {
-    "city": "Ciudad Constituci\u00f3n",
+    "city": "Ciudad Constitución",
     "lat": "25.0322",
     "lng": "-111.6703",
     "country": "Mexico",
@@ -3025,7 +3025,7 @@
     "population_proper": "42009"
   },
   {
-    "city": "Morole\u00f3n",
+    "city": "Moroleón",
     "lat": "20.1333",
     "lng": "-101.2000",
     "country": "Mexico",
@@ -3124,7 +3124,7 @@
     "population_proper": "39702"
   },
   {
-    "city": "San Diego de la Uni\u00f3n",
+    "city": "San Diego de la Unión",
     "lat": "21.4656",
     "lng": "-100.8736",
     "country": "Mexico",
@@ -3146,7 +3146,7 @@
     "population_proper": "39611"
   },
   {
-    "city": "Villa del Carb\u00f3n",
+    "city": "Villa del Carbón",
     "lat": "19.7272",
     "lng": "-99.5417",
     "country": "Mexico",
@@ -3173,7 +3173,7 @@
     "lng": "-100.0667",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "38930",
     "population_proper": "38930"
@@ -3239,7 +3239,7 @@
     "lng": "-100.1333",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "37886",
     "population_proper": "37886"
@@ -3536,7 +3536,7 @@
     "lng": "-100.1833",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "32047",
     "population_proper": "20198"
@@ -3641,7 +3641,7 @@
     "population_proper": "31078"
   },
   {
-    "city": "Champot\u00f3n",
+    "city": "Champotón",
     "lat": "19.3500",
     "lng": "-90.7167",
     "country": "Mexico",
@@ -3806,7 +3806,7 @@
     "population_proper": "28637"
   },
   {
-    "city": "Pabell\u00f3n de Arteaga",
+    "city": "Pabellón de Arteaga",
     "lat": "22.1500",
     "lng": "-102.2667",
     "country": "Mexico",
@@ -3872,7 +3872,7 @@
     "population_proper": "22744"
   },
   {
-    "city": "Rinc\u00f3n de Romos",
+    "city": "Rincón de Romos",
     "lat": "22.2333",
     "lng": "-102.3167",
     "country": "Mexico",
@@ -3899,13 +3899,13 @@
     "lng": "-100.3000",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "27848",
     "population_proper": "27848"
   },
   {
-    "city": "Tlalpujahua de Ray\u00f3n",
+    "city": "Tlalpujahua de Rayón",
     "lat": "19.8050",
     "lng": "-100.1744",
     "country": "Mexico",
@@ -4796,7 +4796,7 @@
     "population_proper": "1609"
   },
   {
-    "city": "Asunci\u00f3n Nochixtlán",
+    "city": "Asunción Nochixtlán",
     "lat": "17.4592",
     "lng": "-97.2261",
     "country": "Mexico",
@@ -5186,7 +5186,7 @@
     "lng": "-100.1833",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "14268",
     "population_proper": "14268"
@@ -5291,7 +5291,7 @@
     "population_proper": "13661"
   },
   {
-    "city": "Ascensi\u00f3n",
+    "city": "Ascensión",
     "lat": "31.0928",
     "lng": "-107.9964",
     "country": "Mexico",
@@ -5643,7 +5643,7 @@
     "population_proper": "10790"
   },
   {
-    "city": "Villa Uni\u00f3n",
+    "city": "Villa Unión",
     "lat": "23.9667",
     "lng": "-104.0333",
     "country": "Mexico",
@@ -5863,7 +5863,7 @@
     "population_proper": "10014"
   },
   {
-    "city": "Plat\u00f3n Sánchez",
+    "city": "Platón Sánchez",
     "lat": "21.2833",
     "lng": "-98.3667",
     "country": "Mexico",
@@ -5962,7 +5962,7 @@
     "population_proper": "9517"
   },
   {
-    "city": "Halach\u00f3",
+    "city": "Halachó",
     "lat": "20.4764",
     "lng": "-90.0819",
     "country": "Mexico",
@@ -6182,7 +6182,7 @@
     "population_proper": "8662"
   },
   {
-    "city": "Ray\u00f3n",
+    "city": "Rayón",
     "lat": "19.1481",
     "lng": "-99.5800",
     "country": "Mexico",
@@ -6363,7 +6363,7 @@
     "lng": "-99.6147",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "7169",
     "population_proper": "7169"
@@ -6622,7 +6622,7 @@
     "population_proper": "5547"
   },
   {
-    "city": "San Sim\u00f3n de Guerrero",
+    "city": "San Simón de Guerrero",
     "lat": "19.0225",
     "lng": "-100.0067",
     "country": "Mexico",
@@ -6649,7 +6649,7 @@
     "lng": "-99.1667",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "5385",
     "population_proper": "5385"
@@ -6666,7 +6666,7 @@
     "population_proper": "5361"
   },
   {
-    "city": "G\u00f3mez Farías",
+    "city": "Gómez Farías",
     "lat": "29.3583",
     "lng": "-107.7361",
     "country": "Mexico",
@@ -6682,7 +6682,7 @@
     "lng": "-100.5056",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "5305",
     "population_proper": "5305"
@@ -6710,7 +6710,7 @@
     "population_proper": "5285"
   },
   {
-    "city": "Pe\u00f1\u00f3n Blanco",
+    "city": "Pe\u00f1ón Blanco",
     "lat": "24.7833",
     "lng": "-104.0333",
     "country": "Mexico",
@@ -6968,7 +6968,7 @@
     "lng": "-100.5167",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "4309",
     "population_proper": "4309"
@@ -7177,7 +7177,7 @@
     "lng": "-100.5000",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "3773",
     "population_proper": "3773"
@@ -7370,7 +7370,7 @@
     "population_proper": "3089"
   },
   {
-    "city": "La Uni\u00f3n",
+    "city": "La Unión",
     "lat": "17.9667",
     "lng": "-101.8167",
     "country": "Mexico",
@@ -7601,7 +7601,7 @@
     "population_proper": "2223"
   },
   {
-    "city": "L\u00f3pez",
+    "city": "López",
     "lat": "27.0000",
     "lng": "-105.0333",
     "country": "Mexico",
@@ -7711,7 +7711,7 @@
     "population_proper": "2042"
   },
   {
-    "city": "Camar\u00f3n de Tejeda",
+    "city": "Camarón de Tejeda",
     "lat": "19.0167",
     "lng": "-96.6167",
     "country": "Mexico",
@@ -7749,13 +7749,13 @@
     "lng": "-99.9000",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "1896",
     "population_proper": "1896"
   },
   {
-    "city": "Tem\u00f3sachic",
+    "city": "Temósachic",
     "lat": "28.9533",
     "lng": "-107.8306",
     "country": "Mexico",
@@ -8008,7 +8008,7 @@
     "population_proper": "1392"
   },
   {
-    "city": "San Jer\u00f3nimo Silacayoapilla",
+    "city": "San Jerónimo Silacayoapilla",
     "lat": "17.8086",
     "lng": "-97.8456",
     "country": "Mexico",
@@ -8041,7 +8041,7 @@
     "population_proper": "1373"
   },
   {
-    "city": "General Sim\u00f3n Bolívar",
+    "city": "General Simón Bolívar",
     "lat": "24.6833",
     "lng": "-103.2167",
     "country": "Mexico",
@@ -8338,7 +8338,7 @@
     "population_proper": "834"
   },
   {
-    "city": "San Crist\u00f3bal de la Barranca",
+    "city": "San Cristóbal de la Barranca",
     "lat": "21.0444",
     "lng": "-103.4292",
     "country": "Mexico",
@@ -8536,7 +8536,7 @@
     "population_proper": "516"
   },
   {
-    "city": "Satev\u00f3",
+    "city": "Satevó",
     "lat": "27.9542",
     "lng": "-106.1064",
     "country": "Mexico",
@@ -8783,13 +8783,13 @@
     "lng": "-100.1082",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
   },
   {
-    "city": "Her\u00f3ica Zitácuaro",
+    "city": "Heróica Zitácuaro",
     "lat": "19.4361",
     "lng": "-100.3573",
     "country": "Mexico",
@@ -9284,7 +9284,7 @@
     "population_proper": ""
   },
   {
-    "city": "Encarnaci\u00f3n de Díaz",
+    "city": "Encarnación de Díaz",
     "lat": "21.5271",
     "lng": "-102.2401",
     "country": "Mexico",
@@ -9328,7 +9328,7 @@
     "population_proper": ""
   },
   {
-    "city": "Yajal\u00f3n",
+    "city": "Yajalón",
     "lat": "17.1728",
     "lng": "-92.3331",
     "country": "Mexico",
@@ -10087,7 +10087,7 @@
     "population_proper": ""
   },
   {
-    "city": "Pantelh\u00f3",
+    "city": "Pantelhó",
     "lat": "17.0056",
     "lng": "-92.4716",
     "country": "Mexico",
@@ -10153,7 +10153,7 @@
     "population_proper": ""
   },
   {
-    "city": "Uni\u00f3n de San Antonio",
+    "city": "Unión de San Antonio",
     "lat": "21.1271",
     "lng": "-102.0062",
     "country": "Mexico",
@@ -10169,7 +10169,7 @@
     "lng": "-100.3640",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -10400,13 +10400,13 @@
     "lng": "-100.1323",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
   },
   {
-    "city": "Concepci\u00f3n del Oro",
+    "city": "Concepción del Oro",
     "lat": "24.6167",
     "lng": "-101.4167",
     "country": "Mexico",
@@ -10461,7 +10461,7 @@
     "population_proper": ""
   },
   {
-    "city": "Chil\u00f3n",
+    "city": "Chilón",
     "lat": "17.1057",
     "lng": "-92.2729",
     "country": "Mexico",
@@ -10571,7 +10571,7 @@
     "population_proper": ""
   },
   {
-    "city": "Ray\u00f3n",
+    "city": "Rayón",
     "lat": "17.2008",
     "lng": "-93.0116",
     "country": "Mexico",
@@ -10631,7 +10631,7 @@
     "lng": "-100.1813",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -10681,7 +10681,7 @@
     "population_proper": ""
   },
   {
-    "city": "Uni\u00f3n de Tula",
+    "city": "Unión de Tula",
     "lat": "19.9565",
     "lng": "-104.2681",
     "country": "Mexico",
@@ -11121,7 +11121,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Jer\u00f3nimo de Juárez",
+    "city": "San Jerónimo de Juárez",
     "lat": "17.1392",
     "lng": "-100.4707",
     "country": "Mexico",
@@ -11473,7 +11473,7 @@
     "population_proper": ""
   },
   {
-    "city": "Villa Purificaci\u00f3n",
+    "city": "Villa Purificación",
     "lat": "19.7184",
     "lng": "-104.6046",
     "country": "Mexico",
@@ -11594,7 +11594,7 @@
     "population_proper": ""
   },
   {
-    "city": "Concepci\u00f3n de Buenos Aires",
+    "city": "Concepción de Buenos Aires",
     "lat": "19.9782",
     "lng": "-103.2598",
     "country": "Mexico",
@@ -11748,7 +11748,7 @@
     "population_proper": ""
   },
   {
-    "city": "Apaxtla de Castrej\u00f3n",
+    "city": "Apaxtla de Castrejón",
     "lat": "18.1313",
     "lng": "-99.9326",
     "country": "Mexico",
@@ -11781,7 +11781,7 @@
     "population_proper": ""
   },
   {
-    "city": "\u00c1lvaro Obreg\u00f3n",
+    "city": "\u00c1lvaro Obregón",
     "lat": "19.8238",
     "lng": "-101.0400",
     "country": "Mexico",
@@ -11869,7 +11869,7 @@
     "population_proper": ""
   },
   {
-    "city": "Angamacutiro de la Uni\u00f3n",
+    "city": "Angamacutiro de la Unión",
     "lat": "20.1500",
     "lng": "-101.7111",
     "country": "Mexico",
@@ -12050,7 +12050,7 @@
     "lng": "-100.4500",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -12177,7 +12177,7 @@
     "population_proper": ""
   },
   {
-    "city": "Sanct\u00f3rum",
+    "city": "Sanctórum",
     "lat": "19.4933",
     "lng": "-98.4716",
     "country": "Mexico",
@@ -12292,7 +12292,7 @@
     "lng": "-100.0537",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -12870,7 +12870,7 @@
     "population_proper": ""
   },
   {
-    "city": "Col\u00f3n",
+    "city": "Colón",
     "lat": "20.7833",
     "lng": "-100.0500",
     "country": "Mexico",
@@ -12903,7 +12903,7 @@
     "population_proper": ""
   },
   {
-    "city": "Soyal\u00f3",
+    "city": "Soyaló",
     "lat": "16.8913",
     "lng": "-92.9243",
     "country": "Mexico",
@@ -13370,7 +13370,7 @@
     "lng": "-100.0083",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -13453,7 +13453,7 @@
     "population_proper": ""
   },
   {
-    "city": "Ray\u00f3n",
+    "city": "Rayón",
     "lat": "21.8433",
     "lng": "-99.6426",
     "country": "Mexico",
@@ -13651,7 +13651,7 @@
     "population_proper": ""
   },
   {
-    "city": "Metlat\u00f3noc",
+    "city": "Metlatónoc",
     "lat": "17.1939",
     "lng": "-98.4092",
     "country": "Mexico",
@@ -13684,7 +13684,7 @@
     "population_proper": ""
   },
   {
-    "city": "G\u00f3mez Farías",
+    "city": "Gómez Farías",
     "lat": "19.7936",
     "lng": "-103.4765",
     "country": "Mexico",
@@ -13695,7 +13695,7 @@
     "population_proper": ""
   },
   {
-    "city": "Uni\u00f3n Juárez",
+    "city": "Unión Juárez",
     "lat": "15.0628",
     "lng": "-92.0808",
     "country": "Mexico",
@@ -13981,7 +13981,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Crist\u00f3bal Amatlán",
+    "city": "San Cristóbal Amatlán",
     "lat": "16.3171",
     "lng": "-96.4078",
     "country": "Mexico",
@@ -14047,7 +14047,7 @@
     "population_proper": ""
   },
   {
-    "city": "Chenalh\u00f3",
+    "city": "Chenalhó",
     "lat": "16.8937",
     "lng": "-92.6265",
     "country": "Mexico",
@@ -14239,7 +14239,7 @@
     "lng": "-99.6728",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -14784,7 +14784,7 @@
     "population_proper": ""
   },
   {
-    "city": "Ca\u00f1adas de Obreg\u00f3n",
+    "city": "Ca\u00f1adas de Obregón",
     "lat": "21.1493",
     "lng": "-102.6874",
     "country": "Mexico",
@@ -15548,7 +15548,7 @@
     "lng": "-99.2345",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -15581,7 +15581,7 @@
     "lng": "-100.3958",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -15785,7 +15785,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Jer\u00f3nimo Zacualpan",
+    "city": "San Jerónimo Zacualpan",
     "lat": "19.2428",
     "lng": "-98.2632",
     "country": "Mexico",
@@ -15807,7 +15807,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Francisco Lachigol\u00f3",
+    "city": "San Francisco Lachigoló",
     "lat": "17.0162",
     "lng": "-96.5995",
     "country": "Mexico",
@@ -15851,7 +15851,7 @@
     "population_proper": ""
   },
   {
-    "city": "Aquism\u00f3n",
+    "city": "Aquismón",
     "lat": "21.6216",
     "lng": "-99.0198",
     "country": "Mexico",
@@ -16236,7 +16236,7 @@
     "population_proper": ""
   },
   {
-    "city": "Cutzamala de Pinz\u00f3n",
+    "city": "Cutzamala de Pinzón",
     "lat": "18.4678",
     "lng": "-100.5809",
     "country": "Mexico",
@@ -16357,7 +16357,7 @@
     "population_proper": ""
   },
   {
-    "city": "Sergio Butr\u00f3n Casas",
+    "city": "Sergio Butrón Casas",
     "lat": "18.5139",
     "lng": "-88.5688",
     "country": "Mexico",
@@ -16516,7 +16516,7 @@
     "lng": "-100.0333",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -16577,7 +16577,7 @@
     "population_proper": ""
   },
   {
-    "city": "Tampamol\u00f3n Corona",
+    "city": "Tampamolón Corona",
     "lat": "21.5588",
     "lng": "-98.8187",
     "country": "Mexico",
@@ -17149,7 +17149,7 @@
     "population_proper": ""
   },
   {
-    "city": "Villa Uni\u00f3n",
+    "city": "Villa Unión",
     "lat": "28.2167",
     "lng": "-100.7167",
     "country": "Mexico",
@@ -17193,7 +17193,7 @@
     "population_proper": ""
   },
   {
-    "city": "Ray\u00f3n",
+    "city": "Rayón",
     "lat": "29.7170",
     "lng": "-110.5830",
     "country": "Mexico",
@@ -17303,7 +17303,7 @@
     "population_proper": ""
   },
   {
-    "city": "G\u00f3mez Farías",
+    "city": "Gómez Farías",
     "lat": "22.8869",
     "lng": "-99.0258",
     "country": "Mexico",
@@ -17336,7 +17336,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Jer\u00f3nimo Taviche",
+    "city": "San Jerónimo Taviche",
     "lat": "16.7147",
     "lng": "-96.5936",
     "country": "Mexico",
@@ -17369,7 +17369,7 @@
     "population_proper": ""
   },
   {
-    "city": "El Lim\u00f3n",
+    "city": "El Limón",
     "lat": "19.8255",
     "lng": "-104.1563",
     "country": "Mexico",
@@ -17732,7 +17732,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Jer\u00f3nimo Tlacochahuaya",
+    "city": "San Jerónimo Tlacochahuaya",
     "lat": "17.0087",
     "lng": "-96.5827",
     "country": "Mexico",
@@ -17787,7 +17787,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Juan Coatz\u00f3spam",
+    "city": "San Juan Coatzóspam",
     "lat": "18.0494",
     "lng": "-96.7635",
     "country": "Mexico",
@@ -17875,7 +17875,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Crist\u00f3bal Lachirioag",
+    "city": "San Cristóbal Lachirioag",
     "lat": "17.3358",
     "lng": "-96.1650",
     "country": "Mexico",
@@ -18078,7 +18078,7 @@
     "lng": "-99.7723",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -18133,7 +18133,7 @@
     "lng": "-99.6833",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -18161,7 +18161,7 @@
     "population_proper": ""
   },
   {
-    "city": "Zontecomatlán de L\u00f3pez y Fuentes",
+    "city": "Zontecomatlán de López y Fuentes",
     "lat": "20.7624",
     "lng": "-98.3432",
     "country": "Mexico",
@@ -18238,7 +18238,7 @@
     "population_proper": ""
   },
   {
-    "city": "Asunci\u00f3n Ocotlán",
+    "city": "Asunción Ocotlán",
     "lat": "16.7619",
     "lng": "-96.7214",
     "country": "Mexico",
@@ -18755,7 +18755,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Jer\u00f3nimo Coatlán",
+    "city": "San Jerónimo Coatlán",
     "lat": "16.2321",
     "lng": "-96.8705",
     "country": "Mexico",
@@ -18815,7 +18815,7 @@
     "lng": "-100.4251",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -18980,7 +18980,7 @@
     "lng": "-99.9874",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -19079,7 +19079,7 @@
     "lng": "-99.5333",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -19233,7 +19233,7 @@
     "lng": "-100.1173",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -19365,7 +19365,7 @@
     "lng": "-99.6167",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -19431,7 +19431,7 @@
     "lng": "-99.4850",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -19602,7 +19602,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Pedro Ap\u00f3stol",
+    "city": "San Pedro Apóstol",
     "lat": "16.7370",
     "lng": "-96.7247",
     "country": "Mexico",
@@ -19679,7 +19679,7 @@
     "population_proper": ""
   },
   {
-    "city": "San José del Rinc\u00f3n Centro",
+    "city": "San José del Rincón Centro",
     "lat": "19.6622",
     "lng": "-100.1531",
     "country": "Mexico",
@@ -19761,7 +19761,7 @@
     "lng": "-99.4048",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -19866,7 +19866,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Pedro Y\u00f3lox",
+    "city": "San Pedro Yólox",
     "lat": "17.5891",
     "lng": "-96.5523",
     "country": "Mexico",
@@ -19932,7 +19932,7 @@
     "population_proper": ""
   },
   {
-    "city": "Santa María la Asunci\u00f3n",
+    "city": "Santa María la Asunción",
     "lat": "18.1077",
     "lng": "-96.8138",
     "country": "Mexico",
@@ -19987,7 +19987,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Jer\u00f3nimo Tec\u00f3atl",
+    "city": "San Jerónimo Tecóatl",
     "lat": "18.1663",
     "lng": "-96.9126",
     "country": "Mexico",
@@ -20361,7 +20361,7 @@
     "population_proper": ""
   },
   {
-    "city": "Eloxochitlán de Flores Mag\u00f3n",
+    "city": "Eloxochitlán de Flores Magón",
     "lat": "18.1772",
     "lng": "-96.8754",
     "country": "Mexico",
@@ -20383,7 +20383,7 @@
     "population_proper": ""
   },
   {
-    "city": "Asunci\u00f3n Tlacolulita",
+    "city": "Asunción Tlacolulita",
     "lat": "16.2994",
     "lng": "-95.7267",
     "country": "Mexico",
@@ -20454,7 +20454,7 @@
     "lng": "-99.9441",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -20526,7 +20526,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Jer\u00f3nimo Xayacatlán",
+    "city": "San Jerónimo Xayacatlán",
     "lat": "18.2203",
     "lng": "-97.9129",
     "country": "Mexico",
@@ -20553,7 +20553,7 @@
     "lng": "-100.0152",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -20570,7 +20570,7 @@
     "population_proper": ""
   },
   {
-    "city": "Polotitlán de la Ilustraci\u00f3n",
+    "city": "Polotitlán de la Ilustración",
     "lat": "20.2253",
     "lng": "-99.8154",
     "country": "Mexico",
@@ -20927,13 +20927,13 @@
     "lng": "-99.5216",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
   },
   {
-    "city": "Santiago Nuyo\u00f3",
+    "city": "Santiago Nuyoó",
     "lat": "17.0145",
     "lng": "-97.7666",
     "country": "Mexico",
@@ -20993,7 +20993,7 @@
     "lng": "-99.8181",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -21059,7 +21059,7 @@
     "lng": "-99.5438",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -21136,7 +21136,7 @@
     "lng": "-99.1956",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -21356,7 +21356,7 @@
     "lng": "-100.0732",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -21400,7 +21400,7 @@
     "lng": "-99.1667",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Nuevo Le\u00f3n",
+    "admin_name": "Nuevo León",
     "capital": "minor",
     "population": "",
     "population_proper": ""
@@ -21494,7 +21494,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Sim\u00f3n Almolongas",
+    "city": "San Simón Almolongas",
     "lat": "16.4066",
     "lng": "-96.7193",
     "country": "Mexico",
@@ -21505,7 +21505,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Crist\u00f3bal Amoltepec",
+    "city": "San Cristóbal Amoltepec",
     "lat": "17.2843",
     "lng": "-97.5722",
     "country": "Mexico",
@@ -21857,7 +21857,7 @@
     "population_proper": ""
   },
   {
-    "city": "San Jer\u00f3nimo Sosola",
+    "city": "San Jerónimo Sosola",
     "lat": "17.3668",
     "lng": "-97.0329",
     "country": "Mexico",
