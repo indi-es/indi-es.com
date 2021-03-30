@@ -76,8 +76,14 @@
 }
 
 @media screen and (max-width: 900px) {
-  .actions-view {
+  .header {
     flex-flow: column;
+    align-items: flex-end;
+  }
+
+  .header > *:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: var(--margin-02);
   }
 
   .button {

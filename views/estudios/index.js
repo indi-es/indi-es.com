@@ -29,12 +29,14 @@ function Estudios({ data }) {
   return (
     <Page className={style.page}>
       <div className={`${style.wrapper}`}>
-        <EstudiosHeader isMap={isMap} isStats={isStats} isTable={isTable} />
-        {isStats ? <StudiosStats studios={developers} /> : null}
-        {isMap ? <StudiosMap studios={developers} /> : null}
-        {isTable ? (
-          <StudiosTable studios={developers} className={style.table} />
-        ) : null}
+        <div className={style.content}>
+          <EstudiosHeader isMap={isMap} isStats={isStats} isTable={isTable} />
+          {isStats ? <StudiosStats studios={developers} /> : null}
+          {isMap ? <StudiosMap studios={developers} /> : null}
+          {isTable ? (
+            <StudiosTable studios={developers} className={style.table} />
+          ) : null}
+        </div>
         <EstudiosResources />
       </div>
     </Page>
