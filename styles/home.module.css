@@ -34,3 +34,6 @@
 .nav li:not(:last-child) {
   margin-right: var(--margin-02);
 }
+
+.nav-routes {
+}

@@ -12,7 +12,7 @@ export default function Home() {
       <div className={`${style.wrapper}`}>
         <img className={style.logo} src="/icon.png" alt="INDI·ES" />
         <nav className={style.nav}>
-          <ul>
+          <ul className={style['nav-routes']}>
             <li>
               <a
                 rel="noopener noreferrer"
