@@ -54,11 +54,6 @@ const Page = ({ header, footer, children, className, ...rest }) => {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       {header ? <Header /> : null}
       <main>{children}</main>
