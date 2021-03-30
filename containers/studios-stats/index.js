@@ -9,11 +9,15 @@ import style from './style.module.css';
 function byCity(items) {
   const grouped = items
     .filter((item) => item.city !== '')
-    .reduce((acc, curr) => {
-      if (!acc[curr.city]) acc[curr.city] = 0;
-      acc[curr.city] += 1;
-      return acc;
-    }, {});
+    .reduce(
+      (acc, curr) => {
+        if (!acc[curr.city]) acc[curr.city] = 0;
+        acc[curr.city] += 1;
+        acc.total += 1;
+        return acc;
+      },
+      { total: 0 }
+    );
 
   return grouped;
 }
@@ -27,12 +31,16 @@ function getByState(items) {
       return acc;
     }, {});
 
-  const t = Object.entries(grouped).map((entry) => {
-    return {
-      state: entry[0],
-      ...byCity(entry[1]),
-    };
-  });
+  const t = Object.entries(grouped)
+    .map((entry) => {
+      return {
+        state: entry[0],
+        ...byCity(entry[1]),
+      };
+    })
+    .sort((a, b) => {
+      return b.total - a.total;
+    });
   return t;
 }
 
