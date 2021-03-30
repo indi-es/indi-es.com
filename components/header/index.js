@@ -38,6 +38,15 @@ export default function Header() {
                 Newsletter
               </a>
             </li>
+            <li>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.joinclubhouse.com/club/indies"
+              >
+                Clubhouse
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
