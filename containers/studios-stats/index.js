@@ -39,7 +39,7 @@ function getByState(items) {
       };
     })
     .sort((a, b) => {
-      return b.total - a.total;
+      return a.total - b.total;
     });
   return t;
 }
@@ -70,11 +70,12 @@ function StudiosStats({ studios, className }) {
           keys={keys}
           indexBy="state"
           colors={['#f33bb6', '#aee73c']}
+          layout="horizontal"
           axisBottom={{
             tickSize: 4,
             tickPadding: 4,
             tickRotation: 0,
-            legend: 'Ciudad',
+            legend: 'Número de estudios',
             legendPosition: 'middle',
             legendOffset: 32,
           }}
@@ -82,7 +83,6 @@ function StudiosStats({ studios, className }) {
             tickSize: 4,
             tickPadding: 4,
             tickRotation: 0,
-            legend: 'Número de estudios',
             legendPosition: 'middle',
             legendOffset: -40,
           }}
