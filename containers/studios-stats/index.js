@@ -77,14 +77,14 @@ function StudiosStats({ studios, className }) {
             tickRotation: 0,
             legend: 'Número de estudios',
             legendPosition: 'middle',
-            legendOffset: 32,
+            legendOffset: 40,
           }}
           axisLeft={{
             tickSize: 4,
             tickPadding: 4,
             tickRotation: 0,
             legendPosition: 'middle',
-            legendOffset: -40,
+            legendOffset: 32,
           }}
         />
       </section>

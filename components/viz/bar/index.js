@@ -5,7 +5,7 @@ import { ResponsiveBar } from '@nivo/bar';
 function Bar(props) {
   return (
     <ResponsiveBar
-      margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+      margin={{ top: 0, left: 100, bottom: 50, right: 0 }}
       padding={0.3}
       valueScale={{ type: 'linear' }}
       indexScale={{ type: 'band', round: true }}
