@@ -10,7 +10,7 @@ function EstudiosHeader({ isTable, isMap, isStats }) {
     <header className={style.header}>
       <a
         className={style.support}
-        href="https://github.com/indi-es/estudios"
+        href="https://github.com/indi-es/estudios/blob/main/contributing.md"
         target="__blank"
       >
         Puedes aportar a la lista de estudios en Github

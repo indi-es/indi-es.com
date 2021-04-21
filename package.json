@@ -16,6 +16,7 @@
     "@nivo/bar": "^0.67.0",
     "@nivo/core": "^0.67.0",
     "@nivo/geo": "^0.67.0",
+    "@reach/tooltip": "^0.15.0",
     "classnames": "^2.2.6",
     "leaflet": "^1.7.1",
     "modern-css-reset": "^1.4.0",

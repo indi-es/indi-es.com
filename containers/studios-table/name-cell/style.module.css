@@ -1,0 +1,19 @@
+.name-cell {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.name-cell > *:not(:last-child) {
+  margin-right: var(--margin-01);
+}
+
+.inactive-indicator {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: help;
+  color: var(--hl-01);
+}

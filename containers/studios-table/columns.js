@@ -1,11 +1,19 @@
 import React from 'react';
-import { FbCell, IgCell, TwCell, WebCell } from 'components/cells';
+import { TypeCell, FbCell, IgCell, TwCell, WebCell } from 'components/cells';
 import { HeaderCenter } from 'components/table-headers';
+
+import NameCell from './name-cell';
 
 const columns = [
   {
     Header: 'Name',
     accessor: 'name',
+    Cell: NameCell,
+  },
+  {
+    Header: 'Tipo',
+    accessor: 'type',
+    Cell: TypeCell,
   },
   {
     Header: 'Ciudad',
@@ -18,6 +26,12 @@ const columns = [
   // {
   //   Header: 'Country',
   //   accessor: 'country',
+  // },
+  // {
+  //   Header: 'Tags',
+  //   accessor: 'tags',
+  //   disableSortBy: true,
+  //   Cell: TagsCell,
   // },
   {
     Header: () => <HeaderCenter label="Web" />,
