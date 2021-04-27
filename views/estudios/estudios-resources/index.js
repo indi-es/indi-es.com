@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Markdown from 'components/markdown';
 
 import style from './style.module.css';

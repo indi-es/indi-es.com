@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import React, { Children } from 'react';
+import { cloneElement, Children } from 'react';
 
 const NavLink = ({ children, activeClassName, exact, ...rest }) => {
   const { asPath, pathName } = useRouter();
@@ -21,7 +21,7 @@ const NavLink = ({ children, activeClassName, exact, ...rest }) => {
 
   return (
     <Link {...rest}>
-      {React.cloneElement(child, {
+      {cloneElement(child, {
         className: className || null,
       })}
     </Link>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { FbCell, IgCell, TwCell, WebCell } from 'components/cells';
 import { HeaderCenter } from 'components/table-headers';
 

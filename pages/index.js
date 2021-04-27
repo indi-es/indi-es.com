@@ -1,5 +1,4 @@
 /* eslint filenames/match-exported: 0 */
-import React from 'react';
 import Link from 'next/link';
 
 import { Page } from 'components/layouts';

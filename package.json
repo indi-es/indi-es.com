@@ -10,47 +10,43 @@
     "lint:fix": "eslint --fix './**/*.js'",
     "lint:format": "prettier --write --ignore-unknown ./**/*",
     "lint:css": "stylelint './**/*.css'",
-    "lint:css:fix": "stylelint --fix './**/*.css'"
+    "lint:css:fix": "stylelint --fix './**/*.css'",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "@nivo/bar": "^0.67.0",
-    "@nivo/core": "^0.67.0",
-    "@nivo/geo": "^0.67.0",
+    "@nivo/bar": "^0.68.0",
+    "@nivo/core": "^0.68.0",
+    "@nivo/geo": "^0.68.0",
     "@reach/tooltip": "^0.15.0",
-    "classnames": "^2.2.6",
+    "classnames": "^2.3.1",
     "leaflet": "^1.7.1",
     "modern-css-reset": "^1.4.0",
-    "next": "10.0.6",
+    "next": "10.1.3",
     "prop-types": "^15.7.2",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "react-leaflet": "^3.1.0",
-    "react-markdown": "^5.0.3",
-    "react-table": "^7.6.3"
+    "react-markdown": "^6.0.1",
+    "react-table": "^7.7.0"
   },
   "devDependencies": {
-    "eslint": "^7.19.0",
+    "eslint": "^7.25.0",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": ">=4",
-    "lint-staged": ">=10",
+    "husky": "^6.0.0",
+    "lint-staged": ">=10.5.4",
     "prettier": "^2.2.1",
-    "stylelint": "^13.9.0",
+    "stylelint": "^13.13.0",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-prettier": "^1.1.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-prettier": "^1.2.0"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import L from 'leaflet';
@@ -17,7 +17,7 @@ const Map = ({ children, className, center, zoom, ...rest }) => {
     className
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     // eslint-disable-next-line no-underscore-dangle
     delete L.Icon.Default.prototype._getIconUrl;
     L.Icon.Default.mergeOptions({

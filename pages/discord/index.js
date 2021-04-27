@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Page } from 'components/layouts';
 
 import style from './style.module.css';

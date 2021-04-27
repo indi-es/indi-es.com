@@ -1,4 +1,3 @@
-import React from 'react';
 import { ResponsiveGeoMap } from '@nivo/geo';
 
 const Map = () => (

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -16,8 +16,8 @@ function StudiosStats({ studios, className }) {
     className
   );
 
-  const byState = React.useMemo(() => getByState(studios, 'state'), [studios]);
-  const keys = React.useMemo(() => getCities(studios), [studios]);
+  const byState = useMemo(() => getByState(studios, 'state'), [studios]);
+  const keys = useMemo(() => getCities(studios), [studios]);
 
   return (
     <div className={customClassName}>

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useMap, useMapEvents, Marker, Popup } from 'react-leaflet';
 import classNames from 'classnames';
@@ -29,7 +29,7 @@ function Locate() {
       map.flyTo(e.latlng, 7);
     },
   });
-  React.useEffect(() => {
+  useEffect(() => {
     map.locate();
   }, []);
   return '';

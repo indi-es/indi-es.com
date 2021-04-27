@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { FiGithub, FiMap, FiMenu, FiBarChart2 } from 'react-icons/fi';
 import Link from 'next/link';

@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { FiAlertCircle } from 'react-icons/fi';
 import Tooltip from '@reach/tooltip';
