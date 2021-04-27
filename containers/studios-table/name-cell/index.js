@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { FiAlertCircle } from 'react-icons/fi';
 import Tooltip from '@reach/tooltip';
 
+import Tag from 'components/tag';
+
 import style from './style.module.css';
 
 function getUrl({ website, twitter, facebook, instagram }) {
@@ -26,6 +28,7 @@ const NameCell = ({
     inactive: isInactive,
     last_time_active: lastTimeActive,
     type,
+    tags,
   } = original;
 
   const date = new Date(lastTimeActive);
@@ -47,6 +50,9 @@ const NameCell = ({
           </div>
         </Tooltip>
       ) : null}
+      {tags.map((tag) => (
+        <Tag key={tag}>{tag}</Tag>
+      ))}
     </span>
   );
 };
@@ -59,6 +65,7 @@ NameCell.propTypes = {
         inactive: PropTypes.bool,
         last_time_active: PropTypes.string,
         type: PropTypes.string,
+        tags: PropTypes.arrayOf(PropTypes.string),
       }),
     }),
   }),

@@ -2,9 +2,7 @@
   --flow-space: var(--size-700);
 
   margin: 0;
-  padding: 1.5rem;
+  padding: 0;
   border-radius: var(--margin-01);
   max-width: max-content;
-  width: 90vw;
-  width: clamp(16rem, 90vw, 70rem);
 }

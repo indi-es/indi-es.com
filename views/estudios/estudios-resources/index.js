@@ -16,9 +16,7 @@ Proyectos similares que nos hemos encontrado a lo largo del camino:
 
 function EstudiosResources() {
   return (
-    <Markdown className={`${style['estudios-resources']} wrapper`}>
-      {text}
-    </Markdown>
+    <Markdown className={`${style['estudios-resources']}`}>{text}</Markdown>
   );
 }
 

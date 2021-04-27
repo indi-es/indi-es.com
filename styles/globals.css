@@ -80,20 +80,26 @@ ul:not([class]) {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-gap: 0.8rem;
 }
 
 ul:not([class]) li,
 ol:not([class]) li {
-  display: grid;
-  grid-template-columns: 0 1fr;
-  grid-gap: 1em;
   align-items: start;
 }
 
 ul:not([class]) li::before {
+  content: '·';
+  margin-right: var(--margin-01);
+}
+
+ul:not([class]) ul li::before {
   content: '–';
+  margin-right: var(--margin-01);
+}
+
+ul:not([class]) ul,
+ol:not([class]) ol {
+  padding-left: 1em;
 }
 
 .wrapper {

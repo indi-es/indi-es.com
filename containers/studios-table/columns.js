@@ -1,5 +1,5 @@
 import React from 'react';
-import { TypeCell, FbCell, IgCell, TwCell, WebCell } from 'components/cells';
+import { FbCell, IgCell, TwCell, WebCell } from 'components/cells';
 import { HeaderCenter } from 'components/table-headers';
 
 import NameCell from './name-cell';
@@ -9,11 +9,6 @@ const columns = [
     Header: 'Name',
     accessor: 'name',
     Cell: NameCell,
-  },
-  {
-    Header: 'Tipo',
-    accessor: 'type',
-    Cell: TypeCell,
   },
   {
     Header: 'Ciudad',

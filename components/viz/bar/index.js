@@ -9,13 +9,17 @@ function Bar(props) {
       padding={0.3}
       valueScale={{ type: 'linear' }}
       indexScale={{ type: 'band', round: true }}
-      borderColor={{ from: 'color', modifiers: [['darker', 10]] }}
       labelSkipWidth={12}
       labelSkipHeight={12}
-      labelTextColor={{ from: 'color', modifiers: [['darker', 10]] }}
+      labelTextColor="var(--bg)"
+      borderColor="var(--bg)"
       motionStiffness={90}
       motionDamping={15}
       animate
+      theme={{
+        background: 'var(--bg)',
+        textColor: 'var(--fg)',
+      }}
       {...props}
     />
   );

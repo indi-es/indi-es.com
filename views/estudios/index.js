@@ -30,7 +30,12 @@ function Estudios({ data }) {
     <Page className={style.page}>
       <div className={`${style.wrapper}`}>
         <div className={style.content}>
-          <EstudiosHeader isMap={isMap} isStats={isStats} isTable={isTable} />
+          <EstudiosHeader
+            isMap={isMap}
+            isStats={isStats}
+            isTable={isTable}
+            total={developers.length}
+          />
           {isStats ? <StudiosStats studios={developers} /> : null}
           {isMap ? <StudiosMap studios={developers} /> : null}
           {isTable ? (

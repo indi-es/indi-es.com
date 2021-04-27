@@ -2,55 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import RichText from 'components/rich-text';
 import { Bar } from 'components/viz';
 
+import { getByState, getCities } from './utils';
+
 import style from './style.module.css';
-
-function byCity(items) {
-  const grouped = items
-    .filter((item) => item.city !== '')
-    .reduce(
-      (acc, curr) => {
-        if (!acc[curr.city]) acc[curr.city] = 0;
-        acc[curr.city] += 1;
-        acc.total += 1;
-        return acc;
-      },
-      { total: 0 }
-    );
-
-  return grouped;
-}
-
-function getByState(items) {
-  const grouped = items
-    .filter((item) => item.state !== '')
-    .reduce((acc, curr) => {
-      if (!acc[curr.state]) acc[curr.state] = [];
-      acc[curr.state].push(curr);
-      return acc;
-    }, {});
-
-  const t = Object.entries(grouped)
-    .map((entry) => {
-      return {
-        state: entry[0],
-        ...byCity(entry[1]),
-      };
-    })
-    .sort((a, b) => {
-      return a.total - b.total;
-    });
-  return t;
-}
-
-function getCities(items) {
-  return [
-    ...new Set(
-      items.filter((item) => item.city !== '').map(({ city }) => city)
-    ),
-  ];
-}
 
 function StudiosStats({ studios, className }) {
   const customClassName = classNames(
@@ -66,11 +23,16 @@ function StudiosStats({ studios, className }) {
     <div className={customClassName}>
       <section>
         <Bar
-          data={byState}
+          data={byState.map((item) => ({
+            state: item.state,
+            total: item.total,
+            ...item.cities,
+          }))}
           keys={keys}
           indexBy="state"
-          colors={['#f33bb6', '#aee73c']}
+          colors={['var(--fg)']}
           layout="horizontal"
+          borderWidth={2}
           axisBottom={{
             tickSize: 4,
             tickPadding: 4,
@@ -88,9 +50,33 @@ function StudiosStats({ studios, className }) {
           }}
         />
       </section>
-      {/* <section> */}
-      {/*   <Map /> */}
-      {/* </section> */}
+
+      <details>
+        <summary>Detalles</summary>
+        <RichText className={`${style['stats-info']}`}>
+          <ul>
+            {byState.map((item) => {
+              const cities = Object.entries(item.cities);
+              const hasCities = cities[0][0] !== item.state;
+              return (
+                <li>
+                  <span>
+                    {item.state}: {item.total}
+                  </span>
+                  {hasCities ? (
+                    <ul>
+                      {cities.map(([city, total]) => {
+                        const text = `${city}: ${total}`;
+                        return <li>{text}</li>;
+                      })}
+                    </ul>
+                  ) : null}
+                </li>
+              );
+            })}
+          </ul>
+        </RichText>
+      </details>
     </div>
   );
 }

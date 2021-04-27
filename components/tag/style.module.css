@@ -1,5 +1,11 @@
 .tag {
   display: inline-block;
-  border-radius: var(--margin-01);
+  border-radius: var(--margin-02);
   text-decoration: none;
+  background: var(--fg);
+  color: var(--bg);
+  padding: var(--margin-q) var(--margin-01);
+  font-size: 0.8rem;
+  line-height: 1em;
+  overflow: hidden;
 }

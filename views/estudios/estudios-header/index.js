@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import style from './style.module.css';
 
-function EstudiosHeader({ isTable, isMap, isStats }) {
+function EstudiosHeader({ isTable, isMap, isStats, total }) {
   return (
     <header className={style.header}>
       <a
@@ -16,6 +16,11 @@ function EstudiosHeader({ isTable, isMap, isStats }) {
         Puedes aportar a la lista de estudios en Github
         <FiGithub />
       </a>
+
+      <div className={style.info}>
+        <span>{total} Estudios</span>
+      </div>
+
       <div className={style['actions-view']}>
         <Link href="/estudios?vista=tabla">
           <a className={`${style.button} ${isTable ? style['-active'] : null}`}>
@@ -41,12 +46,14 @@ EstudiosHeader.propTypes = {
   isTable: PropTypes.bool,
   isMap: PropTypes.bool,
   isStats: PropTypes.bool,
+  total: PropTypes.number,
 };
 
 EstudiosHeader.defaultProps = {
   isTable: true,
   isMap: false,
   isStats: false,
+  total: 0,
 };
 
 export default EstudiosHeader;
