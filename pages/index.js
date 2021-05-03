@@ -25,6 +25,9 @@ export default function Home() {
               <Link href="/estudios">Estudios</Link>
             </li>
             <li>
+              <Link href="/recursos">Recursos</Link>
+            </li>
+            <li>
               <a
                 rel="noopener noreferrer"
                 target="_blank"

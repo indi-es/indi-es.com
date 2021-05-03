@@ -1,7 +1,4 @@
 .wrapper {
-  max-width: var(--max-width-wraper);
-  margin: auto;
-  padding: 0 var(--margin-02);
   padding-bottom: var(--margin-04);
 }
 

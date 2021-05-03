@@ -27,7 +27,7 @@ function Estudios({ data }) {
 
   return (
     <Page className={style.page}>
-      <div className={`${style.wrapper}`}>
+      <div className={`${style.wrapper} wrapper`}>
         <div className={style.content}>
           <EstudiosHeader
             isMap={isMap}

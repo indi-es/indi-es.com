@@ -1,0 +1,24 @@
+.button {
+  display: block;
+  text-align: center;
+  max-width: 50ch;
+  border: 2px solid var(--hl-02);
+  padding: var(--margin-h) var(--margin-01);
+  border-radius: var(--margin-01);
+  text-decoration: none;
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.button:hover {
+  color: var(--bg);
+  border-color: var(--hl-01);
+}
+
+.button svg {
+  transform: translate(0, 3px);
+}
+
+.button > *:not(:last-child) {
+  margin-right: var(--margin-01);
+}

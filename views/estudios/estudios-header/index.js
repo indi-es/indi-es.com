@@ -2,19 +2,20 @@ import PropTypes from 'prop-types';
 import { FiGithub, FiMap, FiMenu, FiBarChart2 } from 'react-icons/fi';
 import Link from 'next/link';
 
+import Button from 'components/button';
+
 import style from './style.module.css';
 
 function EstudiosHeader({ isTable, isMap, isStats, total }) {
   return (
     <header className={style.header}>
-      <a
+      <Button
         className={style.support}
         href="https://github.com/indi-es/estudios/blob/main/CONTRIBUTING.md"
-        target="__blank"
       >
-        Puedes aportar a la lista de estudios en Github
+        <span>Puedes aportar a la lista de estudios en Github</span>
         <FiGithub />
-      </a>
+      </Button>
 
       <div className={style.info}>
         <span>{total} Estudios</span>

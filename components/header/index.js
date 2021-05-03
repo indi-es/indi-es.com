@@ -6,7 +6,7 @@ import style from './style.module.css';
 export default function Header() {
   return (
     <header id="header" className={style.header}>
-      <div className={`${style.wrapper}`}>
+      <div className={`${style.wrapper} wrapper`}>
         <Link href="/">
           <a className={style['logo-wrapper']}>
             <img className={style.logo} src="/icon.png" alt="INDI·ES" />
@@ -15,11 +15,6 @@ export default function Header() {
         <nav className={style['nav-container']}>
           <ul className={style['nav-routes']}>
             <li>
-              <NavLink href="/estudios" activeClassName="-active">
-                <a>Estudios</a>
-              </NavLink>
-            </li>
-            <li>
               <a
                 rel="noopener noreferrer"
                 target="_blank"
@@ -27,6 +22,16 @@ export default function Header() {
               >
                 Discord
               </a>
+            </li>
+            <li>
+              <NavLink href="/estudios" activeClassName="-active" exact>
+                <a>Estudios</a>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink href="/recursos" activeClassName="-active" exact>
+                <a>Recursos</a>
+              </NavLink>
             </li>
             <li>
               <a

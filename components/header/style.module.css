@@ -7,9 +7,6 @@
 }
 
 .wrapper {
-  max-width: var(--max-width-wraper);
-  margin: auto;
-  padding: 0 var(--margin-02);
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -31,16 +28,18 @@
 
 .nav-routes {
   padding: 0;
+  margin: 0;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: flex-end;
   list-style: none;
   font-weight: bold;
+  gap: var(--margin-02);
 }
 
 .nav-routes > *:not(:last-child) {
-  margin-right: var(--margin-02);
+  /* margin-right: var(--margin-02); */
 }
 
 .nav-routes a {
@@ -51,5 +50,10 @@
 @media screen and (max-width: 900px) {
   .wrapper {
     flex-flow: column;
+  }
+
+  .nav-routes {
+    gap: var(--margin-01);
+    margin-bottom: var(--margin-02);
   }
 }

@@ -1,4 +1,6 @@
 .rich-text-container {
+  --flow-space: var(--size-500);
+
   font-family: var(--font-serif);
   line-height: 1.5;
 }
@@ -9,11 +11,11 @@
 
 @media (min-width: 45em) {
   .rich-text-container h1 {
-    font-size: var(--size-900);
+    font-size: var(--size-800);
   }
 
   .rich-text-container h2 {
-    font-size: var(--size-700);
+    font-size: var(--size-600);
   }
 
   .rich-text-container p,
