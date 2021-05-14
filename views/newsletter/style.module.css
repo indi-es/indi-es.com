@@ -1,0 +1,26 @@
+.newsletter-wrapper {
+  margin: auto;
+  padding: var(--margin-04);
+  font-variant-numeric: tabular-nums;
+}
+
+.newsletter-info {
+  margin-bottom: var(--margin-02);
+}
+
+.newsletter-header {
+  margin-bottom: var(--margin-02);
+}
+
+.newsletter-section:not(:last-child) {
+  margin-bottom: var(--margin-04);
+}
+
+.newsletter-section-header {
+  margin-bottom: var(--margin-01);
+}
+
+.newsletter-section-title {
+  font-family: var(--font-sans);
+  text-transform: capitalize;
+}

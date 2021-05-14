@@ -1,0 +1,8 @@
+.newsletter-item:not(:last-child) {
+  margin-bottom: var(--margin-01);
+}
+
+.newsletter-item-title {
+  font-family: var(--font-sans);
+  font-weight: normal;
+}
