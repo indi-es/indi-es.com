@@ -8,8 +8,6 @@ import Button from 'components/button';
 import style from './style.module.css';
 
 function Recursos({ data }) {
-  console.log(data);
-
   return (
     <Page className={style.page}>
       <div className={`${style.wrapper} wrapper`}>

@@ -34,13 +34,7 @@ export default function Header() {
               </NavLink>
             </li>
             <li>
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://www.notion.so/indies/820b50fe5398486cbd062603c3f4529b?v=17f8d19621604b75bb1845f420b213db"
-              >
-                Newsletter
-              </a>
+              <Link href="/newsletter">Newsletter</Link>
             </li>
             <li>
               <a

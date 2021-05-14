@@ -1,4 +1,5 @@
 import Markdown from 'components/markdown';
+import Callout from 'components/callout';
 
 import style from './style.module.css';
 
@@ -14,7 +15,9 @@ Proyectos similares que nos hemos encontrado a lo largo del camino:
 
 function EstudiosResources() {
   return (
-    <Markdown className={`${style['estudios-resources']}`}>{text}</Markdown>
+    <Callout>
+      <Markdown className={`${style['estudios-resources']}`}>{text}</Markdown>
+    </Callout>
   );
 }
 
