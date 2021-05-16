@@ -3,6 +3,6 @@
   background: var(--bg-alt);
   border-radius: var(--margin-01);
   border: 1px solid var(--fg-alt);
-  width: min-content;
-  min-width: 600px;
+  display: inline-block;
+  max-width: 550px;
 }
