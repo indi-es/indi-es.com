@@ -4,7 +4,7 @@ import { Client } from '@notionhq/client';
 import NewsletterView from 'views/newsletter';
 
 const notion = new Client({
-  auth: 'secret_LtWkk9b8FAwBgbjI9rE82cXwQnlUvZpBuCl0ZDpFJRV',
+  auth: process.env.NOTION_SECRET,
 });
 
 function Newsletter(props) {

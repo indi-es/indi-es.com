@@ -35,5 +35,11 @@
   margin-right: var(--margin-02);
 }
 
-.nav-routes {
+.events-list {
+  max-width: 700px;
+  margin-top: var(--margin-04);
+}
+
+.events-list > *:not(:last-child) {
+  margin-bottom: var(--margin-02);
 }

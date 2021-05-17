@@ -102,6 +102,10 @@ ol:not([class]) ol {
   padding-left: 1em;
 }
 
+time {
+  font-variant-numeric: tabular-nums;
+}
+
 .wrapper {
   width: 90vw;
   width: clamp(16rem, var(--max-width-wrapper), 70rem);

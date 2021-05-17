@@ -3,12 +3,33 @@ import classNames from 'classnames';
 
 import style from './style.module.css';
 
-function Button({ href, children, className }) {
-  const customClassName = classNames(style.button, 'button', className);
+function getBaseButton(href) {
+  if (href)
+    // eslint-disable-next-line react/prop-types
+    return ({ children, ...rest }) => {
+      return (
+        <a href={href} rel="noopener noreferrer" target="_blank" {...rest}>
+          {children}
+        </a>
+      );
+    };
+
+  return (props) => <button type="button" {...props} />;
+}
+
+function Button({ href, children, className, ...rest }) {
+  const BaseButton = getBaseButton(href);
+
+  const customClassName = classNames(className, style.button, 'button');
   return (
-    <a className={customClassName} href={href} target="__blank">
+    <BaseButton
+      className={customClassName}
+      href={href}
+      target="__blank"
+      {...rest}
+    >
       {children}
-    </a>
+    </BaseButton>
   );
 }
 
