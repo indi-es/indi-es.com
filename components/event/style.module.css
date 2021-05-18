@@ -28,12 +28,10 @@
 
 .event-subheader {
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-}
-
-.event-content {
+  gap: var(--margin-01);
 }
 
 .event-media {
@@ -68,4 +66,18 @@
 
 .event-dates {
   display: inherit;
+  display: flex;
+  flex-flow: row;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 700px) {
+  .event {
+    grid-template-columns: 1fr;
+  }
+
+  .event-media {
+    border-right: 0;
+    border-bottom: var(--border-width) solid var(--hl-02);
+  }
 }

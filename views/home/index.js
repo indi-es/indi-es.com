@@ -53,7 +53,7 @@ function Home({ events }) {
   const newEvents = getNewEvents(parseEvents(events));
   return (
     <Page className={style.page} header={false}>
-      <div className={`${style.wrapper}`}>
+      <div className={`${style['home-wrapper']} wrapper`}>
         <img className={style.logo} src="/icon.png" alt="INDI·ES" />
         <nav className={style.nav}>
           <ul className={style['nav-routes']}>
@@ -89,7 +89,7 @@ function Home({ events }) {
         {newEvents.length > 0 ? (
           <section className={style['events-list']}>
             {newEvents.map((event) => {
-              return <Event {...event} />;
+              return <Event {...event} key={event.title} />;
             })}
           </section>
         ) : null}

@@ -7,7 +7,7 @@
   justify-content: center;
 }
 
-.wrapper {
+.home-wrapper {
   flex: 1 0 auto;
   width: 100%;
   display: flex;
@@ -17,25 +17,24 @@
 }
 
 .logo {
+  width: 100%;
   cursor: pointer;
   max-width: 200px;
   margin-bottom: var(--margin-02);
 }
 
-.nav ul {
+.nav-routes {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   align-items: center;
-}
-
-.nav li:not(:last-child) {
-  margin-right: var(--margin-02);
+  gap: var(--margin-02);
 }
 
 .events-list {
+  width: 100%;
   max-width: 700px;
   margin-top: var(--margin-04);
 }
