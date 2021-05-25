@@ -52,9 +52,13 @@ function Event({ title, channel, description, guest, startDate, endDate }) {
                 icalendar.download();
               }}
             >
-              <time>{parseAndFormatDate(startDate, OPTIONS_HOUR_MINUTE)} </time>
-              {' - '}
-              <time>{parseAndFormatDate(endDate, OPTIONS_HOUR_MINUTE)} </time>
+              <span>
+                <time>
+                  {parseAndFormatDate(startDate, OPTIONS_HOUR_MINUTE)}{' '}
+                </time>
+                <span>-</span>
+                <time>{parseAndFormatDate(endDate, OPTIONS_HOUR_MINUTE)} </time>
+              </span>
               <time>{parseAndFormatDate(startDate, OPTIONS_DAY_MOTH)} </time>
             </Button>
           </div>

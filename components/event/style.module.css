@@ -50,7 +50,7 @@
   font-weight: bold;
   background: var(--fg);
   color: var(--bg);
-  padding: var(--margin-01) var(--margin-02);
+  padding: var(--margin-h) var(--margin-02);
   border-radius: 0 0 var(--margin-01) 0;
 }
 
