@@ -6,10 +6,16 @@
   overflow: hidden;
   border: var(--border-width) solid var(--border-color);
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 40% minmax(0, 1fr);
+  width: 100%;
+}
+
+.event-content {
+  width: 100%;
 }
 
 .event-header {
+  width: 100%;
   border-bottom: var(--border-width) solid var(--border-color);
   padding: var(--margin-01) var(--margin-02);
 }
@@ -17,8 +23,12 @@
 .event-title {
   font-weight: bold;
   text-transform: uppercase;
-  white-space: nowrap;
   margin-bottom: var(--margin-q);
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .event-title,
