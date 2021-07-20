@@ -35,9 +35,9 @@ export default async function createStudioIssue(req, res) {
   } = req;
 
   const issue = {
-    title: `[DESDE LA WEB] ${values.name}`,
+    title: `Nuevo estudio: ${values.name}`,
     body: `
-## Nuevo estudio gracias a: ${name} - ${email}
+## Gracias a: ${name} - ${email}
 
 \`\`\`json
 ${JSON.stringify(
