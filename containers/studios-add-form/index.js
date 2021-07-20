@@ -19,19 +19,19 @@ import schema from './schema';
 
 import styles from './style.module.css';
 
-const defaultValues = {
-  name: 'Super juegos',
-  city: 'CDMX',
-  state: 'CDMX',
-  web: 'https://ellugar.co',
-};
-
 // const defaultValues = {
-//   name: '',
-//   city: '',
-//   state: '',
-//   web: '',
+//   name: 'Super juegos',
+//   city: 'CDMX',
+//   state: 'CDMX',
+//   web: 'https://ellugar.co',
 // };
+
+const defaultValues = {
+  name: '',
+  city: '',
+  state: '',
+  web: '',
+};
 
 function StudiosAddForm({ items, onSubmit }) {
   const {

@@ -45,7 +45,6 @@ function Entrar({ providers }) {
 
 // http://localhost:3000/entrar?callbackUrl=http://localhost:3000/estudios
 export async function getServerSideProps({ req, res }) {
-  // TODO: Get protocol depending on if it's dev env or not
   const parsed = new URL(getFullUrl(req));
   const session = await getSession({ req });
   const callback = parsed.searchParams.get('callbackUrl');
