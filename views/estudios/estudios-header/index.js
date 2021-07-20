@@ -9,11 +9,8 @@ import style from './style.module.css';
 function EstudiosHeader({ isTable, isMap, isStats, total }) {
   return (
     <header className={style.header}>
-      <Button
-        className={style.support}
-        href="https://github.com/indi-es/estudios/blob/main/CONTRIBUTING.md"
-      >
-        <span>Puedes aportar a la lista de estudios en Github</span>
+      <Button className={style.support} href="/estudios/agregar">
+        <span>Agregar Estudio</span>
         <FiGithub />
       </Button>
 

@@ -1,6 +1,6 @@
 {
   "name": "indi-es.com",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,6 +14,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.6.1",
     "@nivo/bar": "^0.68.0",
     "@nivo/core": "^0.68.0",
     "@nivo/geo": "^0.68.0",
@@ -24,13 +25,16 @@
     "leaflet": "^1.7.1",
     "modern-css-reset": "^1.4.0",
     "next": "10.1.3",
+    "next-auth": "^3.27.3",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-hook-form": "^7.11.1",
     "react-icons": "^4.2.0",
     "react-leaflet": "^3.1.0",
     "react-markdown": "^6.0.1",
-    "react-table": "^7.7.0"
+    "react-table": "^7.7.0",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "eslint": "^7.25.0",

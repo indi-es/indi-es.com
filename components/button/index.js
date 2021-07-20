@@ -8,7 +8,7 @@ function getBaseButton(href) {
     // eslint-disable-next-line react/prop-types
     return ({ children, ...rest }) => {
       return (
-        <a href={href} rel="noopener noreferrer" target="_blank" {...rest}>
+        <a href={href} {...rest}>
           {children}
         </a>
       );
@@ -22,12 +22,7 @@ function Button({ href, children, className, ...rest }) {
 
   const customClassName = classNames(className, style.button, 'button');
   return (
-    <BaseButton
-      className={customClassName}
-      href={href}
-      target="__blank"
-      {...rest}
-    >
+    <BaseButton className={customClassName} href={href} {...rest}>
       {children}
     </BaseButton>
   );

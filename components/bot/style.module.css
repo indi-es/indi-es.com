@@ -1,0 +1,16 @@
+/* .bot { */
+/*   overflow: hidden; */
+/*   padding: var(--margin-01); */
+/*   background: white; */
+/*   display: inline-block; */
+/* } */
+
+.bot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--fg);
+  object-fit: cover;
+  overflow: hidden;
+  shape-outside: circle();
+}

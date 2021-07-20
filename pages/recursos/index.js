@@ -14,6 +14,8 @@ function Recursos({ data }) {
         <Button
           className={style.contribute}
           href="https://github.com/indi-es/enlaces"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <span>Puedes aportar a la lista de enlances en Github</span>
           <FiGithub />

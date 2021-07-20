@@ -1,0 +1,18 @@
+.page main {
+  padding: var(--margin-02);
+  padding-top: var(--margin-04);
+}
+
+.page.-loading main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.page.-loading .spinner {
+  width: 100px;
+  height: 100px;
+  color: var(--bg-alt);
+}

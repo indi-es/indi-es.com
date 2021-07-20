@@ -26,4 +26,5 @@ Estudios.propTypes = {
     ).isRequired,
   }).isRequired,
 };
+
 export default Estudios;

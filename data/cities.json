@@ -5,7 +5,7 @@
     "lng": "-99.1333",
     "country": "Mexico",
     "iso2": "MX",
-    "admin_name": "Ciudad de México",
+    "admin_name": "CDMX",
     "capital": "primary",
     "population": "20996000",
     "population_proper": "8918653"
@@ -352,7 +352,7 @@
     "population_proper": "614453"
   },
   {
-    "city": "Tuxtla",
+    "city": "Tuxtla Gutierrez",
     "lat": "16.7528",
     "lng": "-93.1167",
     "country": "Mexico",

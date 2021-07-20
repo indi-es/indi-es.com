@@ -25,6 +25,15 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/no-array-index-key': 'off',
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        required: {
+          some: ['nesting', 'id'],
+        },
+      },
+    ],
     'react/jsx-filename-extension': [
       1,
       {

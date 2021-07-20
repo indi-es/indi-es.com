@@ -1,0 +1,46 @@
+.page {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.page main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+.success-wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--margin-04);
+}
+
+.success-callout {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--margin-02);
+}
+
+.success-message-wrapper {
+  display: flex;
+  flex-flow: row;
+  gap: var(--margin-04);
+}
+
+.success-button {
+  margin-left: auto;
+  display: block;
+}
+
+.success-bot {
+  flex: 0 0 auto;
+}

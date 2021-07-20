@@ -1,0 +1,34 @@
+.user-card {
+  --border-color: var(--bg-alt);
+
+  display: flex;
+  flex-flow: row;
+  gap: var(--margin-01);
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid var(--border-color);
+  border-radius: var(--margin-01);
+  padding: var(--margin-01) var(--margin-02);
+}
+
+.user-card-info-wrapper {
+  display: flex;
+  flex-flow: row;
+  gap: var(--margin-01);
+}
+
+.user-card-info {
+  display: flex;
+  flex-flow: column;
+  gap: var(--margin-q);
+}
+
+.user-card-info-wrapper img {
+  --border-color: var(--fg);
+
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+}

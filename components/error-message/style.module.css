@@ -1,0 +1,12 @@
+.error-message {
+  --border-color: var(--hl-01);
+
+  width: max-content;
+  border-radius: var(--margin-01);
+  background: var(--hl-01);
+  color: var(--bg);
+  padding: var(--margin-q) var(--margin-01);
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.8em;
+}
