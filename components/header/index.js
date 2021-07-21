@@ -9,7 +9,16 @@ export default function Header() {
       <div className={`${style.wrapper} wrapper`}>
         <Link href="/">
           <a className={style['logo-wrapper']}>
-            <img className={style.logo} src="/icon.png" alt="INDI·ES" />
+            <img
+              className={`${style.logo} ${style['-light']}`}
+              src="/icon.png"
+              alt="INDI·ES"
+            />
+            <img
+              className={`${style.logo} ${style['-dark']}`}
+              src="/icon_inv.png"
+              alt="INDI·ES"
+            />
           </a>
         </Link>
         <nav className={style['nav-container']}>

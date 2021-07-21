@@ -54,7 +54,16 @@ function Home({ events }) {
   return (
     <Page className={style.page} header={false}>
       <div className={`${style['home-wrapper']} wrapper`}>
-        <img className={style.logo} src="/icon.png" alt="INDI·ES" />
+        <img
+          className={`${style.logo} ${style['-light']}`}
+          src="/icon.png"
+          alt="INDI·ES"
+        />
+        <img
+          className={`${style.logo} ${style['-dark']}`}
+          src="/icon_inv.png"
+          alt="INDI·ES"
+        />
         <nav className={style.nav}>
           <ul className={style['nav-routes']}>
             <li>

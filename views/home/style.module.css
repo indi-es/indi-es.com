@@ -23,6 +23,10 @@
   margin-bottom: var(--margin-02);
 }
 
+.logo.-dark {
+  display: none;
+}
+
 .nav-routes {
   margin: 0;
   padding: 0;
@@ -41,4 +45,13 @@
 
 .events-list > *:not(:last-child) {
   margin-bottom: var(--margin-02);
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo.-dark {
+    display: block;
+  }
+  .logo.-light {
+    display: none;
+  }
 }
