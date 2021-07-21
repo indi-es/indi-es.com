@@ -1,12 +1,27 @@
 .error-message {
   --border-color: var(--hl-01);
 
-  width: max-content;
-  border-radius: var(--margin-01);
   background: var(--hl-01);
   color: var(--bg);
+  width: max-content;
+  border-radius: var(--margin-01);
+  border: 2px solid var(--border-color);
   padding: var(--margin-q) var(--margin-01);
   font-weight: bold;
   text-align: center;
   font-size: 0.8em;
+}
+
+.error-message::selection {
+  background: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  .error-message {
+    background: transparent;
+    color: var(--fg);
+  }
+  .error-message::selection {
+    background: var(--hl-01);
+  }
 }

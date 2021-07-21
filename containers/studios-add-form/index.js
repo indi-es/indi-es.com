@@ -58,7 +58,9 @@ function StudiosAddForm({ items, onSubmit }) {
         onSubmit={handleSubmit(handleSubmitForm)}
       >
         <div className={styles['label-wrapper']}>
-          <label htmlFor="name">Nombre del estudio *</label>
+          <label htmlFor="name">
+            Nombre del estudio <strong>*</strong>
+          </label>
           {errors.name?.type === 'required' && (
             <ErrorMessage>Campo requerido</ErrorMessage>
           )}
@@ -72,7 +74,9 @@ function StudiosAddForm({ items, onSubmit }) {
         <div className={styles['studios-add-form-where']}>
           <div className={styles['input-wrapper']}>
             <div className={styles['label-wrapper']}>
-              <label htmlFor="city">Ciudad *</label>
+              <label htmlFor="city">
+                Ciudad <strong>*</strong>
+              </label>
               {errors.city?.type === 'required' && (
                 <ErrorMessage>Campo requerido</ErrorMessage>
               )}
@@ -88,7 +92,9 @@ function StudiosAddForm({ items, onSubmit }) {
 
           <div className={styles['input-wrapper']}>
             <div className={styles['label-wrapper']}>
-              <label htmlFor="state">Estado *</label>
+              <label htmlFor="state">
+                Estado <strong>*</strong>
+              </label>
               {errors.state?.type === 'required' && (
                 <ErrorMessage>Campo requerido</ErrorMessage>
               )}
@@ -104,7 +110,9 @@ function StudiosAddForm({ items, onSubmit }) {
         </div>
 
         <div className={styles['label-wrapper']}>
-          <label htmlFor="web">Página Web *</label>
+          <label htmlFor="web">
+            Página Web <strong>*</strong>
+          </label>
           {errors.web?.type === 'required' && (
             <ErrorMessage>Campo requerido</ErrorMessage>
           )}

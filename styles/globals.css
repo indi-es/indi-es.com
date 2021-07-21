@@ -118,6 +118,10 @@ input:focus {
   border-color: var(--fg-alt);
 }
 
+label strong {
+  color: var(--hl-01);
+}
+
 .wrapper {
   width: 90vw;
   width: clamp(16rem, var(--max-width-wrapper), 70rem);

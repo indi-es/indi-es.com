@@ -4,11 +4,11 @@
   display: flex;
   flex-flow: row;
   gap: var(--margin-01);
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   border: 2px solid var(--border-color);
   border-radius: var(--margin-01);
-  padding: var(--margin-01) var(--margin-02);
+  padding: var(--margin-02) var(--margin-02);
 }
 
 .user-card-info-wrapper {
