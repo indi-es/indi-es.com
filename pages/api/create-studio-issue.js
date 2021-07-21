@@ -11,7 +11,7 @@ const baseURL = `https://api.github.com`;
 const url = `${baseURL}/repos/${repoOwner}/${repoName}/issues`;
 const defaultValues = {
   country: 'México',
-  tags: [],
+  tags: ['from-web'],
   inactive: false,
 };
 
@@ -37,7 +37,7 @@ export default async function createStudioIssue(req, res) {
   const issue = {
     title: `Nuevo estudio: ${values.name}`,
     body: `
-## Gracias a: ${name} - ${email}
+## Gracias a: ${name}${email ? ` - ${email}` : null}
 
 \`\`\`json
 ${JSON.stringify(
