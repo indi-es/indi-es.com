@@ -120,7 +120,11 @@ function StudiosAddForm({ items, onSubmit }) {
             <ErrorMessage>Url inválido</ErrorMessage>
           )}
         </div>
-        <input placeholder="https://superjuegos.com" {...register('web')} />
+        <input
+          placeholder="https://superjuegos.com"
+          type="url"
+          {...register('web')}
+        />
 
         <div className={styles['label-wrapper']}>
           <label htmlFor="twitter">Twitter</label>
@@ -130,6 +134,7 @@ function StudiosAddForm({ items, onSubmit }) {
         </div>
         <input
           placeholder="https://twitter.com/superjuegos"
+          type="url"
           autoComplete="off"
           {...register('twitter')}
         />
@@ -142,6 +147,7 @@ function StudiosAddForm({ items, onSubmit }) {
         </div>
         <input
           placeholder="https://facebook.com/superjuegos"
+          type="url"
           autoComplete="off"
           {...register('facebook')}
         />
@@ -154,6 +160,7 @@ function StudiosAddForm({ items, onSubmit }) {
         </div>
         <input
           placeholder="https://instagram.com/superjuegos"
+          type="url"
           autoComplete="off"
           {...register('instagram')}
         />
