@@ -11,7 +11,7 @@ const baseURL = `https://api.github.com`;
 const url = `${baseURL}/repos/${repoOwner}/${repoName}/issues`;
 const defaultValues = {
   country: 'México',
-  tags: ['from-web'],
+  tags: [],
   inactive: false,
 };
 
