@@ -22,6 +22,11 @@
   text-align: center;
 }
 
+.studios-add-form-results-message::selection {
+  color: var(--bg);
+  background: var(--fg);
+}
+
 .studios-add-form-results li {
   width: 100%;
   max-width: none;
@@ -35,4 +40,10 @@
 
 .studios-add-form-results li:not(:last-child) {
   border-bottom: 2px solid var(--border-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .studios-add-form-results-message {
+    color: var(--bg);
+  }
 }

@@ -106,6 +106,18 @@ time {
   font-variant-numeric: tabular-nums;
 }
 
+input {
+  background: var(--bg);
+  color: var(--fg);
+  border: 2px solid var(--bg-alt);
+  border-radius: var(--margin-01);
+  padding: var(--margin-q) var(--margin-01);
+}
+
+input:focus {
+  border-color: var(--fg-alt);
+}
+
 .wrapper {
   width: 90vw;
   width: clamp(16rem, var(--max-width-wrapper), 70rem);
@@ -114,4 +126,10 @@ time {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   position: relative;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background: var(--hl-01);
+  }
 }
