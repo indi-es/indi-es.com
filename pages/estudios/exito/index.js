@@ -17,7 +17,7 @@ function Exito() {
   const text = `
 ## ¡Gracias!
 
-Alguien del equipo revisara tu contribución y esperamos pronto sea parte de la base de datos, si tienes alguna duda puedes preguntar en nuestro discord o puedes checar la discucción en **[Github](https://github.com/indi-es/estudios)**.
+Alguien del equipo revisara tu contribución y esperamos pronto sea parte de la base de datos, si tienes alguna duda puedes preguntar en nuestro discord o puedes checar la discusión en **[Github](https://github.com/indi-es/estudios)**.
 `;
   return (
     <Page className={style.page}>
