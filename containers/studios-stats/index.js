@@ -59,7 +59,7 @@ function StudiosStats({ studios, className }) {
               const cities = Object.entries(item.cities);
               const hasCities = cities[0][0] !== item.state;
               return (
-                <li>
+                <li key={`${item.state}-${item.total}`}>
                   <span>
                     {item.state}: {item.total}
                   </span>

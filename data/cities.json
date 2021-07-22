@@ -21899,5 +21899,16 @@
     "capital": "minor",
     "population": "",
     "population_proper": ""
+  },
+  {
+    "city": "Ciudad Juárez",
+    "lat": "31.738581",
+    "lng": "-106.487014",
+    "country": "Mexico",
+    "iso2": "MX",
+    "admin_name": "Chihuahua",
+    "capital": "minor",
+    "population": "",
+    "population_proper": ""
   }
 ]

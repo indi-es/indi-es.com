@@ -10,6 +10,10 @@ const columns = [
     Cell: NameCell,
   },
   {
+    Header: 'País',
+    accessor: 'country',
+  },
+  {
     Header: 'Ciudad',
     accessor: 'city',
   },
