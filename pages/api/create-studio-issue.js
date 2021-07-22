@@ -68,12 +68,12 @@ ${JSON.stringify(
     }),
   };
 
-  // console.log(options, url);
-  // return res.status(200).json({ message: 'success' });
   const data = await fetch(url, {
     ...options,
   });
-  const resCode = data.ok ? 200 : data.statusCode;
   const json = await data.json();
-  return res.status(resCode).json(json);
+  return res.status(data.status).json(json);
+
+  // console.log(options, url);
+  // return res.status(200).json({ message: 'Test response' });
 }

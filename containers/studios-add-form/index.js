@@ -9,6 +9,7 @@ import DatalistStates from 'components/datalist-states';
 import ErrorMessage from 'components/error-message';
 import Button from 'components/button';
 import Spinner from 'components/spinner';
+import Markdown from 'components/markdown';
 
 import UserCard from 'containers/user-card';
 import { createGHIssue } from 'utils/github';
@@ -19,36 +20,58 @@ import schema from './schema';
 
 import styles from './style.module.css';
 
-// const defaultValues = {
-//   name: 'Super juegos',
-//   city: 'CDMX',
-//   state: 'CDMX',
-//   website: 'https://ellugar.co',
-// };
+const prod = process.env.NODE_ENV === 'production';
 
-const defaultValues = {
-  name: '',
-  city: '',
-  state: '',
-  website: '',
-};
+const defaultValues = prod
+  ? {
+      name: '',
+      country: 'México',
+      city: '',
+      state: '',
+      website: '',
+    }
+  : {
+      name: 'Probando',
+      country: 'México',
+      city: 'CDMX',
+      state: 'CDMX',
+      website: 'https://ellugar.co',
+    };
 
 function StudiosAddForm({ items, onSubmit }) {
   const {
     register,
     handleSubmit,
     watch,
+    setError,
     formState: { errors },
   } = useForm({ defaultValues, resolver: yupResolver(schema) });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmitForm = async (values) => {
     setIsSubmitting(true);
-    const res = await createGHIssue({ values });
-    onSubmit({ res, values });
+    try {
+      const res = await createGHIssue({ values });
+      onSubmit({ res, values });
+    } catch (e) {
+      console.error(e);
+      setIsSubmitting(false);
+      setError('server', {
+        type: 'server',
+        message: e.message,
+      });
+    }
+
     // setIsSubmitting(false);
   };
   const name = watch('name');
+  const serverError = errors.server
+    ? `
+Algo salió mal, manda un mensaje en el canal de **#www** con un screenshot de esta pantalla en Discord.
+
+\`${errors.server.message}\`
+`
+    : null;
 
   return (
     <div className={`${styles['studios-add-form-wrapper']}`}>
@@ -57,6 +80,13 @@ function StudiosAddForm({ items, onSubmit }) {
         className={styles['studios-add-form']}
         onSubmit={handleSubmit(handleSubmitForm)}
       >
+        {serverError ? (
+          <ErrorMessage className={styles['studios-add-form-server-error']}>
+            <Markdown className={styles['studios-add-form-server-message']}>
+              {serverError}
+            </Markdown>
+          </ErrorMessage>
+        ) : null}
         <div className={styles['label-wrapper']}>
           <label htmlFor="name">
             Nombre del estudio <strong>*</strong>
@@ -69,6 +99,11 @@ function StudiosAddForm({ items, onSubmit }) {
           placeholder="Super Juegos..."
           autoComplete="off"
           {...register('name')}
+        />
+        <input
+          placeholder="México"
+          autoComplete="off"
+          {...register('country')}
         />
 
         <div className={styles['studios-add-form-where']}>

@@ -16,6 +16,17 @@
   flex-flow: column;
   gap: var(--margin-01);
 }
+.studios-add-form-server-error {
+  margin: auto;
+  font-size: 1em;
+  font-weight: normal;
+  margin-bottom: var(--margin-01);
+  text-align: left;
+}
+
+.studios-add-form-server-message {
+  font-family: var(--font-sans);
+}
 
 .studios-add-form input {
   width: 100%;

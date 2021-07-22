@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactMarkdown from 'react-markdown';
 
-import RichText from 'components/rich-text';
-
 import style from './style.module.css';
 
 function Markdown({ children, className }) {
@@ -13,11 +11,7 @@ function Markdown({ children, className }) {
     className
   );
 
-  return (
-    <RichText className={customClassName}>
-      <ReactMarkdown>{children}</ReactMarkdown>
-    </RichText>
-  );
+  return <ReactMarkdown className={customClassName}>{children}</ReactMarkdown>;
 }
 
 Markdown.propTypes = {

@@ -9,14 +9,12 @@ export async function createGHIssue({ values }) {
     body: JSON.stringify({ values }),
   };
 
-  try {
-    const res = await fetch(url, {
-      ...options,
-    });
-    const json = await res.json();
+  const data = await fetch(url, {
+    ...options,
+  });
+  const json = await data.json();
+  if (data.status >= 200 && data.status <= 299) {
     return json;
-  } catch (e) {
-    console.error(e);
-    return e;
   }
+  throw Error(`[${data.status}] ${data.statusText} ${JSON.stringify(json)}`);
 }

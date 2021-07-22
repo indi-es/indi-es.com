@@ -1,6 +1,7 @@
 .error-message {
   --border-color: var(--hl-01);
 
+  max-width: 100%;
   background: var(--hl-01);
   color: var(--bg);
   width: max-content;
@@ -10,6 +11,18 @@
   font-weight: bold;
   text-align: center;
   font-size: 0.8em;
+}
+
+.error-message pre,
+.error-message code {
+  display: block;
+  padding: var(--margin-01);
+  background: var(--bg);
+  color: var(--fg);
+  border-radius: var(--margin-01);
+  border: 2px solid var(--fg);
+  margin-top: var(--margin-01);
+  margin-bottom: var(--margin-01);
 }
 
 .error-message::selection {
