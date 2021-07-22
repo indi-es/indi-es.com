@@ -100,6 +100,14 @@ Algo salió mal, manda un mensaje en el canal de **#www** con un screenshot de e
           autoComplete="off"
           {...register('name')}
         />
+        <div className={styles['label-wrapper']}>
+          <label htmlFor="country">
+            País<strong>*</strong>
+          </label>
+          {errors.country?.type === 'required' && (
+            <ErrorMessage>Campo requerido</ErrorMessage>
+          )}
+        </div>
         <input
           placeholder="México"
           autoComplete="off"
