@@ -23,14 +23,14 @@ import styles from './style.module.css';
 //   name: 'Super juegos',
 //   city: 'CDMX',
 //   state: 'CDMX',
-//   web: 'https://ellugar.co',
+//   website: 'https://ellugar.co',
 // };
 
 const defaultValues = {
   name: '',
   city: '',
   state: '',
-  web: '',
+  website: '',
 };
 
 function StudiosAddForm({ items, onSubmit }) {
@@ -110,7 +110,7 @@ function StudiosAddForm({ items, onSubmit }) {
         </div>
 
         <div className={styles['label-wrapper']}>
-          <label htmlFor="web">
+          <label htmlFor="website">
             Página Web <strong>*</strong>
           </label>
           {errors.web?.type === 'required' && (
@@ -123,7 +123,7 @@ function StudiosAddForm({ items, onSubmit }) {
         <input
           placeholder="https://superjuegos.com"
           type="url"
-          {...register('web')}
+          {...register('website')}
         />
 
         <div className={styles['label-wrapper']}>

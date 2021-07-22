@@ -4,7 +4,7 @@ export default yup.object().shape({
   name: yup.string().required(),
   city: yup.string().required(),
   state: yup.string().required(),
-  web: yup.string().url().required(),
+  website: yup.string().url().required(),
   twitter: yup.string().url(),
   facebook: yup.string().url(),
   instagram: yup.string().url(),
