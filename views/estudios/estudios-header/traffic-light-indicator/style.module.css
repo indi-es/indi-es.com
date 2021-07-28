@@ -1,0 +1,43 @@
+.traffic-light-indicator {
+  text-transform: uppercase;
+  border-radius: var(--margin-01);
+  text-decoration: none;
+  background: var(--bg-alt);
+  line-height: 1em;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row;
+  gap: var(--margin-01);
+  padding: var(--margin-h) var(--margin-02);
+  align-items: center;
+  justify-content: center;
+}
+
+.indicator-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--margin-h);
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+}
+
+.indicator.-info {
+  background: var(--fg);
+}
+.indicator.-success {
+  background: var(--success);
+}
+.indicator.-warning {
+  background: var(--warning);
+}
+.indicator.-danger {
+  background: var(--danger);
+}

@@ -4,9 +4,11 @@ import Link from 'next/link';
 
 import Button from 'components/button';
 
+import TrafficLightIndicator from './traffic-light-indicator';
+
 import style from './style.module.css';
 
-function EstudiosHeader({ isTable, isMap, isStats, total }) {
+function EstudiosHeader({ isTable, isMap, isStats, data }) {
   return (
     <header className={style.header}>
       <Button className={style.support} href="/estudios/agregar">
@@ -14,9 +16,7 @@ function EstudiosHeader({ isTable, isMap, isStats, total }) {
         <FiGithub />
       </Button>
 
-      <div className={style.info}>
-        <span>{total} Estudios</span>
-      </div>
+      <TrafficLightIndicator data={data} />
 
       <div className={style['actions-view']}>
         <Link href="/estudios?vista=tabla">
@@ -43,14 +43,18 @@ EstudiosHeader.propTypes = {
   isTable: PropTypes.bool,
   isMap: PropTypes.bool,
   isStats: PropTypes.bool,
-  total: PropTypes.number,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      error: PropTypes.shape({}),
+    })
+  ).isRequired,
 };
 
 EstudiosHeader.defaultProps = {
   isTable: true,
   isMap: false,
   isStats: false,
-  total: 0,
 };
 
 export default EstudiosHeader;

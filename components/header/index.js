@@ -27,7 +27,7 @@ export default function Header() {
               <a
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://discord.com/invite/Z9eyP8A"
+                href="https://discord.com/invite/z9eyp8a"
               >
                 Discord
               </a>
@@ -44,15 +44,6 @@ export default function Header() {
             </li>
             <li>
               <Link href="/newsletter">Newsletter</Link>
-            </li>
-            <li>
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://www.joinclubhouse.com/club/indies"
-              >
-                Clubhouse
-              </a>
             </li>
           </ul>
         </nav>

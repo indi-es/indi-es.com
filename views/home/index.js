@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import Link from 'next/link';
+import Markdown from 'components/markdown';
+import Callout from 'components/callout';
 
 import { Page } from 'components/layouts';
 import Event from 'components/event';
@@ -49,53 +50,37 @@ function getNewEvents(events) {
   });
 }
 
+const text = `
+## Sin eventos esta semana
+
+Normalmente aquí aparecen los próximos eventos pero parece que no tenemos ninguno programado.
+
+---
+
+Mientras tanto puedes checar:
+
+- [Nuestra base de datos de estudios mexicanos.](/estudios)
+- [El newsletter con lo mejor de la semana.](/newsletter)
+- [El servidor de discord.](https://discord.com/invite/z9eyp8a)
+- [Nuestra lista de recursos.](/recursos)
+`;
+
 function Home({ events }) {
   const newEvents = getNewEvents(parseEvents(events));
+  const hasEvents = newEvents.length > 0;
   return (
-    <Page className={style.page} header={false}>
+    <Page className={style.page}>
       <div className={`${style['home-wrapper']} wrapper`}>
-        <img
-          className={`${style.logo} ${style['-light']}`}
-          src="/icon.png"
-          alt="INDI·ES"
-        />
-        <img
-          className={`${style.logo} ${style['-dark']}`}
-          src="/icon_inv.png"
-          alt="INDI·ES"
-        />
-        <nav className={style.nav}>
-          <ul className={style['nav-routes']}>
-            <li>
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://discord.com/invite/Z9eyP8A"
-              >
-                Discord
-              </a>
-            </li>
-            <li>
-              <Link href="/estudios">Estudios</Link>
-            </li>
-            <li>
-              <Link href="/recursos">Recursos</Link>
-            </li>
-            <li>
-              <Link href="/newsletter">Newsletter</Link>
-            </li>
-            <li>
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://www.joinclubhouse.com/club/indies"
-              >
-                Clubhouse
-              </a>
-            </li>
-          </ul>
-        </nav>
-        {newEvents.length > 0 ? (
+        {!hasEvents ? (
+          <section className={style['empty-events']}>
+            <Callout>
+              <Markdown className={`${style['empty-events-message']}`}>
+                {text}
+              </Markdown>
+            </Callout>
+          </section>
+        ) : null}
+        {hasEvents ? (
           <section className={style['events-list']}>
             {newEvents.map((event) => {
               return <Event {...event} key={event.title} />;

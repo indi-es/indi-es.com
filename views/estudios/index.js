@@ -17,7 +17,6 @@ const StudiosMap = dynamic(() => import('containers/studios-map'), {
 });
 
 function Estudios({ data }) {
-  const { developers = [] } = data;
   const router = useRouter();
   const { vista = 'tabla' } = router.query;
 
@@ -33,12 +32,12 @@ function Estudios({ data }) {
             isMap={isMap}
             isStats={isStats}
             isTable={isTable}
-            total={developers.length}
+            data={data}
           />
-          {isStats ? <StudiosStats studios={developers} /> : null}
-          {isMap ? <StudiosMap studios={developers} /> : null}
+          {isStats ? <StudiosStats studios={data} /> : null}
+          {isMap ? <StudiosMap studios={data} /> : null}
           {isTable ? (
-            <StudiosTable studios={developers} className={style.table} />
+            <StudiosTable studios={data} className={style.table} />
           ) : null}
         </div>
         <EstudiosResources />
@@ -48,12 +47,10 @@ function Estudios({ data }) {
 }
 
 Estudios.propTypes = {
-  data: PropTypes.shape({
-    developers: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string,
-      })
-    ).isRequired,
-  }).isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+    })
+  ).isRequired,
 };
 export default Estudios;

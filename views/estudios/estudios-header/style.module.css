@@ -11,16 +11,6 @@
   margin-right: var(--margin-02);
 }
 
-.info {
-  /* border: 1px solid var(--bg-alt); */
-  text-transform: uppercase;
-  border-radius: var(--margin-01);
-  text-decoration: none;
-  background: var(--bg-alt);
-  line-height: 1em;
-  overflow: hidden;
-}
-
 .actions-view {
   flex: 0 0 auto;
   display: flex;

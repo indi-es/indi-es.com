@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 
 import Header from 'components/header';
+import Footer from 'components/footer';
 
 import style from './style.module.css';
 
@@ -56,7 +57,7 @@ const Page = ({ header, footer, children, className, ...rest }) => {
       </Head>
       {header ? <Header /> : null}
       <main>{children}</main>
-      {/* {footer ? <footer id="footer" /> : null} */}
+      {footer ? <Footer /> : null}
     </div>
   );
 };

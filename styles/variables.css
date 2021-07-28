@@ -5,6 +5,11 @@
   --fg-alt: #35363c;
   --hl-01: #f33bb6;
   --hl-02: #aee73c;
+
+  --warning: rgb(223, 191, 0);
+  --success: #aee73c;
+  --danger: #f33bb6;
+
   --border: var(--bg-alt);
 
   --font-sans: system-ui, -apple-system, 'BlinkMacSystemFont', 'Segoe UI',
