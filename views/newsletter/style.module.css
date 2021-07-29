@@ -1,6 +1,4 @@
 .newsletter-wrapper {
-  margin: auto;
-  padding: var(--margin-04);
   font-variant-numeric: tabular-nums;
 }
 

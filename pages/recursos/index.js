@@ -38,13 +38,7 @@ export async function getServerSideProps() {
 }
 
 Recursos.propTypes = {
-  data: PropTypes.shape({
-    developers: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string,
-      })
-    ).isRequired,
-  }).isRequired,
+  data: PropTypes.string.isRequired,
 };
 
 export default Recursos;

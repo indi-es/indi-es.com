@@ -1,6 +1,4 @@
 .page main {
-  padding: var(--margin-02);
-  padding-top: var(--margin-04);
 }
 
 .page.-loading main {

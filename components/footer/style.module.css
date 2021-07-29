@@ -6,8 +6,15 @@
   border-top: 2px solid var(--fg);
 }
 
+.nav-wrapper {
+  padding-top: var(--margin-02);
+  padding-bottom: var(--margin-02);
+}
+
 .nav-routes {
   display: flex;
+  margin: 0;
+  padding: 0;
   flex-flow: column nowrap;
   align-items: flex-end;
   justify-content: flex-end;

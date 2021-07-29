@@ -1,7 +1,6 @@
-/* eslint filenames/match-exported: 0 */
 import { Client } from '@notionhq/client';
 
-import HomeView from 'views/home';
+import EventsView from 'views/events';
 
 import { parseEvents } from 'utils/notion';
 
@@ -9,8 +8,8 @@ const notion = new Client({
   auth: process.env.NOTION_SECRET,
 });
 
-export default function Home(props) {
-  return <HomeView {...props} />;
+export default function Eventos(props) {
+  return <EventsView {...props} />;
 }
 
 export async function getServerSideProps() {

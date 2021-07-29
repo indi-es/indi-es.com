@@ -7,15 +7,6 @@ import Event from 'components/event';
 
 import style from './style.module.css';
 
-function getNewEvents(events) {
-  return events.filter(({ endDate, isPublished }) => {
-    if (!isPublished) return false;
-    const end = new Date(endDate);
-    const now = new Date();
-    return end > now;
-  });
-}
-
 const text = `
 ## Sin eventos esta semana
 
@@ -31,12 +22,11 @@ Mientras tanto puedes checar:
 - [Nuestra lista de recursos.](/recursos)
 `;
 
-function Home({ events }) {
-  const newEvents = getNewEvents(events);
-  const hasEvents = newEvents.length > 0;
+function Events({ events }) {
+  const hasEvents = events.length > 0;
   return (
     <Page className={style.page}>
-      <div className={`${style['home-wrapper']} wrapper`}>
+      <div className={`${style['events-wrapper']} wrapper`}>
         {!hasEvents ? (
           <section className={style['empty-events']}>
             <Callout>
@@ -48,7 +38,7 @@ function Home({ events }) {
         ) : null}
         {hasEvents ? (
           <section className={style['events-list']}>
-            {newEvents.map((event) => {
+            {events.map((event) => {
               return <Event {...event} key={event.title} />;
             })}
           </section>
@@ -58,8 +48,8 @@ function Home({ events }) {
   );
 }
 
-Home.propTypes = {
+Events.propTypes = {
   events: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
-export default Home;
+export default Events;

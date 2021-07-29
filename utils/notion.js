@@ -42,3 +42,35 @@ export function richTextToMarkdown(block) {
     return `${acc}${parsed}`;
   }, '');
 }
+
+export function parseEvents(events) {
+  return events.map((event) => {
+    const { properties } = event;
+    const {
+      Date: dateProp,
+      Title: titleProp,
+      Description: descriptionProp,
+      Guest: guestProp,
+      GuestURL: guestURLProp,
+      GuestImage: guestImageProp,
+      Channel: channelProp,
+      Publish: publishProp,
+    } = properties;
+    const { date } = dateProp;
+
+    const { start, end } = date;
+    return {
+      isPublished: publishProp.checkbox,
+      title: titleProp.title[0].plain_text,
+      description: richTextToMarkdown(descriptionProp),
+      channel: richTextToMarkdown(channelProp),
+      guest: {
+        name: richTextToMarkdown(guestProp),
+        url: guestURLProp.url,
+        img: guestImageProp.url,
+      },
+      startDate: start,
+      endDate: end,
+    };
+  });
+}

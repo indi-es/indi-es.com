@@ -81,14 +81,17 @@ function Newsletter({ items }) {
             });
 
             return (
-              <section className={style['newsletter-section']}>
+              <section
+                className={style['newsletter-section']}
+                key={sectionTitle}
+              >
                 <header className={style['newsletter-section-header']}>
                   <h2 className={style['newsletter-section-title']}>
                     {sectionTitle}
                   </h2>
                 </header>
                 {value.map((item) => {
-                  return <NewsletterItem {...item} />;
+                  return <NewsletterItem {...item} key={item.id} />;
                 })}
               </section>
             );
