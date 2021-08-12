@@ -6,7 +6,7 @@ import style from './style.module.css';
 const lf = new Intl.ListFormat('es-mx', { style: 'long' });
 
 function TrafficLightIndicator({ data }) {
-  const healthyCount = data.filter((item) => item.inactive === false).length;
+  const healthyCount = data.filter((item) => item.error == null).length;
   const inactive = data
     .filter((item) => item.inactive === true)
     .map((item) => item.name);
