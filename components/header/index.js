@@ -24,13 +24,9 @@ export default function Header() {
         <nav className={style['nav-container']}>
           <ul className={style['nav-routes']}>
             <li>
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://discord.com/invite/z9eyp8a"
-              >
-                Discord
-              </a>
+              <NavLink href="/discord" activeClassName="-active" exact>
+                <a>Discord</a>
+              </NavLink>
             </li>
             <li>
               <NavLink href="/estudios" activeClassName="-active" exact>
