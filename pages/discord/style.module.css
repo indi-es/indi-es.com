@@ -13,7 +13,22 @@
   justify-content: center;
 }
 
-.wrapper {
+.page main::before {
+  content: ' ';
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+  z-index: 0;
+  background-image: url('/img/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.discord-wrapper {
   flex: 1 0 auto;
   width: 100%;
   display: flex;
@@ -30,68 +45,4 @@
   flex-flow: column;
   align-items: center;
   justify-content: center;
-}
-
-.widget-container {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
-
-  --border-color: var(--bg-alt);
-  --border-width: 3px;
-
-  border-radius: var(--margin-01);
-  overflow: hidden;
-  border: var(--border-width) solid var(--border-color);
-}
-
-.widget-header {
-  width: 100%;
-  text-align: center;
-  padding: var(--margin-01) var(--margin-02);
-  border-bottom: var(--border-width) solid var(--border-color);
-}
-
-.widget-footer {
-  width: 100%;
-  padding: var(--margin-01) var(--margin-01);
-  border-top: var(--border-width) solid var(--border-color);
-  display: flex;
-  flex-flow: column;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.widget-title {
-  margin: 0;
-  max-width: none;
-  white-space: nowrap;
-  font-size: 2em;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.widget-info {
-  width: 100%;
-  padding: var(--margin-04) var(--margin-02);
-  font-size: 1.5em;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--margin-01);
-}
-
-.widget-info code {
-  font-weight: bold;
-  padding: var(--margin-q) var(--margin-02);
-  border: 2px solid var(--fg-alt);
-  color: var(--hl-01);
-  border-radius: var(--margin-02);
-}
-
-.join-server {
-  margin-left: 0;
 }

@@ -3,6 +3,7 @@ import { Client } from '@notionhq/client';
 
 import HomeView from 'views/home';
 
+import { fetchDiscordWidget } from 'utils/discord';
 import { parseEvents } from 'utils/notion';
 
 const notion = new Client({
@@ -14,6 +15,7 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps() {
+  const widget = await fetchDiscordWidget();
   const data = await notion.databases.query({
     database_id: '6f48ba5a2dc24aa9b8d4a65105352aff',
   });
@@ -21,6 +23,6 @@ export async function getServerSideProps() {
   const { results: events } = data;
 
   return {
-    props: { events: parseEvents(events) },
+    props: { events: parseEvents(events), widget },
   };
 }

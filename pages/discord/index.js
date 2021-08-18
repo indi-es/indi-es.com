@@ -1,36 +1,17 @@
 import PropTypes from 'prop-types';
-import { FaDiscord } from 'react-icons/fa';
+
+import { fetchDiscordWidget } from 'utils/discord';
 
 import { Page } from 'components/layouts';
-import Button from 'components/button';
+import DiscordWidget from 'components/discord-widget';
 
 import style from './style.module.css';
 
 export default function Discord({ data }) {
-  const { name, presence_count: online, instant_invite: invite } = data;
   return (
     <Page className={style.page}>
-      <div className={`${style.wrapper}`}>
-        <article className={`${style['widget-container']}`}>
-          <header className={style['widget-header']}>
-            <h1 className={style['widget-title']}>Discord de {name}</h1>
-          </header>
-          <div className={style['widget-info']}>
-            <b>Personas online</b>
-            <code>{online}</code>
-          </div>
-          <footer className={style['widget-footer']}>
-            <Button
-              className={style['join-server']}
-              href={invite}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <span>Entrar al servidor</span>
-              <FaDiscord />
-            </Button>
-          </footer>
-        </article>
+      <div className={`${style['discord-wrapper']} wrapper`}>
+        <DiscordWidget {...data} />
       </div>
     </Page>
   );
@@ -41,16 +22,14 @@ Discord.propTypes = {
     name: PropTypes.string,
     members: PropTypes.arrayOf(PropTypes.shape({})),
     presence_count: PropTypes.number,
-    instant_invite: PropTypes.number,
+    instant_invite: PropTypes.string,
   }).isRequired,
 };
 
 export async function getServerSideProps() {
-  const url = 'https://discord.com/api/guilds/323937940462108672/widget.json';
-  const res = await fetch(url);
-  const json = await res.json();
+  const data = await fetchDiscordWidget();
 
   return {
-    props: { data: json },
+    props: { data },
   };
 }
