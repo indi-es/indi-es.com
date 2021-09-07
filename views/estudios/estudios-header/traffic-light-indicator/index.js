@@ -41,7 +41,9 @@ function TrafficLightIndicator({ data }) {
           <span>{healthyCount}</span>
         </div>
       </Tooltip>
-      Estudios
+      <Tooltip label={`${data.length} en total`}>
+        <span>Estudios</span>
+      </Tooltip>
     </div>
   );
 }
