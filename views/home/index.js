@@ -22,6 +22,9 @@ function Home({ events, widget }) {
   const eventList = newEvents;
   const hasEvents = eventList.length > 0;
 
+  const siteDescription =
+    'Bienvenido a INDI·ES, somos una comunidad de desarrollo de videojuegos en español, ¡tod@s son bienvenid@s!';
+
   const customClassName = classNames(style.page, {
     [style['-empty-events']]: !hasEvents,
   });
@@ -38,11 +41,17 @@ Mientras tanto puedes checar:
 - [El servidor de discord.](${widget.instant_invite})
 - [El newsletter con lo mejor de la semana.](/newsletter)
 - [Nuestra lista de recursos.](/recursos)
+- [La lista de eventos pasados.](/eventos)
 `;
 
   return (
     <Page className={customClassName}>
       <div className={`${style['home-wrapper']} wrapper`}>
+        <Callout>
+          <Markdown className={`${style['empty-events-message']}`}>
+            {siteDescription}
+          </Markdown>
+        </Callout>
         {!hasEvents ? (
           <section className={style['empty-events']}>
             <Callout>
