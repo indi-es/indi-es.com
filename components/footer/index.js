@@ -3,6 +3,7 @@ import {
   FiTwitter,
   FiMessageCircle,
   FiCalendar,
+  FiMail,
 } from 'react-icons/fi';
 import NavLink from 'components/nav-link';
 
@@ -59,6 +60,16 @@ export default function Footer() {
             >
               <span>@indi__es</span>
               <FiTwitter />
+            </a>
+          </li>
+          <li>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="mailto:Hola@indi-es.com"
+            >
+              <span>Contacto</span>
+              <FiMail />
             </a>
           </li>
         </ul>
