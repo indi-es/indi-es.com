@@ -3,18 +3,31 @@ import classNames from 'classnames';
 
 import style from './style.module.css';
 
-function getBaseButton(href) {
-  if (href)
-    // eslint-disable-next-line react/prop-types
-    return ({ children, ...rest }) => {
-      return (
-        <a href={href} {...rest}>
-          {children}
-        </a>
-      );
-    };
+function LinkButton({ children, href, ...rest }) {
+  return (
+    <a href={href} {...rest}>
+      {children}
+    </a>
+  );
+}
 
-  return (props) => <button type="button" {...props} />;
+LinkButton.propTypes = {
+  children: PropTypes.node,
+  href: PropTypes.string.isRequired,
+};
+
+LinkButton.defaultProps = {
+  children: null,
+};
+
+function InputButton(props) {
+  return <button type="button" {...props} />;
+}
+
+function getBaseButton(href) {
+  if (href) return LinkButton;
+
+  return InputButton;
 }
 
 function Button({ href, children, className, ...rest }) {

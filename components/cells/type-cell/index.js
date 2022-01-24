@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
-import style from './style.module.css';
+import style from './styles.module.css';
 
 const options = {
   individual: 'Solo',
   studio: 'Estudio',
 };
 
-const TypeCell = ({ cell: { value } }) => {
+function TypeCell({ cell: { value } }) {
   if (!value) return null;
 
   const label = options[value];
@@ -15,7 +15,7 @@ const TypeCell = ({ cell: { value } }) => {
   if (!label) return null;
 
   return <span className={style['type-cell']}>{label}</span>;
-};
+}
 
 TypeCell.propTypes = {
   cell: PropTypes.shape({

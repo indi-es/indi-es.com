@@ -3,7 +3,7 @@ import { FiGlobe } from 'react-icons/fi';
 
 import style from './style.module.css';
 
-const WebCell = ({ cell: { value } }) => {
+function WebCell({ cell: { value } }) {
   if (!value) return null;
   return (
     <a
@@ -15,7 +15,7 @@ const WebCell = ({ cell: { value } }) => {
       <FiGlobe />
     </a>
   );
-};
+}
 
 WebCell.propTypes = {
   cell: PropTypes.shape({

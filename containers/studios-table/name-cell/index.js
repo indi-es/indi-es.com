@@ -14,12 +14,12 @@ function getUrl({ website, twitter, facebook, instagram }) {
   return null;
 }
 
-const NameCell = ({
+function NameCell({
   cell: {
     value,
     row: { original },
   },
-}) => {
+}) {
   if (!value) return null;
 
   const url = getUrl(original);
@@ -36,7 +36,7 @@ const NameCell = ({
       ))}
     </span>
   );
-};
+}
 
 NameCell.propTypes = {
   cell: PropTypes.shape({

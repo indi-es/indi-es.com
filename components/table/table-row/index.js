@@ -4,7 +4,7 @@ import Skeleton from 'components/skeleton';
 
 import style from './style.module.css';
 
-const TableRow = ({ row, loading }) => {
+function TableRow({ row, loading }) {
   return (
     <tr {...row.getRowProps()} className={style['table-row']}>
       {row.cells.map((cell) => (
@@ -14,7 +14,7 @@ const TableRow = ({ row, loading }) => {
       ))}
     </tr>
   );
-};
+}
 
 TableRow.propTypes = {
   row: PropTypes.shape({

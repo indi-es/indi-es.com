@@ -1,4 +1,4 @@
-import { signOut, useSession } from 'next-auth/client';
+import { signOut, useSession } from 'next-auth/react';
 import { FiLogOut } from 'react-icons/fi';
 
 import Button from 'components/button';
@@ -6,12 +6,12 @@ import Button from 'components/button';
 import styles from './style.module.css';
 
 function UserCard() {
-  const [session] = useSession();
-  if (!session) return null;
+  const { data } = useSession();
+  if (!data) return null;
 
   const {
     user: { email, image, name },
-  } = session;
+  } = data;
   return (
     <article className={styles['user-card']}>
       <div className={styles['user-card-info-wrapper']}>

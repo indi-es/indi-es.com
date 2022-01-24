@@ -39,7 +39,7 @@ function Events({ events }) {
         {hasEvents ? (
           <section className={style['events-list']}>
             {events.map((event) => {
-              return <Event {...event} key={event.title} />;
+              return <Event {...event} key={event.id} />;
             })}
           </section>
         ) : null}

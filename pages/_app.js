@@ -1,6 +1,6 @@
 /* eslint filenames/match-exported: 0 */
 import PropTypes from 'prop-types';
-import { Provider } from 'next-auth/client';
+import { SessionProvider } from 'next-auth/react';
 
 import 'modern-css-reset';
 import 'leaflet/dist/leaflet.css';
@@ -12,9 +12,9 @@ import 'styles/leaflet.css';
 
 function App({ Component, pageProps }) {
   return (
-    <Provider session={pageProps.session}>
+    <SessionProvider session={pageProps.session}>
       <Component {...pageProps} />
-    </Provider>
+    </SessionProvider>
   );
 }
 

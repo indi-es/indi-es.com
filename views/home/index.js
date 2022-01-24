@@ -8,18 +8,8 @@ import Event from 'components/event';
 
 import style from './style.module.css';
 
-function getNewEvents(events) {
-  return events.filter(({ endDate, isPublished }) => {
-    if (!isPublished) return false;
-    const end = new Date(endDate);
-    const now = new Date();
-    return end > now;
-  });
-}
-
 function Home({ events, widget }) {
-  const newEvents = getNewEvents(events);
-  const eventList = newEvents;
+  const eventList = events;
   const hasEvents = eventList.length > 0;
 
   const siteDescription =
@@ -64,7 +54,7 @@ Mientras tanto puedes checar:
         {hasEvents ? (
           <section className={style['events-list']}>
             {eventList.map((event) => {
-              return <Event {...event} key={event.title} />;
+              return <Event {...event} key={event.id} />;
             })}
           </section>
         ) : null}

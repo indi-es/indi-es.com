@@ -3,7 +3,7 @@ import { FiInstagram } from 'react-icons/fi';
 
 import style from './style.module.css';
 
-const IgCell = ({ cell: { value } }) => {
+function IgCell({ cell: { value } }) {
   if (!value) return null;
   return (
     <a
@@ -15,7 +15,7 @@ const IgCell = ({ cell: { value } }) => {
       <FiInstagram />
     </a>
   );
-};
+}
 
 IgCell.propTypes = {
   cell: PropTypes.shape({

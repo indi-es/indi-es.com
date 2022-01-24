@@ -3,7 +3,7 @@ import { FaTwitter } from 'react-icons/fa';
 
 import style from './style.module.css';
 
-const TwCell = ({ cell: { value } }) => {
+function TwCell({ cell: { value } }) {
   if (!value) return null;
   return (
     <a
@@ -15,7 +15,7 @@ const TwCell = ({ cell: { value } }) => {
       <FaTwitter />
     </a>
   );
-};
+}
 
 TwCell.propTypes = {
   cell: PropTypes.shape({

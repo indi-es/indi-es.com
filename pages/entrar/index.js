@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { getProviders, getSession, signIn } from 'next-auth/client';
+import { getProviders, getSession, signIn } from 'next-auth/react';
 import { FiGithub } from 'react-icons/fi';
 
 import { Page } from 'components/layouts';
@@ -49,11 +49,12 @@ export async function getServerSideProps({ req, res }) {
   const session = await getSession({ req });
   const callback = parsed.searchParams.get('callbackUrl');
   if (session && res) {
-    res.writeHead(302, {
-      Location: callback || '/estudios',
-    });
-    res.end();
-    return { props: {} };
+    return {
+      redirect: {
+        permanent: false,
+        destination: callback || '/estudios',
+      },
+    };
   }
 
   const providers = await getProviders();

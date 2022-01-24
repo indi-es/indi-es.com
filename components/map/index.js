@@ -8,7 +8,7 @@ import usePrefersColorScheme from 'hooks/use-prefers-color-scheme';
 
 import style from './style.module.css';
 
-const Map = ({ children, className, center, zoom, ...rest }) => {
+function Map({ children, className, center, zoom, ...rest }) {
   const preferredColorSchema = usePrefersColorScheme();
   const isDarkMode = preferredColorSchema === 'dark';
   const customClassName = classNames(
@@ -50,7 +50,7 @@ const Map = ({ children, className, center, zoom, ...rest }) => {
       {children}
     </MapContainer>
   );
-};
+}
 
 Map.propTypes = {
   children: PropTypes.node,

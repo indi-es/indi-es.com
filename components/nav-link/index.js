@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { cloneElement, Children } from 'react';
 
-const NavLink = ({ children, activeClassName, exact, ...rest }) => {
+function NavLink({ children, activeClassName, exact, ...rest }) {
   const { asPath, pathName } = useRouter();
   const child = Children.only(children);
   const childClassName = child.props.className || '';
@@ -26,7 +26,7 @@ const NavLink = ({ children, activeClassName, exact, ...rest }) => {
       })}
     </Link>
   );
-};
+}
 
 NavLink.propTypes = {
   children: PropTypes.node,

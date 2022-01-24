@@ -4,7 +4,7 @@ import Tag from 'components/tag';
 
 import style from './style.module.css';
 
-const TagsCell = ({ cell: { value } }) => {
+function TagsCell({ cell: { value } }) {
   if (!value) return null;
 
   return (
@@ -14,7 +14,7 @@ const TagsCell = ({ cell: { value } }) => {
       })}
     </div>
   );
-};
+}
 
 TagsCell.propTypes = {
   cell: PropTypes.shape({

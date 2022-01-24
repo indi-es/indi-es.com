@@ -3,7 +3,7 @@ import { FaFacebookSquare } from 'react-icons/fa';
 
 import style from './style.module.css';
 
-const FbCell = ({ cell: { value } }) => {
+function FbCell({ cell: { value } }) {
   if (!value) return null;
   return (
     <a
@@ -15,7 +15,7 @@ const FbCell = ({ cell: { value } }) => {
       <FaFacebookSquare />
     </a>
   );
-};
+}
 
 FbCell.propTypes = {
   cell: PropTypes.shape({

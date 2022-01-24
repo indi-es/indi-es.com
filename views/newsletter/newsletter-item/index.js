@@ -5,7 +5,7 @@ import style from './style.module.css';
 
 const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
 
-const NewsletterItem = ({ id, startDate, endDate }) => {
+function NewsletterItem({ id, startDate, endDate }) {
   return (
     <article key={id} className={style['newsletter-item']}>
       <header>
@@ -22,7 +22,7 @@ const NewsletterItem = ({ id, startDate, endDate }) => {
       </header>
     </article>
   );
-};
+}
 
 NewsletterItem.propTypes = {
   id: PropTypes.string.isRequired,

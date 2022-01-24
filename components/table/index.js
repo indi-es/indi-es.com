@@ -7,7 +7,7 @@ import TableRow from './table-row';
 
 import style from './style.module.css';
 
-const Table = ({ className, columns, data, loading, initialState }) => {
+function Table({ className, columns, data, loading, initialState }) {
   const customClassName = classNames(
     style['table-container'],
     'table-container',
@@ -45,7 +45,7 @@ const Table = ({ className, columns, data, loading, initialState }) => {
       </table>
     </div>
   );
-};
+}
 
 Table.propTypes = {
   loading: PropTypes.bool,

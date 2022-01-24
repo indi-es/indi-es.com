@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 
 import style from './style.module.css';
 
-const HeaderCenter = ({ label }) => {
+function HeaderCenter({ label }) {
   return <span className={style['table-header-center']}>{label}</span>;
-};
+}
 
 HeaderCenter.propTypes = {
   label: PropTypes.string,

@@ -17,35 +17,48 @@ function parseAndFormatDate(date, options) {
   return parsed.toLocaleString('es-mx', options);
 }
 
-function Event({ title, channel, description, guest, startDate, endDate }) {
-  const start = new Date(startDate);
-  const end = new Date(endDate);
-
+function Event({
+  id,
+  name,
+  description,
+  image,
+  user_count: userCount,
+  scheduled_start_time: startDate,
+  scheduled_end_time: endDate,
+  // channel_id: channelId,
+}) {
   const config = {
-    title,
+    name,
     location: 'INDI·ES Discord server',
     description,
-    start,
-    end,
+    start: new Date(startDate),
+    end: endDate ? new Date(endDate) : null,
   };
   const icalendar = new ICalendar(config);
+
+  // TODO: fetch channel name
+  // we are currently not doing it because we could get rate limited
+  const channelName = null;
+
   return (
     <article className={style.event}>
       <div className={style['event-media']}>
-        <span className={style['event-badge']}>{channel}</span>
-        <img src={guest.img} alt={guest.name} />
+        <span className={style['event-badge']}>
+          {channelName ? <span>{channelName}</span> : null}
+          {userCount ? <span>{userCount} interesados</span> : null}
+        </span>
+        {image ? (
+          <img
+            src={`https://cdn.discordapp.com/guild-events/${id}/${image}?size=1024`}
+            alt={name}
+          />
+        ) : null}
       </div>
 
       <div className={style['event-content']}>
         <header className={style['event-header']}>
-          <h3 className={style['event-title']}>{title}</h3>
+          <h3 className={style['event-name']}>{name}</h3>
           <div className={style['event-subheader']}>
-            <h4 className={style['event-subtitle']}>
-              con{' '}
-              <a rel="noopener noreferrer" target="_blank" href={guest.url}>
-                {guest.name}
-              </a>{' '}
-            </h4>
             <Button
               className={style['event-dates']}
               onClick={() => {
@@ -56,8 +69,14 @@ function Event({ title, channel, description, guest, startDate, endDate }) {
                 <time>
                   {parseAndFormatDate(startDate, OPTIONS_HOUR_MINUTE)}{' '}
                 </time>
-                <span>-</span>
-                <time>{parseAndFormatDate(endDate, OPTIONS_HOUR_MINUTE)} </time>
+                {endDate ? (
+                  <>
+                    <span>-</span>
+                    <time>
+                      {parseAndFormatDate(endDate, OPTIONS_HOUR_MINUTE)}{' '}
+                    </time>
+                  </>
+                ) : null}
               </span>
               <time>{parseAndFormatDate(startDate, OPTIONS_DAY_MOTH)} </time>
             </Button>
@@ -72,18 +91,20 @@ function Event({ title, channel, description, guest, startDate, endDate }) {
 }
 
 Event.propTypes = {
-  title: PropTypes.string.isRequired,
-  channel: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  guest: PropTypes.shape({
-    url: PropTypes.string,
-    name: PropTypes.string,
-    img: PropTypes.string,
-  }).isRequired,
-  startDate: PropTypes.string.isRequired,
-  endDate: PropTypes.string.isRequired,
+  scheduled_start_time: PropTypes.string.isRequired,
+  scheduled_end_time: PropTypes.string,
+  user_count: PropTypes.number,
+  image: PropTypes.string,
+  // channel_id: PropTypes.string.isRequired,
 };
 
-Event.defaultProps = {};
+Event.defaultProps = {
+  scheduled_end_time: null,
+  user_count: null,
+  image: null,
+};
 
 export default Event;

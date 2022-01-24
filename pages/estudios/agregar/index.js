@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useSession, getSession } from 'next-auth/client';
+import { useSession, getSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 
 import { Page } from 'components/layouts';
@@ -13,10 +13,10 @@ import style from './style.module.css';
 
 function Agregar({ data }) {
   const { developers } = data;
-  const [session, loading] = useSession();
+  const { data: session, status } = useSession();
   const router = useRouter();
 
-  if (loading) {
+  if (status === 'loading') {
     return (
       <Page className={`${style.page} ${style['-loading']}`}>
         <Spinner className={style.spinner} />
@@ -42,16 +42,18 @@ function Agregar({ data }) {
   );
 }
 
-export async function getServerSideProps({ req, res }) {
+export async function getServerSideProps({ req }) {
   const session = await getSession({ req });
   if (!session) {
     const url = getFullUrl(req);
-    res.writeHead(302, {
-      Location: `/entrar?callbackUrl=${url}`,
-    });
-    res.end();
-    return { props: {} };
+    return {
+      redirect: {
+        permanent: false,
+        destination: `/entrar?callbackUrl=${url}`,
+      },
+    };
   }
+
   const url =
     'https://raw.githubusercontent.com/indi-es/estudios/main/developers.json';
   const call = await fetch(url);

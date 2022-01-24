@@ -1,9 +1,7 @@
-import { getSession } from 'next-auth/client';
-import jwt from 'next-auth/jwt';
+import { getSession } from 'next-auth/react';
+import { getToken } from 'next-auth/jwt';
 
-const secret = process.env.JWT_SECRET;
-const signingKey = process.env.JWT_SIGNING_KEY;
-const encryptionKey = process.env.JWT_ENCRYPTION_KEY;
+const secret = process.env.NEXTAUTH_SECRET;
 
 const repoOwner = 'indi-es';
 const repoName = 'estudios';
@@ -18,15 +16,9 @@ const defaultValues = {
 export default async function createStudioIssue(req, res) {
   if (req.method !== 'POST') return res.status(405);
 
-  const token = await jwt.getToken({
-    req,
-    secret,
-    signingKey,
-    encryptionKey,
-    encryption: true,
-  });
+  const token = await getToken({ req, secret });
   const session = await getSession({ req });
-  const { accessToken } = token;
+  const { access_token: accessToken } = token;
   const {
     user: { name, email },
   } = session;
@@ -68,12 +60,7 @@ ${JSON.stringify(
     }),
   };
 
-  const data = await fetch(url, {
-    ...options,
-  });
+  const data = await fetch(url, options);
   const json = await data.json();
   return res.status(data.status).json(json);
-
-  // console.log(options, url);
-  // return res.status(200).json({ message: 'Test response' });
 }

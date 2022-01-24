@@ -1,20 +1,14 @@
 /* eslint filenames/match-regex: 0 */
 import NextAuth from 'next-auth';
-import Providers from 'next-auth/providers';
+import GitHubProvider from 'next-auth/providers/github';
 
-const secret = process.env.JWT_SECRET;
-const signingKey = process.env.JWT_SIGNING_KEY;
-const encryptionKey = process.env.JWT_ENCRYPTION_KEY;
+const secret = process.env.NEXTAUTH_SECRET;
 
 export default NextAuth({
-  jwt: {
-    encryption: true,
-    secret,
-    signingKey,
-    encryptionKey,
-  },
+  secret,
+  jwt: {},
   providers: [
-    Providers.GitHub({
+    GitHubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
       scope: 'user repo',
@@ -24,11 +18,11 @@ export default NextAuth({
     signIn: '/entrar',
   },
   callbacks: {
-    jwt: async (token, user, account) => {
-      if (account?.accessToken) {
+    jwt: async ({ token, account }) => {
+      if (account?.access_token) {
         return {
           ...token,
-          accessToken: account.accessToken,
+          access_token: account.access_token,
         };
       }
 

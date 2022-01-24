@@ -6,7 +6,7 @@ import Footer from 'components/footer';
 
 import style from './style.module.css';
 
-const Page = ({ header, footer, children, className, ...rest }) => {
+function Page({ header, footer, children, className, ...rest }) {
   const title = 'INDI·ES';
   const description = 'Comunidad de desarrolladores de videojuegos en español';
   const url = 'https://indi-es.com';
@@ -60,7 +60,7 @@ const Page = ({ header, footer, children, className, ...rest }) => {
       {footer ? <Footer /> : null}
     </div>
   );
-};
+}
 
 Page.propTypes = {
   children: PropTypes.node,

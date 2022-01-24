@@ -4,10 +4,10 @@ import classNames from 'classnames';
 
 import styles from './style.module.css';
 
-const Spinner = ({ className }) => {
+function Spinner({ className }) {
   const customClassName = classNames('spinner', styles.spinner, className);
   return <AiOutlineLoading3Quarters className={customClassName} />;
-};
+}
 
 Spinner.propTypes = {
   className: PropTypes.string,
