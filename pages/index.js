@@ -7,9 +7,9 @@ export default function Home(props) {
   return <HomeView {...props} />;
 }
 
-export async function getServerSideProps() {
-  const widget = await fetchDiscordWidget();
+export async function getStaticProps() {
   const events = await fetchDiscordEvents();
+  const widget = await fetchDiscordWidget();
 
   return {
     props: { events, widget },

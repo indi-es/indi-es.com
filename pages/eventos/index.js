@@ -6,7 +6,7 @@ export default function Eventos(props) {
   return <EventsView {...props} />;
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const events = await fetchDiscordEvents();
 
   return {
