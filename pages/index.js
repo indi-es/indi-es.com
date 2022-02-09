@@ -9,7 +9,6 @@ export default function Home(props) {
 
 export async function getStaticProps() {
   const events = await fetchDiscordEvents();
-  console.log('events', events);
   const widget = await fetchDiscordWidget();
 
   return {

@@ -35,17 +35,23 @@ export async function fetchDiscordEvents() {
   };
 
   const res = await fetch(url, options);
+
+  if (res.status !== 200) {
+    console.error(
+      `Request failed with stauts code ${res.status}: ${res.statusText}`
+    );
+    return [];
+  }
+
   const data = await res.json();
 
-  const events = data
-    ? await Promise.all(
-        data.map(async (event) => {
-          const { channel_id: channelId } = event;
-          const channel = await fetchChannel(channelId);
-          return { ...event, channel };
-        })
-      )
-    : [];
+  const events = await Promise.all(
+    data.map(async (event) => {
+      const { channel_id: channelId } = event;
+      const channel = await fetchChannel(channelId);
+      return { ...event, channel };
+    })
+  );
 
   return events;
 }
