@@ -37,13 +37,15 @@ export async function fetchDiscordEvents() {
   const res = await fetch(url, options);
   const data = await res.json();
 
-  const events = await Promise.all(
-    data.map(async (event) => {
-      const { channel_id: channelId } = event;
-      const channel = await fetchChannel(channelId);
-      return { ...event, channel };
-    })
-  );
+  const events = data
+    ? await Promise.all(
+        data.map(async (event) => {
+          const { channel_id: channelId } = event;
+          const channel = await fetchChannel(channelId);
+          return { ...event, channel };
+        })
+      )
+    : [];
 
   return events;
 }
