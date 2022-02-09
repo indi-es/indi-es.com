@@ -8,8 +8,22 @@ import Event from 'components/event';
 
 import style from './style.module.css';
 
+function getNewEvents(events) {
+  return events.filter(
+    ({ scheduled_start_time: startDate, scheduled_end_time: endDate }) => {
+      const now = new Date();
+      if (endDate) {
+        const end = new Date(endDate);
+        return end > now;
+      }
+      const start = new Date(startDate);
+      return start > now;
+    }
+  );
+}
+
 function Home({ events, widget }) {
-  const eventList = events;
+  const eventList = getNewEvents(events);
   const hasEvents = eventList.length > 0;
 
   const siteDescription =

@@ -22,7 +22,8 @@ function Event({
   name,
   description,
   image,
-  user_count: userCount,
+  channel,
+  // user_count: userCount,
   scheduled_start_time: startDate,
   scheduled_end_time: endDate,
   // channel_id: channelId,
@@ -38,21 +39,23 @@ function Event({
 
   // TODO: fetch channel name
   // we are currently not doing it because we could get rate limited
-  const channelName = null;
+  const channelName = channel.name;
 
   return (
     <article className={style.event}>
       <div className={style['event-media']}>
         <span className={style['event-badge']}>
-          {channelName ? <span>{channelName}</span> : null}
-          {userCount ? <span>{userCount} interesados</span> : null}
+          {channelName ? <span>#{channelName}</span> : null}
+          {/* {userCount ? <span>{userCount} interesados</span> : null} */}
         </span>
         {image ? (
           <img
             src={`https://cdn.discordapp.com/guild-events/${id}/${image}?size=1024`}
             alt={name}
           />
-        ) : null}
+        ) : (
+          <img src="/bot.png" alt={name} />
+        )}
       </div>
 
       <div className={style['event-content']}>
@@ -96,15 +99,20 @@ Event.propTypes = {
   description: PropTypes.string.isRequired,
   scheduled_start_time: PropTypes.string.isRequired,
   scheduled_end_time: PropTypes.string,
-  user_count: PropTypes.number,
   image: PropTypes.string,
+  channel: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+  }),
+  // user_count: PropTypes.number,
   // channel_id: PropTypes.string.isRequired,
 };
 
 Event.defaultProps = {
   scheduled_end_time: null,
-  user_count: null,
+  // user_count: null,
   image: null,
+  channel: null,
 };
 
 export default Event;
