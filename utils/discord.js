@@ -2,6 +2,12 @@ const API_URL = process.env.DISCORD_API_URL;
 const GUILD_ID = process.env.DISCORD_GUILD_ID;
 const BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
 export async function fetchDiscordWidget() {
   const url = `${API_URL}/guilds/${GUILD_ID}/widget.json`;
   const res = await fetch(url);
@@ -35,15 +41,27 @@ export async function fetchDiscordEvents() {
   };
 
   const res = await fetch(url, options);
-
-  if (res.status !== 200) {
-    console.error(
-      `Request failed with stauts code ${res.status}: ${res.statusText}`
-    );
-    return [];
-  }
-
   const data = await res.json();
+
+  switch (res.status) {
+    case 200:
+      return data;
+    case 429:
+      console.info(
+        `Waiting for ${data.retry_after}s to make another discord request`
+      );
+      await sleep(data.retry_after + 1);
+      return fetchDiscordEvents();
+    default:
+      console.error(
+        `Request failed with stauts code ${res.status}: ${res.statusText}`
+      );
+      return [];
+  }
+}
+
+export async function fetchDiscordEventsWithChannelName() {
+  const data = await fetchDiscordEvents();
 
   const events = await Promise.all(
     data.map(async (event) => {
