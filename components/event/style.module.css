@@ -22,6 +22,7 @@
 }
 
 .event-title {
+  font-family: var(--font-sans);
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: var(--margin-q);

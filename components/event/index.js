@@ -54,13 +54,13 @@ function Event({
             alt={name}
           />
         ) : (
-          <img src="/bot.png" alt={name} />
+          <img src="/preview.png" alt={name} />
         )}
       </div>
 
       <div className={style['event-content']}>
         <header className={style['event-header']}>
-          <h3 className={style['event-name']}>{name}</h3>
+          <h3 className={style['event-title']}>{name}</h3>
           <div className={style['event-subheader']}>
             <Button
               className={style['event-dates']}
