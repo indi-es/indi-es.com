@@ -13,6 +13,7 @@ Proyectos similares que nos hemos encontrado a lo largo del camino:
 - [Latam.vg](http://latam.vg/)
 - [Wikipedia Videojuegos en México](https://es.wikipedia.org/wiki/Videojuegos_en_M%C3%A9xico)
 - [AMEXVID](https://amexvid.com/directorio/)
+- [DVJMX](https://www.devsvj.mx/miembros/)
 `;
 
 function EstudiosResources() {
