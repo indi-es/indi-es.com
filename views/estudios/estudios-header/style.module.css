@@ -3,7 +3,6 @@
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: var(--margin-02);
   margin-bottom: var(--margin-02);
 }
 
