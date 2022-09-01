@@ -1,8 +1,14 @@
 :root {
-  --bg: #fff;
-  --bg-alt: #f7f7f7;
-  --fg: #000;
-  --fg-alt: #35363c;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-light: #f7f7f7;
+  --color-gray-dark: #1d1f21;
+
+  --bg: var(--color-white);
+  --bg-alt: var(--color-gray-light);
+  --fg: var(--color-black);
+  --fg-alt: var(--color-gray-dark);
+
   --hl-01: #f33bb6;
   --hl-02: #aee73c;
 
@@ -46,11 +52,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #000;
-    --bg-alt: #1d1f21;
+    --bg: var(--color-black);
+    --bg-alt: var(--color-gray-dark);
 
-    --fg: #fff;
-    --fg-alt: #f7f7f7;
+    --fg: var(--color-white);
+    --fg-alt: var(--color-gray-light);
 
     --hl-01: #ec008c;
     --hl-02: #fdd000;

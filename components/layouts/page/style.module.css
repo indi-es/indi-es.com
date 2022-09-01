@@ -1,2 +1,5 @@
 .page {
+  display: flex;
+  flex-flow: column;
+  gap: var(--margin-04);
 }

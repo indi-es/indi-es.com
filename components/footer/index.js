@@ -4,6 +4,7 @@ import {
   FiMessageCircle,
   FiCalendar,
   FiMail,
+  FiSmile,
 } from 'react-icons/fi';
 import NavLink from 'components/nav-link';
 
@@ -39,6 +40,14 @@ export default function Footer() {
               <a>
                 <span>Eventos pasados</span>
                 <FiCalendar />
+              </a>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="/brand" activeClassName="-active" exact>
+              <a>
+                <span>Logos y emojis</span>
+                <FiSmile />
               </a>
             </NavLink>
           </li>

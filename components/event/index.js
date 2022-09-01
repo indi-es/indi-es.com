@@ -44,10 +44,12 @@ function Event({
   return (
     <article className={style.event}>
       <div className={style['event-media']}>
-        <span className={style['event-badge']}>
-          {channelName ? <span>#{channelName}</span> : null}
-          {/* {userCount ? <span>{userCount} interesados</span> : null} */}
-        </span>
+        {channelName ? (
+          <span className={style['event-badge']}>
+            <span>#{channelName}</span>
+            {/* {userCount ? <span>{userCount} interesados</span> : null} */}
+          </span>
+        ) : null}
         {image ? (
           <img
             src={`https://cdn.discordapp.com/guild-events/${id}/${image}?size=1024`}

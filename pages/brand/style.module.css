@@ -1,0 +1,104 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+
+.page main {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--margin-02);
+}
+
+.brand-wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--margin-02);
+}
+
+.resources-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--margin-02);
+}
+
+.resources-grid[data-resource='emoji'] {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.resources-grid figure {
+  --border-color: var(--color-gray-dark);
+
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--border-color);
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.resources-grid figure[data-theme='dark'] {
+  --border-color: var(--color-gray-light);
+
+  background: var(--color-gray-dark);
+  color: var(--color-white);
+}
+
+.resources-grid figure[data-theme='light'] {
+  background: var(--color-gray-light);
+  color: var(--color-black);
+}
+
+.resource-img-wrapper {
+  padding: var(--margin-01);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.resource-img-wrapper img {
+  margin: 0 auto;
+}
+
+.resources-grid figcaption {
+  width: 100%;
+  border-top: 2px solid var(--border-color);
+  padding: var(--margin-01);
+}
+
+.resources-grid figcaption a {
+  color: currentColor;
+  text-decoration: none;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resources-grid figcaption a div {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.resources-grid figcaption a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: 0.2s ease color;
+}
+
+.resources-grid figcaption a:hover svg {
+  color: var(--hl-01);
+}

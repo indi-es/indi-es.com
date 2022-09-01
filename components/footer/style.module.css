@@ -2,7 +2,6 @@
   width: 100%;
   z-index: 100;
   background: var(--bg-alt);
-  margin-top: var(--margin-02);
   border-top: 2px solid var(--fg);
 }
 

@@ -11,7 +11,7 @@ function Newsletter(props) {
   return <NewsletterView {...props} />;
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const data = await notion.databases.query({
     database_id: '820b50fe5398486cbd062603c3f4529b',
   });
