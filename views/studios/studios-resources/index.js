@@ -17,7 +17,7 @@ Proyectos similares que nos hemos encontrado a lo largo del camino:
 - [DVJMX](https://www.devsvj.mx/miembros/)
 `;
 
-function EstudiosResources() {
+function StudiosResources() {
   return (
     <Callout>
       <Markdown className={`${style['estudios-resources']}`}>{text}</Markdown>
@@ -25,4 +25,4 @@ function EstudiosResources() {
   );
 }
 
-export default EstudiosResources;
+export default StudiosResources;

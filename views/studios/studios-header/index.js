@@ -8,7 +8,7 @@ import TrafficLightIndicator from './traffic-light-indicator';
 
 import style from './style.module.css';
 
-function EstudiosHeader({ isTable, isMap, isStats, data }) {
+function StudiosHeader({ isTable, isMap, isStats, data }) {
   return (
     <header className={style.header}>
       <Button className={style.support} href="/estudios/agregar">
@@ -39,7 +39,7 @@ function EstudiosHeader({ isTable, isMap, isStats, data }) {
   );
 }
 
-EstudiosHeader.propTypes = {
+StudiosHeader.propTypes = {
   isTable: PropTypes.bool,
   isMap: PropTypes.bool,
   isStats: PropTypes.bool,
@@ -51,10 +51,10 @@ EstudiosHeader.propTypes = {
   ).isRequired,
 };
 
-EstudiosHeader.defaultProps = {
+StudiosHeader.defaultProps = {
   isTable: true,
   isMap: false,
   isStats: false,
 };
 
-export default EstudiosHeader;
+export default StudiosHeader;

@@ -7,8 +7,8 @@ import { Page } from 'components/layouts';
 import StudiosTable from 'containers/studios-table';
 import StudiosStats from 'containers/studios-stats';
 
-import EstudiosHeader from './estudios-header';
-import EstudiosResources from './estudios-resources';
+import StudiosHeader from './studios-header';
+import StudiosResources from './studios-resources';
 
 import style from './style.module.css';
 
@@ -16,7 +16,7 @@ const StudiosMap = dynamic(() => import('containers/studios-map'), {
   ssr: false,
 });
 
-function Estudios({ data }) {
+function Studios({ data }) {
   const router = useRouter();
   const { vista = 'tabla' } = router.query;
 
@@ -28,7 +28,7 @@ function Estudios({ data }) {
     <Page className={style.page}>
       <div className={`${style.wrapper} wrapper`}>
         <div className={style.content}>
-          <EstudiosHeader
+          <StudiosHeader
             isMap={isMap}
             isStats={isStats}
             isTable={isTable}
@@ -40,17 +40,17 @@ function Estudios({ data }) {
             <StudiosTable studios={data} className={style.table} />
           ) : null}
         </div>
-        <EstudiosResources />
+        <StudiosResources />
       </div>
     </Page>
   );
 }
 
-Estudios.propTypes = {
+Studios.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
     })
   ).isRequired,
 };
-export default Estudios;
+export default Studios;

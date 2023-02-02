@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-import EstudiosView from 'views/estudios';
+import StudiosView from 'views/studios';
 
 function Estudios({ data }) {
-  return <EstudiosView data={data} />;
+  return <StudiosView data={data} />;
 }
 
 async function getGithubFile(url) {

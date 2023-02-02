@@ -5,7 +5,7 @@ import NameCell from './name-cell';
 
 const columns = [
   {
-    Header: 'Name',
+    Header: 'Nombre',
     accessor: 'name',
     Cell: NameCell,
   },

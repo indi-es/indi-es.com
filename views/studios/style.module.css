@@ -1,0 +1,13 @@
+.content {
+  margin-bottom: var(--margin-04);
+}
+
+.table {
+  margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .content {
+    margin-bottom: var(--margin-02);
+  }
+}
