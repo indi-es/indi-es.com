@@ -12,7 +12,29 @@ function CellPlatforms({ cell: { value } }) {
 
   return (
     <span className={style['cell-platforms']}>
-      {formatter.format(value.map((item) => item.name))}
+      {formatter.formatToParts(value.map((item) => item.name)).map((item) => {
+        if (item.type === 'literal') {
+          return item.value;
+        }
+
+        const { url } =
+          value.find((platform) => platform.name === item.value) || {};
+
+        if (url == null || url === '') {
+          return item.value;
+        }
+
+        return (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={item.value}
+          >
+            {item.value}
+          </a>
+        );
+      })}
     </span>
   );
 }

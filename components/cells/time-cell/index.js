@@ -6,7 +6,6 @@ import style from './style.module.css';
 
 function TimeCell({ cell: { value } }) {
   if (!value) return null;
-  console.log('value');
 
   return <Time className={style['time-cell']}>{value}</Time>;
 }
