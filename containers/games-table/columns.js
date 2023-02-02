@@ -1,4 +1,4 @@
-import { ListFormattedCell } from 'components/cells';
+import { ListFormattedCell, TimeCell } from 'components/cells';
 import CellPlaforms from './cell-platforms';
 
 const columns = [
@@ -19,6 +19,7 @@ const columns = [
   {
     Header: 'Fecha de lanzamiento',
     accessor: 'date-launch',
+    Cell: TimeCell,
   },
   {
     Header: 'Plataformas',

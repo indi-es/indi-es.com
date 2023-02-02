@@ -22,7 +22,7 @@ function GamesTable({ studios, className }) {
       initialState={{
         sortBy: [
           {
-            id: 'name',
+            id: 'date-launch',
             desc: false,
           },
         ],

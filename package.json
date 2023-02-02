@@ -21,6 +21,7 @@
     "@notionhq/client": "^0.4.12",
     "@reach/tooltip": "^0.16.2",
     "classnames": "^2.3.1",
+    "date-fns": "^2.29.3",
     "datebook": "^7.0.8",
     "leaflet": "^1.7.1",
     "modern-css-reset": "^1.4.0",
