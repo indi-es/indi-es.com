@@ -1,3 +1,4 @@
+import { ListFormattedCell } from 'components/cells';
 import CellPlaforms from './cell-platforms';
 
 const columns = [
@@ -7,11 +8,13 @@ const columns = [
   },
   {
     Header: 'Desarrolladores',
-    accessor: 'developer',
+    accessor: 'developers',
+    Cell: ListFormattedCell,
   },
   {
     Header: 'Publisher',
-    accessor: 'publisher',
+    accessor: 'publishers',
+    Cell: ListFormattedCell,
   },
   {
     Header: 'Fecha de lanzamiento',
