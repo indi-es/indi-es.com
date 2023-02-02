@@ -19,7 +19,12 @@ function CellPlatforms({ cell: { value } }) {
 
 CellPlatforms.propTypes = {
   cell: PropTypes.shape({
-    value: PropTypes.string,
+    value: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string,
+        url: PropTypes.string,
+      })
+    ),
   }),
 };
 
