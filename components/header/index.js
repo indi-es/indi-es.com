@@ -34,6 +34,11 @@ export default function Header() {
               </NavLink>
             </li>
             <li>
+              <NavLink href="/juegos" activeClassName="-active" exact>
+                <a>Juegos</a>
+              </NavLink>
+            </li>
+            <li>
               <NavLink href="/recursos" activeClassName="-active" exact>
                 <a>Recursos</a>
               </NavLink>
