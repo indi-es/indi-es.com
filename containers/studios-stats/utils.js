@@ -31,6 +31,7 @@ export function getByState(items) {
     .sort((a, b) => {
       return b.total - a.total;
     });
+
   return t;
 }
 

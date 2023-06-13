@@ -1,31 +1,29 @@
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 
-import Markdown from 'components/markdown';
-import Callout from 'components/callout';
 import { Page } from 'components/layouts';
 
 import GamesTable from 'containers/games-table';
+import GamesStats from 'containers/games-stats';
+import GamesHeader from './games-header';
+import GamesNotes from './games-notes';
 
 import style from './style.module.css';
 
-const text = `
-La información en esta página fue recopilada originalmente en su mayoría por [Cataxis](https://www.flowcode.com/page/cataxis).
-
-- Base de datos original en [Google Docs](https://docs.google.com/spreadsheets/d/1qZNjZOXthLsm_NQynQ2VOPgVUMK6hfAuLeTj1HG-bV0/edit#gid=1938942876)
-- [JSON de INDI·ES](https://github.com/indi-es/juegos/blob/main/data.json)
-
-`;
-
 function Games({ data }) {
+  const router = useRouter();
+  const { vista = 'tabla' } = router.query;
+  const isTable = vista === 'tabla';
+  const isStats = vista === 'estadisticas';
+
   return (
     <Page className={style.page}>
       <div className={`${style.wrapper} wrapper`}>
-        <Callout>
-          <Markdown className={`${style['juegos-resources']}`}>{text}</Markdown>
-        </Callout>
+        <GamesNotes />
         <div className={style.content}>
-          <span className={style.info}>Total de juegos: {data.length}</span>
-          <GamesTable games={data} className={style.table} />
+          <GamesHeader isTable={isTable} isStats={isStats} data={data} />
+          {isTable ? <GamesTable games={data} className={style.table} /> : null}
+          {isStats ? <GamesStats games={data} className={style.stats} /> : null}
         </div>
       </div>
     </Page>

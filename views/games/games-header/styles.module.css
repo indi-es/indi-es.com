@@ -1,0 +1,82 @@
+.header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--margin-02);
+  gap: var(--margin-02);
+}
+
+.actions-view {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-end;
+  border: 2px solid var(--fg);
+  border-radius: var(--margin-01);
+  overflow: hidden;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--margin-h) var(--margin-01);
+  color: var(--fg);
+  background: var(--bg);
+  box-shadow: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease color;
+}
+
+.button:hover {
+  color: var(--hl-01);
+}
+
+.button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.button.-active {
+  color: var(--hl-01);
+}
+
+.button:not(:last-child) {
+  border-right: 2px solid var(--border);
+}
+
+.info {
+  text-transform: uppercase;
+  border-radius: var(--margin-01);
+  text-decoration: none;
+  background: var(--bg-alt);
+  /* line-height: 1em; */
+  overflow: hidden;
+  display: flex;
+  flex-flow: row;
+  gap: var(--margin-01);
+  padding: var(--margin-h) var(--margin-02);
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    flex-flow: column;
+    align-items: flex-end;
+  }
+
+  .button {
+    padding: var(--margin-01) var(--margin-01);
+  }
+
+  .button:first-child {
+    border-right: 0;
+    border-bottom: 2px solid var(--bg-alt);
+  }
+}
