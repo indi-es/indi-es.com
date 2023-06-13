@@ -31,11 +31,11 @@ export function getByYear(items) {
     .map((entry) => {
       return {
         year: entry[0],
-        total: entry[1].length,
+        value: entry[1].length,
       };
     })
     .sort((a, b) => {
-      return b.total - a.total;
+      return a.year - b.year;
     });
   console.log(t);
   return t;

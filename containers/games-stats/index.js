@@ -21,10 +21,7 @@ function GamesStats({ games, className }) {
     <div className={customClassName}>
       <section>
         <Bar
-          data={byYear.map((item) => ({
-            year: item.year,
-            value: item.total,
-          }))}
+          data={byYear}
           indexBy="year"
           colors={['var(--fg)']}
           layout="vertical"
@@ -34,7 +31,7 @@ function GamesStats({ games, className }) {
             tickSize: 4,
             tickPadding: 4,
             tickRotation: 0,
-            legend: 'Número de juegos',
+            legend: 'Número de juegos lanzados por año',
             legendPosition: 'middle',
             legendOffset: 40,
           }}
