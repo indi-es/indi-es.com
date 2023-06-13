@@ -15,7 +15,7 @@ function CellCrowdfunding({ cell: { getValue } }) {
         rel="noopener noreferrer"
         key={value.url}
       >
-        {value.funded ? 'Fundeado' : 'No fundeado'}
+        {value.funded ? 'Fondeado' : 'No fondeado'}
       </a>
     </span>
   );
