@@ -1,5 +1,7 @@
 import { ResponsiveBar } from '@nivo/bar';
 
+import theme from '../theme';
+
 function Bar(props) {
   return (
     <ResponsiveBar
@@ -14,10 +16,7 @@ function Bar(props) {
       motionStiffness={90}
       motionDamping={15}
       animate
-      theme={{
-        background: 'var(--bg)',
-        textColor: 'var(--fg)',
-      }}
+      theme={theme}
       {...props}
     />
   );

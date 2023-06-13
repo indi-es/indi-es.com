@@ -1,3 +1,34 @@
+.games-stats {
+  display: flex;
+  flex-flow: column;
+  gap: var(--margin-06);
+}
+
 .games-stats section {
   height: 50vh;
+}
+
+.cluster {
+  display: flex;
+  flex-flow: row;
+  gap: var(--margin-02);
+}
+
+.pie-wrapper {
+  margin: auto;
+  max-width: 800px;
+  height: 100%;
+  flex: 1 1 auto;
+}
+
+@media screen and (max-width: 900px) {
+  section.cluster {
+    flex-flow: column;
+    height: 100vh;
+  }
+
+  .pie-wrapper {
+    height: 50%;
+    flex: 1 1 auto;
+  }
 }

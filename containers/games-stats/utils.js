@@ -37,6 +37,109 @@ export function getByYear(items) {
     .sort((a, b) => {
       return a.year - b.year;
     });
-  console.log(t);
+  return t;
+}
+
+export function getStatuses(items) {
+  const grouped = items
+    .filter((item) => item.status != null)
+    .reduce((acc, curr) => {
+      if (!acc[curr.status]) acc[curr.status] = [];
+      acc[curr.status].push(curr);
+      return acc;
+    }, {});
+
+  return Object.keys(grouped);
+}
+
+export function getPlatforms(items) {
+  const grouped = items
+    .filter((item) => item.platforms != null)
+    .reduce((acc, curr) => {
+      curr.platforms.forEach((platform) => {
+        const id = platform.name;
+        if (!acc[id]) acc[id] = [];
+        acc[id].push(curr);
+      });
+
+      return acc;
+    }, {});
+
+  return Object.keys(grouped);
+}
+
+function getCrowdfundedStatus(item) {
+  if (item.url && item.funded) return 'Funded';
+  if (item.url && !item.funded) return 'Not funded';
+  return 'Not Crowdfunded';
+}
+
+export function getCrowdfundedStatuses() {
+  return ['Funded', 'Not funded', 'Not Crowdfunded'];
+}
+
+export function getByCrowdfundedStatus(items) {
+  const grouped = items
+    .filter((item) => item.platforms != null)
+    .reduce((acc, curr) => {
+      const id = getCrowdfundedStatus(curr.crowdfunding);
+      if (!acc[id]) acc[id] = [];
+      acc[id].push(curr);
+
+      return acc;
+    }, {});
+
+  const t = Object.entries(grouped).map((entry) => {
+    return {
+      id: entry[0],
+      label: entry[0],
+      value: entry[1].length,
+    };
+  });
+
+  return t;
+}
+
+export function getByPlatforms(items) {
+  const grouped = items
+    .filter((item) => item.platforms != null)
+    .reduce((acc, curr) => {
+      curr.platforms.forEach((platform) => {
+        const id = platform.name;
+        if (!acc[id]) acc[id] = [];
+        acc[id].push(curr);
+      });
+
+      return acc;
+    }, {});
+
+  const t = Object.entries(grouped).map((entry) => {
+    return {
+      id: entry[0],
+      label: entry[0],
+      value: entry[1].length,
+    };
+  });
+
+  return t;
+}
+
+export function getByStatus(items) {
+  const grouped = items
+    .filter((item) => item.status != null)
+    .reduce((acc, curr) => {
+      if (!acc[curr.status]) acc[curr.status] = [];
+      acc[curr.status].push(curr);
+      return acc;
+    }, {});
+
+  const t = Object.entries(grouped).map((entry) => {
+    return {
+      id: entry[0],
+      label: entry[0],
+      value: entry[1].length,
+    };
+  });
+
   return t;
 }

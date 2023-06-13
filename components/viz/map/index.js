@@ -1,5 +1,7 @@
 import { ResponsiveGeoMap } from '@nivo/geo';
 
+import theme from '../theme';
+
 function Map() {
   return (
     <ResponsiveGeoMap
@@ -12,6 +14,7 @@ function Map() {
       borderColor="#333333"
       enableGraticule
       graticuleLineColor="#666666"
+      theme={theme}
     />
   );
 }
