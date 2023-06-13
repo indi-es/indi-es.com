@@ -42,7 +42,7 @@ Normalmente aquí aparecen los próximos eventos pero parece que no tenemos ning
 Mientras tanto puedes checar:
 
 - [Nuestra base de datos de estudios mexicanos.](/estudios)
-- [El servidor de discord.](${widget.instant_invite})
+- [El servidor de discord.](${widget?.instant_invite})
 - [El newsletter con lo mejor de la semana.](/newsletter)
 - [Nuestra lista de recursos.](/recursos)
 - [La lista de eventos pasados.](/eventos)
@@ -84,7 +84,11 @@ Home.propTypes = {
     members: PropTypes.arrayOf(PropTypes.shape({})),
     presence_count: PropTypes.number,
     instant_invite: PropTypes.string,
-  }).isRequired,
+  }),
+};
+
+Home.defaultProps = {
+  widget: null,
 };
 
 export default Home;

@@ -11,7 +11,7 @@ export default function Discord({ data }) {
   return (
     <Page className={style.page}>
       <div className={`${style['discord-wrapper']} wrapper`}>
-        <DiscordWidget {...data} />
+        {data ? <DiscordWidget {...data} /> : null}
       </div>
     </Page>
   );
@@ -23,7 +23,11 @@ Discord.propTypes = {
     members: PropTypes.arrayOf(PropTypes.shape({})),
     presence_count: PropTypes.number,
     instant_invite: PropTypes.string,
-  }).isRequired,
+  }),
+};
+
+Discord.defaultProps = {
+  data: null,
 };
 
 export async function getServerSideProps() {

@@ -39,7 +39,7 @@ function Event({
 
   // TODO: fetch channel name
   // we are currently not doing it because we could get rate limited
-  const channelName = channel.name;
+  const channelName = channel?.name;
 
   return (
     <article className={style.event}>
