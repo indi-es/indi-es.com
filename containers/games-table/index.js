@@ -7,7 +7,7 @@ import columns from './columns';
 
 import style from './style.module.css';
 
-function GamesTable({ studios, className }) {
+function GamesTable({ games, className }) {
   const customClassName = classNames(
     style['games-table'],
     'games-table',
@@ -17,7 +17,7 @@ function GamesTable({ studios, className }) {
   return (
     <Table
       columns={columns}
-      data={studios}
+      data={games}
       className={customClassName}
       initialState={{
         sortBy: [
@@ -32,7 +32,7 @@ function GamesTable({ studios, className }) {
 }
 
 GamesTable.propTypes = {
-  studios: PropTypes.arrayOf(
+  games: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
     })

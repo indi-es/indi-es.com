@@ -1,2 +1,4 @@
 .list-formatted-cell {
+  max-width: 30ch;
+  white-space: normal;
 }

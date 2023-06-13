@@ -22,6 +22,10 @@ const columns = [
     Cell: TimeCell,
   },
   {
+    Header: 'Estado',
+    accessor: 'status',
+  },
+  {
     Header: 'Plataformas',
     accessor: 'platforms',
     Cell: CellPlaforms,
