@@ -4,20 +4,21 @@
   gap: var(--margin-06);
 }
 
-.games-stats section {
-  height: 50vh;
-}
-
 .cluster {
   display: flex;
   flex-flow: row;
   gap: var(--margin-02);
 }
 
+.bar-wrapper {
+  height: 50vh;
+}
+
 .pie-wrapper {
   margin: auto;
   max-width: 800px;
-  height: 100%;
+  height: 50vh;
+  width: 100%;
   flex: 1 1 auto;
 }
 

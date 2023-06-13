@@ -137,3 +137,15 @@ label strong {
     background: var(--hl-01);
   }
 }
+
+@media (min-width: 670px) {
+  [data-hide-mobile] {
+    display: none !important;
+  }
+}
+
+@media (max-width: 671px) {
+  [data-hide-desktop] {
+    display: none !important;
+  }
+}

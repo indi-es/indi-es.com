@@ -20,7 +20,7 @@ function WebCell({ cell: { getValue } }) {
 
 WebCell.propTypes = {
   cell: PropTypes.shape({
-    getValue: PropTypes.string.isRequired,
+    getValue: PropTypes.func.isRequired,
   }).isRequired,
 };
 
