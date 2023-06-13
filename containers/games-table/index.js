@@ -19,14 +19,12 @@ function GamesTable({ games, className }) {
       columns={columns}
       data={games}
       className={customClassName}
-      initialState={{
-        sortBy: [
-          {
-            id: 'date-launch',
-            desc: false,
-          },
-        ],
-      }}
+      initialSort={[
+        {
+          id: 'date-launch',
+          desc: false,
+        },
+      ]}
     />
   );
 }

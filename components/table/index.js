@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
-import { useTable, useSortBy } from 'react-table';
+import React from 'react';
+import {
+  useReactTable,
+  getSortedRowModel,
+  getCoreRowModel,
+} from '@tanstack/react-table';
 import classNames from 'classnames';
 
 import TableHeader from './table-header';
@@ -7,14 +12,7 @@ import TableRow from './table-row';
 
 import style from './style.module.css';
 
-function Table({
-  className,
-  columns,
-  data,
-  loading,
-  initialState,
-  sortingFns,
-}) {
+function Table({ className, initialSort, columns, data, loading, sortingFns }) {
   const customClassName = classNames(
     style['table-container'],
     'table-container',
@@ -23,32 +21,27 @@ function Table({
       '-loading': loading,
     }
   );
+  const [sorting, setSorting] = React.useState(initialSort);
 
-  console.log(sortingFns);
-  const {
-    headerGroups,
-    getTableProps, // table props from react-table
-    getTableBodyProps, // table body props from react-table
-    rows, // rows for the table based on the data passed
-    prepareRow, // Prepare the row (this function needs to be called for each row before getting the row props)
-  } = useTable(
-    {
-      columns,
-      data,
-      initialState,
-      sortingFns,
+  const table = useReactTable({
+    columns,
+    data,
+    sortingFns,
+    state: {
+      sorting,
     },
-    useSortBy
-  );
+    onSortingChange: setSorting,
+    getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+  });
 
   return (
     <div className={customClassName}>
-      <table {...getTableProps()}>
-        <TableHeader headerGroups={headerGroups} />
-        <tbody {...getTableBodyProps()}>
-          {rows.map((row) => {
-            prepareRow(row);
-            return <TableRow key={row.index} row={row} loading={loading} />;
+      <table>
+        <TableHeader headerGroups={table.getHeaderGroups()} />
+        <tbody>
+          {table.getRowModel().rows.map((row) => {
+            return <TableRow key={row.id} row={row} loading={loading} />;
           })}
         </tbody>
       </table>
@@ -61,14 +54,14 @@ Table.propTypes = {
   className: PropTypes.string,
   columns: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  initialState: PropTypes.shape({}),
+  initialSort: PropTypes.arrayOf(PropTypes.shape({})),
   sortingFns: PropTypes.shape({}),
 };
 
 Table.defaultProps = {
   loading: false,
   className: null,
-  initialState: {},
+  initialSort: null,
   sortingFns: {},
 };
 

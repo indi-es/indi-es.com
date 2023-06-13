@@ -3,7 +3,8 @@ import { FiInstagram } from 'react-icons/fi';
 
 import style from './style.module.css';
 
-function IgCell({ cell: { value } }) {
+function IgCell({ cell: { getValue } }) {
+  const value = getValue();
   if (!value) return null;
   return (
     <a
@@ -19,14 +20,10 @@ function IgCell({ cell: { value } }) {
 
 IgCell.propTypes = {
   cell: PropTypes.shape({
-    value: PropTypes.string,
-  }),
+    getValue: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
-IgCell.defaultProps = {
-  cell: {
-    value: null,
-  },
-};
+IgCell.defaultProps = {};
 
 export default IgCell;

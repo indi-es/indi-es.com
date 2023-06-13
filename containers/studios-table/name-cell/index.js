@@ -16,10 +16,11 @@ function getUrl({ website, twitter, facebook, instagram }) {
 
 function NameCell({
   cell: {
-    value,
+    getValue,
     row: { original },
   },
 }) {
+  const value = getValue();
   if (!value) return null;
 
   const url = getUrl(original);
@@ -40,7 +41,7 @@ function NameCell({
 
 NameCell.propTypes = {
   cell: PropTypes.shape({
-    value: PropTypes.string,
+    getValue: PropTypes.func.isRequired,
     row: PropTypes.shape({
       original: PropTypes.shape({
         inactive: PropTypes.bool,
@@ -57,9 +58,7 @@ NameCell.propTypes = {
 };
 
 NameCell.defaultProps = {
-  cell: {
-    value: null,
-  },
+  cell: {},
 };
 
 export default NameCell;

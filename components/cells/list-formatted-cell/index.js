@@ -7,7 +7,8 @@ const formatter = new Intl.ListFormat('es-mx', {
   type: 'conjunction',
 });
 
-function ListFormattedCell({ cell: { value } }) {
+function ListFormattedCell({ cell: { getValue } }) {
+  const value = getValue();
   if (!value) return null;
 
   return (
@@ -19,14 +20,10 @@ function ListFormattedCell({ cell: { value } }) {
 
 ListFormattedCell.propTypes = {
   cell: PropTypes.shape({
-    value: PropTypes.arrayOf(PropTypes.string),
-  }),
+    getValue: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
-ListFormattedCell.defaultProps = {
-  cell: {
-    value: null,
-  },
-};
+ListFormattedCell.defaultProps = {};
 
 export default ListFormattedCell;

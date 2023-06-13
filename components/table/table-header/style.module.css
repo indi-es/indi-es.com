@@ -28,6 +28,15 @@
   flex-flow: row;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: var(--fg);
+  margin: 0;
+}
+.table-header-wrapper[data-can-sort='true'] {
+  cursor: pointer;
 }
 
 .table-header-wrapper svg {

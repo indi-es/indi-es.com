@@ -3,7 +3,8 @@ import { FiGlobe } from 'react-icons/fi';
 
 import style from './style.module.css';
 
-function WebCell({ cell: { value } }) {
+function WebCell({ cell: { getValue } }) {
+  const value = getValue();
   if (!value) return null;
   return (
     <a
@@ -19,14 +20,10 @@ function WebCell({ cell: { value } }) {
 
 WebCell.propTypes = {
   cell: PropTypes.shape({
-    value: PropTypes.string,
-  }),
+    getValue: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
-WebCell.defaultProps = {
-  cell: {
-    value: null,
-  },
-};
+WebCell.defaultProps = {};
 
 export default WebCell;

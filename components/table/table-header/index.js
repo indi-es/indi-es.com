@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { flexRender } from '@tanstack/react-table';
 
 import Skeleton from 'components/skeleton';
 
@@ -20,18 +21,29 @@ function TableHeader({ className, headerGroups, loading }) {
   return (
     <thead className={customClassName}>
       {headerGroups.map((headerGroup) => (
-        <tr {...headerGroup.getHeaderGroupProps()}>
-          {headerGroup.headers.map((column) => (
-            <th {...column.getHeaderProps(column.getSortByToggleProps())}>
-              <div className={style['table-header-wrapper']}>
-                {loading ? <Skeleton /> : column.render('Header')}
-                <SortIndicator
-                  isSorted={column.isSorted}
-                  isSortedDesc={column.isSortedDesc}
-                />
-              </div>
-            </th>
-          ))}
+        <tr key={headerGroup.id}>
+          {headerGroup.headers.map((header) => {
+            return (
+              <th key={header.id} colSpan={header.colSpan}>
+                <button
+                  type="button"
+                  className={style['table-header-wrapper']}
+                  data-can-sort={header.column.getCanSort()}
+                  onClick={header.column.getToggleSortingHandler()}
+                >
+                  {loading ? (
+                    <Skeleton />
+                  ) : (
+                    flexRender(
+                      header.column.columnDef.header,
+                      header.getContext()
+                    )
+                  )}
+                  <SortIndicator isSorted={header.column.getIsSorted()} />
+                </button>
+              </th>
+            );
+          })}
         </tr>
       ))}
     </thead>

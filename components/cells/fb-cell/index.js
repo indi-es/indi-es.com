@@ -3,7 +3,8 @@ import { FaFacebookSquare } from 'react-icons/fa';
 
 import style from './style.module.css';
 
-function FbCell({ cell: { value } }) {
+function FbCell({ cell: { getValue } }) {
+  const value = getValue();
   if (!value) return null;
   return (
     <a
@@ -19,14 +20,10 @@ function FbCell({ cell: { value } }) {
 
 FbCell.propTypes = {
   cell: PropTypes.shape({
-    value: PropTypes.string,
-  }),
+    getValue: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
-FbCell.defaultProps = {
-  cell: {
-    value: null,
-  },
-};
+FbCell.defaultProps = {};
 
 export default FbCell;

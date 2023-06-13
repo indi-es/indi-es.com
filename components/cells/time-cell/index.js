@@ -4,7 +4,8 @@ import Time from 'components/time';
 
 import style from './style.module.css';
 
-function TimeCell({ cell: { value } }) {
+function TimeCell({ cell: { getValue } }) {
+  const value = getValue();
   if (!value) return null;
 
   return <Time className={style['time-cell']}>{value}</Time>;
@@ -12,14 +13,10 @@ function TimeCell({ cell: { value } }) {
 
 TimeCell.propTypes = {
   cell: PropTypes.shape({
-    value: PropTypes.string,
-  }),
+    getValue: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
-TimeCell.defaultProps = {
-  cell: {
-    value: null,
-  },
-};
+TimeCell.defaultProps = {};
 
 export default TimeCell;

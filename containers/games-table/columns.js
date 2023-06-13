@@ -3,40 +3,54 @@ import { ListFormattedCell, TimeCell } from 'components/cells';
 import CellPlaforms from './cell-platforms';
 import CellCrowdfunding from './cell-crowdfunding';
 
+function getCrowdfundingSortValue(value) {
+  const { funded, url } = value;
+  if (funded) return 2;
+  if (url) return 1;
+  return 0;
+}
+
 const columns = [
   {
-    Header: 'Nombre',
-    accessor: 'name',
+    header: 'Nombre',
+    accessorKey: 'name',
   },
   {
-    Header: 'Desarrolladores',
-    accessor: 'developers',
-    Cell: ListFormattedCell,
+    header: 'Desarrolladores',
+    accessorKey: 'developers',
+    cell: ListFormattedCell,
   },
   {
-    Header: 'Publisher',
-    accessor: 'publishers',
-    Cell: ListFormattedCell,
+    header: 'Publisher',
+    accessorKey: 'publishers',
+    cell: ListFormattedCell,
   },
   {
-    Header: 'Fecha de lanzamiento',
-    accessor: 'date-launch',
-    Cell: TimeCell,
+    header: 'Fecha de lanzamiento',
+    accessorKey: 'date-launch',
+    cell: TimeCell,
+    sortingFn: 'datetime',
   },
   {
-    Header: 'Estado',
-    accessor: 'status',
+    header: 'Estado',
+    accessorKey: 'status',
   },
   {
-    Header: 'Crowdfunding',
-    accessor: 'crowdfunding',
-    Cell: CellCrowdfunding,
+    header: 'Crowdfunding',
+    accessorKey: 'crowdfunding',
+    cell: CellCrowdfunding,
     disableSortBy: true,
+    sortingFn: (rowA, rowB, columnId) => {
+      const a = getCrowdfundingSortValue(rowA.getValue(columnId));
+      const b = getCrowdfundingSortValue(rowB.getValue(columnId));
+
+      return a - b;
+    },
   },
   {
-    Header: 'Plataformas',
-    accessor: 'platforms',
-    Cell: CellPlaforms,
+    header: 'Plataformas',
+    accessorKey: 'platforms',
+    cell: CellPlaforms,
     disableSortBy: true,
   },
 ];

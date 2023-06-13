@@ -7,7 +7,8 @@ const formatter = new Intl.ListFormat('es-mx', {
   type: 'conjunction',
 });
 
-function CellPlatforms({ cell: { value } }) {
+function CellPlatforms({ cell: { getValue } }) {
+  const value = getValue();
   if (!value) return null;
 
   return (
@@ -41,19 +42,10 @@ function CellPlatforms({ cell: { value } }) {
 
 CellPlatforms.propTypes = {
   cell: PropTypes.shape({
-    value: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string,
-        url: PropTypes.string,
-      })
-    ),
-  }),
+    getValue: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
-CellPlatforms.defaultProps = {
-  cell: {
-    value: null,
-  },
-};
+CellPlatforms.defaultProps = {};
 
 export default CellPlatforms;

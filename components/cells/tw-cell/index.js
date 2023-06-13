@@ -3,7 +3,8 @@ import { FaTwitter } from 'react-icons/fa';
 
 import style from './style.module.css';
 
-function TwCell({ cell: { value } }) {
+function TwCell({ cell: { getValue } }) {
+  const value = getValue();
   if (!value) return null;
   return (
     <a
@@ -19,14 +20,10 @@ function TwCell({ cell: { value } }) {
 
 TwCell.propTypes = {
   cell: PropTypes.shape({
-    value: PropTypes.string,
-  }),
+    getValue: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
-TwCell.defaultProps = {
-  cell: {
-    value: null,
-  },
-};
+TwCell.defaultProps = {};
 
 export default TwCell;

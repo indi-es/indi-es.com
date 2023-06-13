@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 
 import style from './style.module.css';
 
-function CellCrowdfunding({ cell: { value } }) {
+function CellCrowdfunding({ cell: { getValue } }) {
+  const value = getValue();
   if (!value) return null;
   if (value.url == null) return null;
 
@@ -22,17 +23,10 @@ function CellCrowdfunding({ cell: { value } }) {
 
 CellCrowdfunding.propTypes = {
   cell: PropTypes.shape({
-    value: PropTypes.shape({
-      funded: PropTypes.bool,
-      url: PropTypes.string,
-    }),
-  }),
+    getValue: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
-CellCrowdfunding.defaultProps = {
-  cell: {
-    value: null,
-  },
-};
+CellCrowdfunding.defaultProps = {};
 
 export default CellCrowdfunding;
