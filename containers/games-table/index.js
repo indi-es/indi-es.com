@@ -16,13 +16,13 @@ function GamesTable({ games, className }) {
 
   return (
     <Table
+      className={customClassName}
       columns={columns}
       data={games}
-      className={customClassName}
       initialSort={[
         {
-          id: 'date-launch',
-          desc: false,
+          id: 'name',
+          desc: true,
         },
       ]}
     />

@@ -1,7 +1,12 @@
-import { ListFormattedCell, TimeCell } from 'components/cells';
+import { TimeCell } from 'components/cells';
 
 import CellPlaforms from './cell-platforms';
 import CellCrowdfunding from './cell-crowdfunding';
+
+const formatter = new Intl.ListFormat('es-mx', {
+  style: 'long',
+  type: 'conjunction',
+});
 
 function getCrowdfundingSortValue(value) {
   const { funded, url } = value;
@@ -14,22 +19,36 @@ const columns = [
   {
     header: 'Nombre',
     accessorKey: 'name',
+    sortingFn: 'alphanumericCaseSensitive',
   },
   {
     header: 'Desarrolladores',
-    accessorKey: 'developers',
-    cell: ListFormattedCell,
+    id: 'developers',
+    accessorFn: (row) => formatter.format(row.developers || []),
+    sortingFn: 'alphanumericCaseSensitive',
   },
   {
     header: 'Publisher',
-    accessorKey: 'publishers',
-    cell: ListFormattedCell,
+    id: 'publishers',
+    accessorFn: (row) => formatter.format(row.publishers || []),
+    sortingFn: 'alphanumericCaseSensitive',
   },
   {
     header: 'Fecha de lanzamiento',
     accessorKey: 'date-launch',
     cell: TimeCell,
-    sortingFn: 'datetime',
+    sortingFn: (rowA, rowB, columnId) => {
+      const valueA = rowA.getValue(columnId);
+      const valueB = rowB.getValue(columnId);
+
+      if (valueA == null) return -1;
+      if (valueB == null) return 1;
+
+      const a = Date.parse(valueA);
+      const b = Date.parse(valueB);
+
+      return a - b;
+    },
   },
   {
     header: 'Estado',
