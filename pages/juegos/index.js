@@ -12,7 +12,7 @@ async function getGithubFile(url) {
   return data;
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const baseUrl = `https://raw.githubusercontent.com/indi-es/juegos`;
   const { games: data } = await getGithubFile(`${baseUrl}/main/data.json`);
 
