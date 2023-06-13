@@ -7,7 +7,14 @@ import TableRow from './table-row';
 
 import style from './style.module.css';
 
-function Table({ className, columns, data, loading, initialState }) {
+function Table({
+  className,
+  columns,
+  data,
+  loading,
+  initialState,
+  sortingFns,
+}) {
   const customClassName = classNames(
     style['table-container'],
     'table-container',
@@ -17,6 +24,7 @@ function Table({ className, columns, data, loading, initialState }) {
     }
   );
 
+  console.log(sortingFns);
   const {
     headerGroups,
     getTableProps, // table props from react-table
@@ -28,6 +36,7 @@ function Table({ className, columns, data, loading, initialState }) {
       columns,
       data,
       initialState,
+      sortingFns,
     },
     useSortBy
   );
@@ -53,12 +62,14 @@ Table.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   initialState: PropTypes.shape({}),
+  sortingFns: PropTypes.shape({}),
 };
 
 Table.defaultProps = {
   loading: false,
   className: null,
   initialState: {},
+  sortingFns: {},
 };
 
 export default Table;

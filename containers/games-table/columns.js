@@ -1,5 +1,7 @@
 import { ListFormattedCell, TimeCell } from 'components/cells';
+
 import CellPlaforms from './cell-platforms';
+import CellCrowdfunding from './cell-crowdfunding';
 
 const columns = [
   {
@@ -24,6 +26,12 @@ const columns = [
   {
     Header: 'Estado',
     accessor: 'status',
+  },
+  {
+    Header: 'Crowdfunding',
+    accessor: 'crowdfunding',
+    Cell: CellCrowdfunding,
+    disableSortBy: true,
   },
   {
     Header: 'Plataformas',
