@@ -49,7 +49,7 @@ function GamesStats({ games, className }) {
             tickSize: 4,
             tickPadding: 4,
             tickRotation: 0,
-            legend: 'Número de juegos lanzados por año',
+            legend: 'Número de juegos publicados por año',
             legendPosition: 'middle',
             legendOffset: 40,
           }}

@@ -26,7 +26,7 @@ function Recursos({ data }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const url =
     'https://raw.githubusercontent.com/indi-es/enlaces/main/README.md';
   const res = await fetch(url);

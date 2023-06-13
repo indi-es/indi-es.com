@@ -16,7 +16,7 @@ export function getYears(items) {
 
 export function getByYear(items) {
   const grouped = items
-    .filter((item) => item[dateKey] != null)
+    .filter((item) => item[dateKey] != null && item.status === 'Publicado')
     .reduce((acc, curr) => {
       const dateString = curr[dateKey];
       const date = new Date(Date.parse(dateString));

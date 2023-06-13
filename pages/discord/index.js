@@ -30,7 +30,7 @@ Discord.defaultProps = {
   data: null,
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const data = await fetchDiscordWidget();
 
   return {
