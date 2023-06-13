@@ -16,7 +16,21 @@ La información en esta página fue recopilada originalmente en su mayoría por 
 
 `;
 
+const unlock = false;
 function Games({ data }) {
+  if (!unlock)
+    return (
+      <Page className={style.page}>
+        <div className={`${style.wrapper} wrapper`}>
+          <Callout>
+            <Markdown className={`${style['juegos-resources']}`}>
+              Pronto!
+            </Markdown>
+          </Callout>
+        </div>
+      </Page>
+    );
+
   return (
     <Page className={style.page}>
       <div className={`${style.wrapper} wrapper`}>
