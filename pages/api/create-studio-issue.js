@@ -22,6 +22,7 @@ export default async function createStudioIssue(req, res) {
   const {
     user: { name, email },
   } = session;
+
   const {
     body: { values },
   } = req;

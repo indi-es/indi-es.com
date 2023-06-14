@@ -5,14 +5,14 @@ import { Pie, patterns } from 'components/viz';
 function PieLeft({ data, headers }) {
   return (
     <Pie
-      margin={{ top: 40, right: 0, bottom: 80, left: 120 }}
+      margin={{ top: 80, right: 100, bottom: 80, left: 200 }}
       data={data}
       legends={[
         {
           anchor: 'left',
           direction: 'column',
           justify: false,
-          translateX: -110,
+          translateX: -200,
           translateY: 0,
           itemsSpacing: 8,
           itemWidth: 100,

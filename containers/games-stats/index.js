@@ -22,6 +22,7 @@ import PieBig from './pie-big';
 
 import styles from './styles.module.css';
 import PieLegendless from './pie-legendless';
+import ChartWrapper from './chart-wrapper';
 
 function GamesStats({ games, className }) {
   const customClassName = classNames(
@@ -38,6 +39,9 @@ function GamesStats({ games, className }) {
     () => getByCrowdfundedStatus(games),
     [games]
   );
+  const byCrowdfundingStatusFiltered = byCrowdfundingStatus.filter(
+    (item) => item.id !== 'Not Crowdfunded'
+  );
 
   const statuses = useMemo(() => getStatuses(games), [games]);
   const genres = useMemo(() => getGenres(games), [games]);
@@ -46,67 +50,75 @@ function GamesStats({ games, className }) {
 
   return (
     <div className={customClassName}>
-      <section data-hide-mobile="">
-        <div className={styles['bar-wrapper']}>
-          <GamesBarYear data={byYear} layout="vertical" />
-        </div>
-      </section>
-      <section data-hide-desktop="">
-        <div className={styles['bar-wrapper']}>
-          <GamesBarYear data={byYear} layout="horizontal" />
-        </div>
-      </section>
-      <section className={styles.cluster}>
-        <div className={styles['pie-wrapper']} data-hide-mobile="">
-          <PieLeft data={byStatus} headers={statuses} />
-        </div>
-        <div className={styles['pie-wrapper']} data-hide-desktop="">
-          <PieLegendless data={byStatus} headers={statuses} />
-        </div>
-        <div className={styles['pie-wrapper']} data-hide-mobile="">
-          <PieRight data={byPlatform} headers={platforms} />
-        </div>
-        <div className={styles['pie-wrapper']} data-hide-desktop="">
-          <PieLegendless data={byPlatform} headers={platforms} />
-        </div>
-      </section>
-      <section className={styles.cluster}>
-        <div className={styles['pie-wrapper']} data-hide-mobile="">
-          <PieLeft data={byCrowdfundingStatus} headers={crowdfundStatuses} />
-        </div>
-        <div className={styles['pie-wrapper']} data-hide-desktop="">
-          <PieLegendless
-            data={byCrowdfundingStatus}
-            headers={crowdfundStatuses}
-          />
-        </div>
-        <div className={styles['pie-wrapper']} data-hide-mobile="">
-          <PieRight
-            data={byCrowdfundingStatus.filter(
-              (item) => item.id !== 'Not Crowdfunded'
-            )}
-            headers={crowdfundStatuses}
-          />
-        </div>
-        <div className={styles['pie-wrapper']} data-hide-desktop="">
-          <PieLegendless
-            data={byCrowdfundingStatus.filter(
-              (item) => item.id !== 'Not Crowdfunded'
-            )}
-            headers={crowdfundStatuses}
-          />
-        </div>
-      </section>
-      <section className={styles['full-height']}>
-        <div className={styles['pie-wrapper']} data-hide-mobile="">
-          <PieBig data={byGenres} headers={genres} />
-        </div>
-      </section>
-      <section className={styles.small}>
-        <div className={styles['pie-wrapper']} data-hide-desktop="">
-          <PieLegendless data={byGenres} headers={genres} />
-        </div>
-      </section>
+      <ChartWrapper
+        data-hide-mobile=""
+        data-columns="full-width"
+        id="game-bar-year-vertical"
+      >
+        <GamesBarYear data={byYear} layout="vertical" />
+      </ChartWrapper>
+
+      <ChartWrapper data-hide-desktop="" id="game-bar-year-horizontal">
+        <GamesBarYear data={byYear} layout="horizontal" />
+      </ChartWrapper>
+
+      <ChartWrapper
+        className={styles['pie-article']}
+        data-hide-mobile=""
+        id="pie-status-desktop"
+      >
+        <PieLeft data={byStatus} headers={statuses} />
+      </ChartWrapper>
+
+      <ChartWrapper data-hide-desktop="" id="pie-status-mobile">
+        <PieLegendless data={byStatus} headers={statuses} />
+      </ChartWrapper>
+
+      <ChartWrapper data-hide-mobile="" id="pie-by-platform-desktop">
+        <PieRight data={byPlatform} headers={platforms} />
+      </ChartWrapper>
+
+      <ChartWrapper data-hide-desktop="" id="pie-by-platform-mobile">
+        <PieLegendless data={byPlatform} headers={platforms} />
+      </ChartWrapper>
+
+      <ChartWrapper data-hide-mobile="" id="pie-crowdfunding-desktop">
+        <PieLeft data={byCrowdfundingStatus} headers={crowdfundStatuses} />
+      </ChartWrapper>
+
+      <ChartWrapper data-hide-desktop="" id="pie-by-platform-mobile">
+        <PieLegendless
+          data={byCrowdfundingStatus}
+          headers={crowdfundStatuses}
+        />
+      </ChartWrapper>
+
+      <ChartWrapper data-hide-mobile="" id="pie-crowdfunding-filter-desktop">
+        <PieRight
+          data={byCrowdfundingStatusFiltered}
+          headers={crowdfundStatuses}
+        />
+      </ChartWrapper>
+
+      <ChartWrapper data-hide-desktop="" id="pie-crowdfunding-filter-mobile">
+        <PieLegendless
+          data={byCrowdfundingStatusFiltered}
+          headers={crowdfundStatuses}
+        />
+      </ChartWrapper>
+
+      <ChartWrapper
+        data-columns="full-width"
+        data-rows="2"
+        data-hide-mobile=""
+        id="pie-genres-desktop"
+      >
+        <PieBig data={byGenres} headers={genres} />
+      </ChartWrapper>
+
+      <ChartWrapper data-hide-desktop="" id="pie-genres-mobile">
+        <PieLegendless data={byGenres} headers={genres} />
+      </ChartWrapper>
     </div>
   );
 }

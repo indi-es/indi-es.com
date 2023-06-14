@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { Bar } from 'components/viz';
 
-function GamesBarYear({ data, layout }) {
+function GamesBarYear({ data, layout, ...rest }) {
   return (
     <Bar
       data={data}
@@ -26,6 +26,7 @@ function GamesBarYear({ data, layout }) {
         legendPosition: 'middle',
         legendOffset: 32,
       }}
+      {...rest}
     />
   );
 }
