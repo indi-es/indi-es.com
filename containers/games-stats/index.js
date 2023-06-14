@@ -18,7 +18,7 @@ import {
 
 import PieRight from './pie-right';
 import PieLeft from './pie-left';
-import PieBottom from './pie-bottom';
+import PieBig from './pie-big';
 
 import styles from './styles.module.css';
 import PieLegendless from './pie-legendless';
@@ -57,19 +57,39 @@ function GamesStats({ games, className }) {
         </div>
       </section>
       <section className={styles.cluster}>
-        <div className={styles['pie-wrapper']}>
+        <div className={styles['pie-wrapper']} data-hide-mobile="">
           <PieLeft data={byStatus} headers={statuses} />
         </div>
-        <div className={styles['pie-wrapper']}>
+        <div className={styles['pie-wrapper']} data-hide-desktop="">
+          <PieLegendless data={byStatus} headers={statuses} />
+        </div>
+        <div className={styles['pie-wrapper']} data-hide-mobile="">
           <PieRight data={byPlatform} headers={platforms} />
+        </div>
+        <div className={styles['pie-wrapper']} data-hide-desktop="">
+          <PieLegendless data={byPlatform} headers={platforms} />
         </div>
       </section>
       <section className={styles.cluster}>
-        <div className={styles['pie-wrapper']}>
+        <div className={styles['pie-wrapper']} data-hide-mobile="">
           <PieLeft data={byCrowdfundingStatus} headers={crowdfundStatuses} />
         </div>
-        <div className={styles['pie-wrapper']}>
+        <div className={styles['pie-wrapper']} data-hide-desktop="">
+          <PieLegendless
+            data={byCrowdfundingStatus}
+            headers={crowdfundStatuses}
+          />
+        </div>
+        <div className={styles['pie-wrapper']} data-hide-mobile="">
           <PieRight
+            data={byCrowdfundingStatus.filter(
+              (item) => item.id !== 'Not Crowdfunded'
+            )}
+            headers={crowdfundStatuses}
+          />
+        </div>
+        <div className={styles['pie-wrapper']} data-hide-desktop="">
+          <PieLegendless
             data={byCrowdfundingStatus.filter(
               (item) => item.id !== 'Not Crowdfunded'
             )}
@@ -79,7 +99,7 @@ function GamesStats({ games, className }) {
       </section>
       <section className={styles['full-height']}>
         <div className={styles['pie-wrapper']} data-hide-mobile="">
-          <PieBottom data={byGenres} headers={genres} />
+          <PieBig data={byGenres} headers={genres} />
         </div>
       </section>
       <section className={styles.small}>
