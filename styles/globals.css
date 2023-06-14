@@ -139,13 +139,13 @@ label strong {
 }
 
 @media (min-width: 670px) {
-  [data-hide-mobile] {
+  [data-hide-desktop] {
     display: none !important;
   }
 }
 
 @media (max-width: 671px) {
-  [data-hide-desktop] {
+  [data-hide-mobile] {
     display: none !important;
   }
 }

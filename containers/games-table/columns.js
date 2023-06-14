@@ -15,6 +15,10 @@ function getCrowdfundingSortValue(value) {
   return 0;
 }
 
+function formatList(items) {
+  return formatter.format(items.sort());
+}
+
 const columns = [
   {
     header: 'Nombre',
@@ -22,15 +26,21 @@ const columns = [
     sortingFn: 'alphanumericCaseSensitive',
   },
   {
+    header: 'Género',
+    id: 'genre',
+    accessorFn: (row) => formatList(row.genre || []),
+    sortingFn: 'alphanumericCaseSensitive',
+  },
+  {
     header: 'Desarrolladores',
     id: 'developers',
-    accessorFn: (row) => formatter.format(row.developers || []),
+    accessorFn: (row) => formatList(row.developers || []),
     sortingFn: 'alphanumericCaseSensitive',
   },
   {
     header: 'Publisher',
     id: 'publishers',
-    accessorFn: (row) => formatter.format(row.publishers || []),
+    accessorFn: (row) => formatList(row.publishers || []),
     sortingFn: 'alphanumericCaseSensitive',
   },
   {

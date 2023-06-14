@@ -35,7 +35,7 @@ function PieRight({ data, headers }) {
 
 PieRight.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  headers: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  headers: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 PieRight.defaultProps = {};

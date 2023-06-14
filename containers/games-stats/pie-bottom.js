@@ -2,22 +2,22 @@ import PropTypes from 'prop-types';
 
 import { Pie, patterns } from 'components/viz';
 
-function PieLeft({ data, headers }) {
+function PieBottom({ data, headers }) {
   return (
     <Pie
-      margin={{ top: 40, right: 0, bottom: 80, left: 120 }}
+      margin={{ top: 40, right: 80, bottom: 200, left: 80 }}
       data={data}
       legends={[
         {
           anchor: 'left',
           direction: 'column',
           justify: false,
-          translateX: -110,
+          translateX: 0,
           translateY: 0,
           itemsSpacing: 8,
-          itemWidth: 100,
+          itemWidth: 80,
           itemHeight: 18,
-          itemDirection: 'left-to-right',
+          itemDirection: 'right-to-left',
           itemOpacity: 1,
           symbolSize: 18,
           symbolShape: 'square',
@@ -29,15 +29,18 @@ function PieLeft({ data, headers }) {
         },
         id: patterns[i % patterns.length].id,
       }))}
+      padAngle={0.1}
+      cornerRadius={1}
+      borderWidth={0.5}
     />
   );
 }
 
-PieLeft.propTypes = {
+PieBottom.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   headers: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-PieLeft.defaultProps = {};
+PieBottom.defaultProps = {};
 
-export default PieLeft;
+export default PieBottom;

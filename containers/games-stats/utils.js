@@ -143,3 +143,52 @@ export function getByStatus(items) {
 
   return t;
 }
+
+export function getGenres(items) {
+  const grouped = items
+    .filter((item) => item.genre != null)
+    .reduce((acc, curr) => {
+      curr.genre.forEach((id) => {
+        if (!acc[id]) acc[id] = [];
+        acc[id].push(curr);
+      });
+
+      return acc;
+    }, {});
+
+  const t = Object.entries(grouped)
+    .map((entry) => {
+      return {
+        id: entry[0],
+        value: entry[1].length,
+      };
+    })
+    .sort((a, b) => a.value - b.value);
+
+  return t.map((item) => item.id);
+}
+
+export function getByGenres(items) {
+  const grouped = items
+    .filter((item) => item.genre != null)
+    .reduce((acc, curr) => {
+      curr.genre.forEach((id) => {
+        if (!acc[id]) acc[id] = [];
+        acc[id].push(curr);
+      });
+
+      return acc;
+    }, {});
+
+  const t = Object.entries(grouped)
+    .map((entry) => {
+      return {
+        id: entry[0],
+        label: entry[0],
+        value: entry[1].length,
+      };
+    })
+    .sort((a, b) => a.value - b.value);
+
+  return t;
+}

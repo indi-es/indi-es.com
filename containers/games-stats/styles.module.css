@@ -22,6 +22,16 @@
   flex: 1 1 auto;
 }
 
+.full-height .pie-wrapper {
+  height: 100vh;
+  max-width: none;
+}
+
+.small {
+  flex-flow: column;
+  height: 40vh;
+}
+
 @media screen and (max-width: 900px) {
   section.cluster {
     flex-flow: column;
@@ -31,5 +41,10 @@
   .pie-wrapper {
     height: 50%;
     flex: 1 1 auto;
+  }
+
+  .small .pie-wrapper {
+    flex-flow: column;
+    height: 100%;
   }
 }

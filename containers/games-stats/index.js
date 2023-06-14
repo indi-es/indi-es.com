@@ -12,12 +12,16 @@ import {
   getByPlatforms,
   getByCrowdfundedStatus,
   getCrowdfundedStatuses,
+  getGenres,
+  getByGenres,
 } from './utils';
 
 import PieRight from './pie-right';
 import PieLeft from './pie-left';
+import PieBottom from './pie-bottom';
 
 import styles from './styles.module.css';
+import PieLegendless from './pie-legendless';
 
 function GamesStats({ games, className }) {
   const customClassName = classNames(
@@ -29,12 +33,14 @@ function GamesStats({ games, className }) {
   const byYear = useMemo(() => getByYear(games), [games]);
   const byStatus = useMemo(() => getByStatus(games), [games]);
   const byPlatform = useMemo(() => getByPlatforms(games), [games]);
+  const byGenres = useMemo(() => getByGenres(games), [games]);
   const byCrowdfundingStatus = useMemo(
     () => getByCrowdfundedStatus(games),
     [games]
   );
 
   const statuses = useMemo(() => getStatuses(games), [games]);
+  const genres = useMemo(() => getGenres(games), [games]);
   const platforms = useMemo(() => getPlatforms(games), [games]);
   const crowdfundStatuses = getCrowdfundedStatuses();
 
@@ -42,12 +48,12 @@ function GamesStats({ games, className }) {
     <div className={customClassName}>
       <section data-hide-mobile="">
         <div className={styles['bar-wrapper']}>
-          <GamesBarYear data={byYear} layout="horizontal" />
+          <GamesBarYear data={byYear} layout="vertical" />
         </div>
       </section>
       <section data-hide-desktop="">
         <div className={styles['bar-wrapper']}>
-          <GamesBarYear data={byYear} layout="vertical" />
+          <GamesBarYear data={byYear} layout="horizontal" />
         </div>
       </section>
       <section className={styles.cluster}>
@@ -69,6 +75,16 @@ function GamesStats({ games, className }) {
             )}
             headers={crowdfundStatuses}
           />
+        </div>
+      </section>
+      <section className={styles['full-height']}>
+        <div className={styles['pie-wrapper']} data-hide-mobile="">
+          <PieBottom data={byGenres} headers={genres} />
+        </div>
+      </section>
+      <section className={styles.small}>
+        <div className={styles['pie-wrapper']} data-hide-desktop="">
+          <PieLegendless data={byGenres} headers={genres} />
         </div>
       </section>
     </div>
