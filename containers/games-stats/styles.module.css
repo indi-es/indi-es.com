@@ -10,6 +10,9 @@
   flex-flow: column;
   gap: var(--spacing-01);
   height: 100%;
+  padding: var(--margin-02);
+  border: 2px solid var(--border);
+  border-radius: var(--margin-02);
 }
 
 .article-header {
@@ -32,18 +35,8 @@
 }
 
 @media screen and (max-width: 900px) {
-  section.cluster {
-    flex-flow: column;
-    height: 100vh;
-  }
-
-  .pie-wrapper {
-    height: 50%;
-    flex: 1 1 auto;
-  }
-
-  .small .pie-wrapper {
-    flex-flow: column;
-    height: 100%;
+  .games-stats {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

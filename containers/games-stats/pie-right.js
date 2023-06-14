@@ -5,7 +5,7 @@ import { Pie, patterns } from 'components/viz';
 function PieRight({ data, headers }) {
   return (
     <Pie
-      margin={{ top: 80, right: 100, bottom: 80, left: 200 }}
+      margin={{ top: 80, right: 200, bottom: 80, left: 100 }}
       data={data}
       legends={[
         {

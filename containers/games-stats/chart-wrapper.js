@@ -12,8 +12,8 @@ function ChartWrapper({ id, children, ...rest }) {
     const elementString = element.outerHTML
       .replaceAll('var(--bg)', '#ffffff')
       .replaceAll('var(--fg)', '#000000')
-      .replaceAll('var(--border)', '#333333');
-    // .replaceAll('transparent', '');
+      .replaceAll('var(--border)', '#333333')
+      .replaceAll('transparent', 'rgba(0, 0, 0, )');
     const blob = new Blob([`${elementString}`], {
       type: 'text/plain;charset=utf-8',
     });
