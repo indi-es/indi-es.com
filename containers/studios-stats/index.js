@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import RichText from 'components/rich-text';
-import { Bar } from 'components/viz';
+import { Bar, patterns } from 'components/viz';
 
 import { getByState, getCities } from './utils';
 
@@ -18,6 +18,14 @@ function StudiosStats({ studios, className }) {
 
   const byState = useMemo(() => getByState(studios, 'state'), [studios]);
   const keys = useMemo(() => getCities(studios), [studios]);
+  const fill = keys
+    ? keys.map((item, i) => ({
+        match: {
+          id: item,
+        },
+        id: patterns[i % patterns.length].id,
+      }))
+    : undefined;
 
   return (
     <div className={customClassName}>
@@ -29,15 +37,15 @@ function StudiosStats({ studios, className }) {
             ...item.cities,
           }))}
           keys={keys}
+          fill={fill}
           indexBy="state"
-          colors={['var(--fg)']}
           layout="horizontal"
           borderWidth={2}
           axisBottom={{
             tickSize: 4,
             tickPadding: 4,
             tickRotation: 0,
-            legend: 'Número de estudios',
+            legend: 'Estudios por estado',
             legendPosition: 'middle',
             legendOffset: 40,
           }}

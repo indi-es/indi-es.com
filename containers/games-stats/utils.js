@@ -14,33 +14,7 @@ export function getYears(items) {
   ];
 }
 
-export function getByYear(items) {
-  const grouped = items
-    .filter((item) => item[dateKey] != null && item.status === 'Publicado')
-    .reduce((acc, curr) => {
-      const dateString = curr[dateKey];
-      const date = new Date(Date.parse(dateString));
-      const year = date.getFullYear();
-
-      if (!acc[year]) acc[year] = [];
-      acc[year].push(curr);
-      return acc;
-    }, {});
-
-  const t = Object.entries(grouped)
-    .map((entry) => {
-      return {
-        year: entry[0],
-        value: entry[1].length,
-      };
-    })
-    .sort((a, b) => {
-      return a.year - b.year;
-    });
-  return t;
-}
-
-export function getStatuses(items) {
+export function groupByStatus(items) {
   const grouped = items
     .filter((item) => item.status != null)
     .reduce((acc, curr) => {
@@ -49,10 +23,16 @@ export function getStatuses(items) {
       return acc;
     }, {});
 
+  return grouped;
+}
+
+export function getStatuses(items) {
+  const grouped = groupByStatus(items);
+
   return Object.keys(grouped);
 }
 
-export function getPlatforms(items) {
+export function groupByPlatforms(items, cutOff = 5) {
   const grouped = items
     .filter((item) => item.platforms != null)
     .reduce((acc, curr) => {
@@ -65,7 +45,37 @@ export function getPlatforms(items) {
       return acc;
     }, {});
 
+  return Object.entries(grouped).reduce(
+    (acc, [key, value]) => {
+      if (value.length < cutOff) {
+        acc.Otro = [...acc.Otro, ...value];
+      } else {
+        acc[key] = value;
+      }
+
+      return acc;
+    },
+    { Otro: [] }
+  );
+}
+
+export function getPlatforms(items) {
+  const grouped = groupByPlatforms(items);
   return Object.keys(grouped);
+}
+
+export function getByPlatforms(items) {
+  const grouped = groupByPlatforms(items);
+
+  const t = Object.entries(grouped).map((entry) => {
+    return {
+      id: entry[0],
+      label: entry[0],
+      value: entry[1].length,
+    };
+  });
+
+  return t;
 }
 
 function getCrowdfundedStatus(item) {
@@ -100,39 +110,8 @@ export function getByCrowdfundedStatus(items) {
   return t;
 }
 
-export function getByPlatforms(items) {
-  const grouped = items
-    .filter((item) => item.platforms != null)
-    .reduce((acc, curr) => {
-      curr.platforms.forEach((platform) => {
-        const id = platform.name;
-        if (!acc[id]) acc[id] = [];
-        acc[id].push(curr);
-      });
-
-      return acc;
-    }, {});
-
-  const t = Object.entries(grouped).map((entry) => {
-    return {
-      id: entry[0],
-      label: entry[0],
-      value: entry[1].length,
-    };
-  });
-
-  return t;
-}
-
 export function getByStatus(items) {
-  const grouped = items
-    .filter((item) => item.status != null)
-    .reduce((acc, curr) => {
-      if (!acc[curr.status]) acc[curr.status] = [];
-      acc[curr.status].push(curr);
-      return acc;
-    }, {});
-
+  const grouped = groupByStatus(items);
   const t = Object.entries(grouped).map((entry) => {
     return {
       id: entry[0],
@@ -144,7 +123,7 @@ export function getByStatus(items) {
   return t;
 }
 
-export function getGenres(items) {
+export function groupByGenres(items, cutOff = 5) {
   const grouped = items
     .filter((item) => item.genre != null)
     .reduce((acc, curr) => {
@@ -156,6 +135,22 @@ export function getGenres(items) {
       return acc;
     }, {});
 
+  return Object.entries(grouped).reduce(
+    (acc, [key, value]) => {
+      if (value.length < cutOff) {
+        acc.Otro = [...acc.Otro, ...value];
+      } else {
+        acc[key] = value;
+      }
+
+      return acc;
+    },
+    { Otro: [] }
+  );
+}
+
+export function getGenres(items) {
+  const grouped = groupByGenres(items);
   const t = Object.entries(grouped)
     .map((entry) => {
       return {
@@ -169,16 +164,7 @@ export function getGenres(items) {
 }
 
 export function getByGenres(items) {
-  const grouped = items
-    .filter((item) => item.genre != null)
-    .reduce((acc, curr) => {
-      curr.genre.forEach((id) => {
-        if (!acc[id]) acc[id] = [];
-        acc[id].push(curr);
-      });
-
-      return acc;
-    }, {});
+  const grouped = groupByGenres(items);
 
   const t = Object.entries(grouped)
     .map((entry) => {
@@ -186,9 +172,74 @@ export function getByGenres(items) {
         id: entry[0],
         label: entry[0],
         value: entry[1].length,
+        items: entry[1],
       };
     })
     .sort((a, b) => a.value - b.value);
+
+  return t;
+}
+
+export function getByYear(items) {
+  const grouped = items
+    .filter((item) => item[dateKey] != null)
+    .reduce((acc, curr) => {
+      const dateString = curr[dateKey];
+      const date = new Date(Date.parse(dateString));
+      const year = date.getFullYear();
+
+      if (!acc[year]) acc[year] = [];
+      acc[year].push(curr);
+      return acc;
+    }, {});
+
+  const t = Object.entries(grouped)
+    .map((entry) => {
+      const byStatus = Object.entries(groupByStatus(entry[1])).reduce(
+        (acc, [key, value]) => {
+          acc[key] = value.length;
+          return acc;
+        },
+        {}
+      );
+
+      return {
+        year: entry[0],
+        value: entry[1],
+        ...byStatus,
+      };
+    })
+    .sort((a, b) => {
+      return a.year - b.year;
+    });
+  return t;
+}
+
+export function getByYearFiltered(items) {
+  const filtered = items.filter((item) => item.status === 'Publicado');
+
+  const grouped = filtered
+    .filter((item) => item[dateKey] != null)
+    .reduce((acc, curr) => {
+      const dateString = curr[dateKey];
+      const date = new Date(Date.parse(dateString));
+      const year = date.getFullYear();
+
+      if (!acc[year]) acc[year] = [];
+      acc[year].push(curr);
+      return acc;
+    }, {});
+
+  const t = Object.entries(grouped)
+    .map((entry) => {
+      return {
+        year: entry[0],
+        value: entry[1].length,
+      };
+    })
+    .sort((a, b) => {
+      return a.year - b.year;
+    });
 
   return t;
 }

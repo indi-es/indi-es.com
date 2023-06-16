@@ -14,6 +14,7 @@ import {
   getCrowdfundedStatuses,
   getGenres,
   getByGenres,
+  getByYearFiltered,
 } from './utils';
 
 import PieRight from './pie-right';
@@ -32,6 +33,7 @@ function GamesStats({ games, className }) {
   );
 
   const byYear = useMemo(() => getByYear(games), [games]);
+  const byYearFiltered = useMemo(() => getByYearFiltered(games), [games]);
   const byStatus = useMemo(() => getByStatus(games), [games]);
   const byPlatform = useMemo(() => getByPlatforms(games), [games]);
   const byGenres = useMemo(() => getByGenres(games), [games]);
@@ -53,13 +55,51 @@ function GamesStats({ games, className }) {
       <ChartWrapper
         data-hide-mobile=""
         data-columns="full-width"
-        id="game-bar-year-vertical"
+        id="game-bar-year-filtered-vertical"
       >
-        <GamesBarYear data={byYear} layout="vertical" />
+        <GamesBarYear
+          data={byYearFiltered}
+          layout="vertical"
+          legend="Juegos publicados por año"
+        />
       </ChartWrapper>
 
-      <ChartWrapper data-hide-desktop="" id="game-bar-year-horizontal">
-        <GamesBarYear data={byYear} layout="horizontal" />
+      <ChartWrapper
+        data-hide-desktop=""
+        id="game-bar-year-filtered-horizontal"
+        data-rows="2"
+      >
+        <GamesBarYear
+          data={byYearFiltered}
+          layout="horizontal"
+          legend="Juegos publicados por año"
+        />
+      </ChartWrapper>
+
+      <ChartWrapper
+        data-hide-mobile=""
+        data-columns="full-width"
+        id="game-bar-year-vertical"
+      >
+        <GamesBarYear
+          data={byYear}
+          keys={statuses}
+          layout="vertical"
+          legend="Juegos por año"
+        />
+      </ChartWrapper>
+
+      <ChartWrapper
+        data-hide-desktop=""
+        id="game-bar-year-horizontal"
+        data-rows="2"
+      >
+        <GamesBarYear
+          data={byYear}
+          keys={statuses}
+          layout="horizontal"
+          legend="Juegos por año"
+        />
       </ChartWrapper>
 
       <ChartWrapper
