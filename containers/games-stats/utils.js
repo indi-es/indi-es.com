@@ -180,8 +180,8 @@ export function getByGenres(items) {
   return t;
 }
 
-export function getByYear(items) {
-  const grouped = items
+export function getGroupedByYear(items) {
+  return items
     .filter((item) => item[dateKey] != null)
     .reduce((acc, curr) => {
       const dateString = curr[dateKey];
@@ -192,7 +192,10 @@ export function getByYear(items) {
       acc[year].push(curr);
       return acc;
     }, {});
+}
 
+export function getByYear(items) {
+  const grouped = getGroupedByYear(items);
   const t = Object.entries(grouped)
     .map((entry) => {
       const byStatus = Object.entries(groupByStatus(entry[1])).reduce(
@@ -217,24 +220,77 @@ export function getByYear(items) {
 
 export function getByYearFiltered(items) {
   const filtered = items.filter((item) => item.status === 'Publicado');
-
-  const grouped = filtered
-    .filter((item) => item[dateKey] != null)
-    .reduce((acc, curr) => {
-      const dateString = curr[dateKey];
-      const date = new Date(Date.parse(dateString));
-      const year = date.getFullYear();
-
-      if (!acc[year]) acc[year] = [];
-      acc[year].push(curr);
-      return acc;
-    }, {});
+  const grouped = getGroupedByYear(filtered);
 
   const t = Object.entries(grouped)
     .map((entry) => {
       return {
         year: entry[0],
         value: entry[1].length,
+      };
+    })
+    .sort((a, b) => {
+      return a.year - b.year;
+    });
+
+  return t;
+}
+
+export function getCollapsedPlatforms(dict) {
+  return Object.entries(dict).reduce(
+    (acc, curr) => {
+      const [key, value] = curr;
+
+      switch (key.toLowerCase()) {
+        case 'nintendo':
+        case 'play station':
+        case 'xbox':
+          acc.console = [...acc.console, ...value];
+          break;
+        case 'play store':
+        case 'app store':
+          acc.mobile = [...acc.mobile, ...value];
+          break;
+        case 'steam':
+        case 'epic store':
+        case 'microsoft store':
+          acc.pc = [...acc.pc, ...value];
+          break;
+        default:
+          break;
+      }
+
+      return acc;
+    },
+    { console: [], mobile: [], pc: [] }
+  );
+}
+
+export function getByYearPlatforms(items) {
+  const grouped = getGroupedByYear(items);
+
+  const t = Object.entries(grouped)
+    .map((entry) => {
+      const [year, value] = entry;
+      const byPlatforms = groupByPlatforms(value, 0);
+      const collapsed = getCollapsedPlatforms(byPlatforms);
+
+      return {
+        year,
+        ...collapsed,
+      };
+    })
+    .filter((item) => {
+      const count = item.console.length + item.mobile.length + item.pc.length;
+      return count > 0;
+    })
+    .map((item) => {
+      const { console, mobile, pc } = item;
+      return {
+        year: item.year,
+        console: console.length,
+        mobile: mobile.length,
+        pc: pc.length,
       };
     })
     .sort((a, b) => {
