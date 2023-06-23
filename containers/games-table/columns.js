@@ -44,6 +44,11 @@ const columns = [
     sortingFn: 'alphanumericCaseSensitive',
   },
   {
+    header: 'Engine',
+    accessorKey: 'engine',
+    sortingFn: 'alphanumericCaseSensitive',
+  },
+  {
     header: 'Fecha de lanzamiento',
     accessorKey: 'date-launch',
     cell: TimeCell,

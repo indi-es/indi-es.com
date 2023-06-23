@@ -16,6 +16,8 @@ import {
   getByGenres,
   getByYearFiltered,
   getByYearPlatforms,
+  getByEngines,
+  getEngines,
 } from './utils';
 
 import PieRight from './pie-right';
@@ -46,11 +48,13 @@ function GamesStats({ games, className }) {
   const byCrowdfundingStatusFiltered = byCrowdfundingStatus.filter(
     (item) => item.id !== 'Not Crowdfunded'
   );
+  const byEngines = useMemo(() => getByEngines(games), [games]);
 
   const statuses = useMemo(() => getStatuses(games), [games]);
   const genres = useMemo(() => getGenres(games), [games]);
   const platforms = useMemo(() => getPlatforms(games), [games]);
   const crowdfundStatuses = getCrowdfundedStatuses();
+  const engines = getEngines(games);
 
   return (
     <div className={customClassName}>
@@ -173,6 +177,14 @@ function GamesStats({ games, className }) {
           data={byCrowdfundingStatusFiltered}
           headers={crowdfundStatuses}
         />
+      </ChartWrapper>
+
+      <ChartWrapper data-hide-mobile="" id="pie-engine-filter-desktop">
+        <PieRight data={byEngines} headers={engines} />
+      </ChartWrapper>
+
+      <ChartWrapper data-hide-desktop="" id="pie-engine-filter-mobile">
+        <PieLegendless data={byEngines} headers={engines} />
       </ChartWrapper>
 
       <ChartWrapper

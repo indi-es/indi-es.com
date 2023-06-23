@@ -299,3 +299,35 @@ export function getByYearPlatforms(items) {
 
   return t;
 }
+
+export function groupByEngine(items) {
+  const grouped = items
+    .filter((item) => item.engine != null && item.engine !== 'Desconocido')
+    .reduce((acc, curr) => {
+      if (!acc[curr.engine]) acc[curr.engine] = [];
+      acc[curr.engine].push(curr);
+      return acc;
+    }, {});
+
+  return grouped;
+}
+
+export function getEngines(items) {
+  const grouped = groupByEngine(items);
+  return Object.keys(grouped);
+}
+
+export function getByEngines(items) {
+  const grouped = groupByEngine(items);
+  const t = Object.entries(grouped)
+    .map((entry) => {
+      return {
+        id: entry[0],
+        label: entry[0],
+        value: entry[1].length,
+      };
+    })
+    .sort((a, b) => a.value - b.value);
+
+  return t;
+}
