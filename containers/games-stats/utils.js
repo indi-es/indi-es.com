@@ -300,7 +300,7 @@ export function getByYearPlatforms(items) {
   return t;
 }
 
-export function groupByEngine(items) {
+export function groupByEngine(items, cutOff = 5) {
   const grouped = items
     .filter((item) => item.engine != null && item.engine !== 'Desconocido')
     .reduce((acc, curr) => {
@@ -309,7 +309,18 @@ export function groupByEngine(items) {
       return acc;
     }, {});
 
-  return grouped;
+  return Object.entries(grouped).reduce(
+    (acc, [key, value]) => {
+      if (value.length < cutOff) {
+        acc.Otro = [...acc.Otro, ...value];
+      } else {
+        acc[key] = value;
+      }
+
+      return acc;
+    },
+    { Otro: [] }
+  );
 }
 
 export function getEngines(items) {
