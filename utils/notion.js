@@ -1,3 +1,9 @@
+import { Client } from '@notionhq/client';
+
+export const notion = new Client({
+  auth: process.env.NOTION_SECRET,
+});
+
 export function getBlockText(block) {
   const { type } = block;
   if (type === 'unsupported') return null;
@@ -11,16 +17,8 @@ export function getPageURL(team, id) {
   return `https://www.notion.so/indies/${id.replace(/[_-]/g, '')}`;
 }
 
-export function richTextToMarkdown(block) {
-  const { type } = block;
-  if (type !== 'rich_text') {
-    console.error(
-      new Error('Triying to convert non rich text block to markdown')
-    );
-    return null;
-  }
-
-  return block.rich_text.reduce((acc, curr) => {
+export function richTextToMarkdown(richText) {
+  return richText.reduce((acc, curr) => {
     const { plain_text: text, annotations } = curr;
     const { bold, code, italic, strikethrough } = annotations;
 
@@ -41,6 +39,20 @@ export function richTextToMarkdown(block) {
 
     return `${acc}${parsed}`;
   }, '');
+}
+
+export function richTextBlockToMarkdown(prop) {
+  const { type } = prop;
+  if (type !== 'rich_text') {
+    console.error(
+      new Error(
+        `Triying to convert non rich text db property to markdown: ${type}`
+      )
+    );
+    return null;
+  }
+
+  return richTextToMarkdown(prop.rich_text);
 }
 
 export function parseEvents(events) {

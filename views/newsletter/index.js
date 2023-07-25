@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 // import dynamic from 'next/dynamic';
 // import { useRouter } from 'next/router';
 
-import { months } from 'utils/dates';
-
 import { Page } from 'components/layouts';
 import Callout from 'components/callout';
 
@@ -11,54 +9,16 @@ import NewsletterItem from './newsletter-item';
 
 import style from './style.module.css';
 
-function formatPages(item) {
-  const { id, blocks, properties } = item;
-  const titleProperty = properties['Título'];
-  const title = titleProperty.title[0].plain_text;
-  const dateElements = title.split(' ');
-  const [days, month, year] = dateElements;
-
-  const startDay = parseInt(`${days[0]}${days[1]}`, 10);
-  const endDay = parseInt(`${days[3]}${days[4]}`, 10);
-
-  let startMonth = months.findIndex((m) => m === month.toLowerCase());
-  const endMonth = startMonth;
-
-  let startYear = year;
-  const endYear = year;
-
-  if (endDay < startDay) {
-    startMonth -= 1;
-    if (startMonth === -1) {
-      startMonth = 11;
-      startYear -= 1;
-    }
-  }
-
-  const startDate = new Date(startYear, startMonth, startDay);
-  const endDate = new Date(endYear, endMonth, endDay);
-
-  return {
-    id,
-    title,
-    blocks,
-    startMonth,
-    endMonth,
-    startDate,
-    endDate,
-  };
-}
-
 function groupByMonth(acc, curr) {
-  const key = `${curr.endDate.getMonth()}-${curr.endDate.getFullYear()}`;
+  const endDate = new Date(curr.endDate);
+  const key = `${endDate.getMonth()}-${endDate.getFullYear()}`;
   if (!acc[key]) acc[key] = [];
   acc[key].push(curr);
   return acc;
 }
 
 function Newsletter({ items }) {
-  const pages = items.map(formatPages);
-  const grouped = pages.reduce(groupByMonth, {});
+  const grouped = items.reduce(groupByMonth, {});
 
   return (
     <Page className={style.page}>
@@ -75,7 +35,8 @@ function Newsletter({ items }) {
         <section className={style['newsletter-list']}>
           {Object.entries(grouped).map((entry) => {
             const value = entry[1];
-            const sectionTitle = value[0].endDate.toLocaleString('es-mx', {
+            const titleDate = new Date(value[0].endDate);
+            const sectionTitle = titleDate.toLocaleString('es-mx', {
               year: 'numeric',
               month: 'long',
             });
@@ -90,9 +51,11 @@ function Newsletter({ items }) {
                     {sectionTitle}
                   </h2>
                 </header>
-                {value.map((item) => {
-                  return <NewsletterItem {...item} key={item.id} />;
-                })}
+                <div className={style['newsletter-list-entries']}>
+                  {value.map((item) => {
+                    return <NewsletterItem {...item} key={item.id} />;
+                  })}
+                </div>
               </section>
             );
           })}

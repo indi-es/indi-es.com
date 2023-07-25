@@ -10,9 +10,12 @@ import 'styles/variables.css';
 import 'styles/globals.css';
 import 'styles/leaflet.css';
 
+import Filters from 'svg/filters';
+
 function App({ Component, pageProps }) {
   return (
     <SessionProvider session={pageProps.session}>
+      <Filters />
       <Component {...pageProps} />
     </SessionProvider>
   );
