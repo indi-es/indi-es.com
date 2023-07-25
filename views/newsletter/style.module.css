@@ -28,3 +28,12 @@
   font-family: var(--font-sans);
   text-transform: capitalize;
 }
+
+@media screen and (max-width: 900px) {
+  .newsletter-list-entries {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: var(--margin-06);
+  }
+}
