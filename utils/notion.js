@@ -14,7 +14,7 @@ export function getBlockText(block) {
 }
 
 export function getPageURL(team, id) {
-  return `https://www.notion.so/indies/${id.replace(/[_-]/g, '')}`;
+  return `https://${team}.notion.site/${id.replace(/[_-]/g, '')}`;
 }
 
 export function richTextToMarkdown(richText) {

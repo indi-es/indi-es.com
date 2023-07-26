@@ -54,6 +54,30 @@ function Page({ header, footer, children, className, ...rest }) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Newsletter RSS Feed"
+          href="/newsletter.xml"
+        />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="Newsletter Atom Feed"
+          href="/newsletter.atom"
+        />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="Newsletter Atom Feed"
+          href="/newsletter.atom"
+        />
+        <link
+          rel="alternate"
+          title="Newsletter JSON Feed"
+          type="application/json"
+          href="/newsletter.json"
+        />
       </Head>
       {header ? <Header /> : null}
       <main>{children}</main>

@@ -1,21 +1,10 @@
 import PropTypes from 'prop-types';
 
-import { getPageURL } from 'utils/notion';
-
 import Markdown from 'components/markdown';
 
 import style from './style.module.css';
 
-const options = { day: '2-digit', month: '2-digit', year: '2-digit' };
-
-function NewsletterItem({ id, startDate, endDate, description, image }) {
-  const startDateParsed = new Date(startDate);
-  const endDateParsed = new Date(endDate);
-  const title = `${startDateParsed.toLocaleString(
-    'es-mx',
-    options
-  )} - ${endDateParsed.toLocaleString('es-mx', options)}`;
-
+function NewsletterItem({ id, title, url, description, image }) {
   return (
     <article key={id} className={style['newsletter-item']}>
       <header className={style['newsletter-item-header']}>
@@ -23,7 +12,7 @@ function NewsletterItem({ id, startDate, endDate, description, image }) {
           className={style['newsletter-item-header-wrapper']}
           rel="noopener noreferrer"
           target="_blank"
-          href={getPageURL('indies', id)}
+          href={url}
         >
           <div className={style['newsletter-item-image-wrapper']}>
             {image ? (
@@ -31,6 +20,7 @@ function NewsletterItem({ id, startDate, endDate, description, image }) {
                 className={style['newsletter-item-image']}
                 src={image}
                 alt={`${title}`}
+                loading="lazy"
               />
             ) : (
               <img
@@ -54,10 +44,10 @@ function NewsletterItem({ id, startDate, endDate, description, image }) {
 
 NewsletterItem.propTypes = {
   id: PropTypes.string.isRequired,
-  startDate: PropTypes.string.isRequired,
-  endDate: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string,
+  url: PropTypes.string.isRequired,
 };
 
 NewsletterItem.defaultProps = { image: null };
