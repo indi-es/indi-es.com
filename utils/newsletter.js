@@ -121,7 +121,7 @@ export async function genNewsletterFeed() {
   generateRssFeed({
     items,
     name: 'newsletter',
-    title: 'Newsletter',
+    title: 'INDI·ES Newsletter',
     description:
       'Bienvenidos al Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español.',
   });
