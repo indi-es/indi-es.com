@@ -114,7 +114,6 @@ export async function genNewsletterFeed() {
       description: item.description,
       content: `${item.description} lee más en: ${item.url}`,
       date: item.endDate,
-      image: item.image,
     };
   });
 
