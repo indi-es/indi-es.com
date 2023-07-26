@@ -112,7 +112,7 @@ export async function genNewsletterFeed() {
       url: item.url,
       title: item.title,
       description: item.description,
-      content: item.description,
+      content: `${item.description} lee más en: ${item.url}`,
       date: item.endDate,
       image: item.image,
     };
