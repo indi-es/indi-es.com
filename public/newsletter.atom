@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://indi-es.com/newsletter</id>
     <title>INDI·ES Newsletter</title>
-    <updated>2023-08-01T03:26:30.092Z</updated>
+    <updated>2023-08-01T05:32:09.961Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>INDI·ES</name>
@@ -12,6 +12,19 @@
     <link rel="alternate" href="https://indi-es.com"/>
     <link rel="self" href="https://indi-es.com/newsletter.atom"/>
     <subtitle>Bienvenidos al Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español.</subtitle>
+    <entry>
+        <title type="html"><![CDATA[21-31 Julio 2023]]></title>
+        <id>https://indies.notion.site/036f65476ba747c9a7edbcd085112e1c</id>
+        <link href="https://indies.notion.site/036f65476ba747c9a7edbcd085112e1c"/>
+        <updated>2023-07-31T05:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Bienvenidos al 99№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español.]]></summary>
+        <content type="html"><![CDATA[Bienvenidos al 99№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español. lee más en: https://indies.notion.site/036f65476ba747c9a7edbcd085112e1c]]></content>
+        <author>
+            <name>INDI·ES</name>
+            <email>hola@indi-es.com</email>
+            <uri>https://indi-es.com/</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[11-20 Julio 2023]]></title>
         <id>https://indies.notion.site/e955e65a0fea40d8aff4c4606b25d159</id>
