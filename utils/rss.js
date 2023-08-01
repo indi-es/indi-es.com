@@ -2,7 +2,7 @@ import fs from 'fs';
 import { Feed } from 'feed';
 
 export function generateRssFeed({ items, name, title, description }) {
-  const baseUrl = 'https://indi-es.com/';
+  const baseUrl = 'https://indi-es.com';
 
   const author = {
     name: 'INDI·ES',
@@ -14,7 +14,7 @@ export function generateRssFeed({ items, name, title, description }) {
   const feed = new Feed({
     title,
     description,
-    id: name,
+    id: `${baseUrl}/${name}`,
     link: baseUrl,
     language: 'es-mx',
     author,
