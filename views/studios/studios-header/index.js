@@ -19,20 +19,23 @@ function StudiosHeader({ isTable, isMap, isStats, data }) {
       <TrafficLightIndicator data={data} />
 
       <div className={style['actions-view']}>
-        <Link href="/estudios?vista=tabla">
-          <a className={`${style.button} ${isTable ? style['-active'] : null}`}>
-            <FiMenu />
-          </a>
+        <Link
+          href="/estudios?vista=tabla"
+          className={`${style.button} ${isTable ? style['-active'] : null}`}
+        >
+          <FiMenu />
         </Link>
-        <Link href="/estudios?vista=mapa">
-          <a className={`${style.button} ${isMap ? style['-active'] : null}`}>
-            <FiMap />
-          </a>
+        <Link
+          href="/estudios?vista=mapa"
+          className={`${style.button} ${isMap ? style['-active'] : null}`}
+        >
+          <FiMap />
         </Link>
-        <Link href="/estudios?vista=estadisticas">
-          <a className={`${style.button} ${isStats ? style['-active'] : null}`}>
-            <FiBarChart2 />
-          </a>
+        <Link
+          href="/estudios?vista=estadisticas"
+          className={`${style.button} ${isStats ? style['-active'] : null}`}
+        >
+          <FiBarChart2 />
         </Link>
       </div>
     </header>

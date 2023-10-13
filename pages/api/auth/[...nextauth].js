@@ -3,8 +3,7 @@ import NextAuth from 'next-auth';
 import GitHubProvider from 'next-auth/providers/github';
 
 const secret = process.env.NEXTAUTH_SECRET;
-
-export default NextAuth({
+export const authOptions = {
   secret,
   jwt: {},
   providers: [
@@ -29,4 +28,6 @@ export default NextAuth({
       return token;
     },
   },
-});
+};
+
+export default NextAuth(authOptions);

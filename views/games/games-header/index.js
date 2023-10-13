@@ -10,15 +10,17 @@ function GamesHeader({ isTable, isStats, data }) {
       <span className={style.info}>Total de juegos: {data.length}</span>
 
       <div className={style['actions-view']}>
-        <Link href="/juegos?vista=tabla">
-          <a className={`${style.button} ${isTable ? style['-active'] : null}`}>
-            <FiMenu />
-          </a>
+        <Link
+          href="/juegos?vista=tabla"
+          className={`${style.button} ${isTable ? style['-active'] : null}`}
+        >
+          <FiMenu />
         </Link>
-        <Link href="/juegos?vista=estadisticas">
-          <a className={`${style.button} ${isStats ? style['-active'] : null}`}>
-            <FiBarChart2 />
-          </a>
+        <Link
+          href="/juegos?vista=estadisticas"
+          className={`${style.button} ${isStats ? style['-active'] : null}`}
+        >
+          <FiBarChart2 />
         </Link>
       </div>
     </header>

@@ -20,7 +20,7 @@ function NavLink({ children, activeClassName, exact, ...rest }) {
       : childClassName;
 
   return (
-    <Link {...rest}>
+    <Link {...rest} legacyBehavior>
       {cloneElement(child, {
         className: className || null,
       })}

@@ -1,6 +1,8 @@
 import { getServerSession } from 'next-auth/next';
 import { getToken } from 'next-auth/jwt';
 
+import { authOptions } from './auth/[...nextauth]';
+
 const secret = process.env.NEXTAUTH_SECRET;
 
 const repoOwner = 'indi-es';
@@ -17,8 +19,7 @@ export default async function createStudioIssue(req, res) {
   if (req.method !== 'POST') return res.status(405);
 
   const token = await getToken({ req, secret });
-  const session = await getServerSession({ req });
-  console.log('session', session);
+  const session = await getServerSession(req, res, authOptions);
   const { access_token: accessToken } = token;
   const {
     user: { name, email },
