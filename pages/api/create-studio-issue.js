@@ -1,4 +1,4 @@
-import { getSession } from 'next-auth/react';
+import { getServerSession } from 'next-auth/next';
 import { getToken } from 'next-auth/jwt';
 
 const secret = process.env.NEXTAUTH_SECRET;
@@ -17,7 +17,8 @@ export default async function createStudioIssue(req, res) {
   if (req.method !== 'POST') return res.status(405);
 
   const token = await getToken({ req, secret });
-  const session = await getSession({ req });
+  const session = await getServerSession({ req });
+  console.log('session', session);
   const { access_token: accessToken } = token;
   const {
     user: { name, email },
