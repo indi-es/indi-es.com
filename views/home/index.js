@@ -17,6 +17,9 @@ function getNewEvents(events) {
         return end > now;
       }
       const start = new Date(startDate);
+      // NOTE: Add two hours so it won't filter out
+      // if the event is running and doesn't have a end datetime
+      start.setHours(start.getHours() + 2);
       return start > now;
     }
   );
