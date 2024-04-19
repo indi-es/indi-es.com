@@ -24,7 +24,7 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@tanstack/react-table": "^8.16.0",
     "classnames": "^2.5.1",
-    "date-fns": "^2.29.3",
+    "date-fns": "^3.6.0",
     "datebook": "^7.0.8",
     "feed": "^4.2.2",
     "file-saver": "^2.0.5",
