@@ -25,7 +25,7 @@
     "@tanstack/react-table": "^8.16.0",
     "classnames": "^2.5.1",
     "date-fns": "^3.6.0",
-    "datebook": "^7.0.8",
+    "datebook": "^8.0.1",
     "feed": "^4.2.2",
     "file-saver": "^2.0.5",
     "leaflet": "^1.7.1",

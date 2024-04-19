@@ -1319,12 +1319,10 @@ date-fns@^3.6.0:
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-3.6.0.tgz#f20ca4fe94f8b754951b24240676e8618c0206bf"
   integrity sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==
 
-datebook@^7.0.8:
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/datebook/-/datebook-7.1.2.tgz#9bfe04a49bf27df996c08fa0646389aff5c22c65"
-  integrity sha512-vO2HiydgWOBmT04P9gpDJqto+UUXgAH/JQq3HghbhLT8BgphYqmkN3oVcTPERlG2QUizzkr7e5rbY41r9PQqGg==
-  dependencies:
-    file-saver "^2.0.5"
+datebook@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/datebook/-/datebook-8.0.1.tgz#6345091baebbe0fa202bb82fe8f8abb481eaeb6f"
+  integrity sha512-qdM9rULfZ/IoDzPW5FrMSXwrL5uBbk1WgVcIj5xwaneeZLZqaIggKjWzODWfk5waLQt7PamPP3s+lLv4cEPsrw==
 
 debug@4.3.4, debug@^4.0.0, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"

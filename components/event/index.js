@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
+import { useCallback } from 'react';
 import { ICalendar } from 'datebook';
+import { saveAs } from 'file-saver';
 
 import Markdown from 'components/markdown';
 import Button from 'components/button';
@@ -37,6 +39,14 @@ function Event({
   };
   const icalendar = new ICalendar(config);
 
+  const download = useCallback(() => {
+    const ics = icalendar.render();
+    const blob = new Blob([ics], {
+      type: 'text/calendar',
+    });
+    saveAs(blob, `${name}.ics`);
+  }, [icalendar, name]);
+
   // TODO: fetch channel name
   // we are currently not doing it because we could get rate limited
   const channelName = channel?.name;
@@ -67,7 +77,7 @@ function Event({
             <Button
               className={style['event-dates']}
               onClick={() => {
-                icalendar.download();
+                download();
               }}
             >
               <span>
