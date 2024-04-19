@@ -36,7 +36,7 @@ export async function getNewsletterPagesWithContent() {
 export function getNewsletterPageDescription(blocks) {
   const { results } = blocks;
   const [block] = results;
-  const { text } = block[block.type];
+  const { rich_text: text } = block[block.type];
   const markdown = richTextToMarkdown(text);
   return markdown;
 }
