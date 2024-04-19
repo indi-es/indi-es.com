@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { FiGithub } from 'react-icons/fi';
 
 import { Page } from 'components/layouts';
@@ -7,7 +6,12 @@ import Button from 'components/button';
 
 import style from './style.module.css';
 
-function Recursos({ data }) {
+const url = 'https://raw.githubusercontent.com/indi-es/enlaces/main/README.md';
+
+async function Recursos() {
+  const res = await fetch(url);
+  const data = await res.text();
+
   return (
     <Page className={style.page}>
       <div className={`${style.wrapper} wrapper`}>
@@ -26,19 +30,6 @@ function Recursos({ data }) {
   );
 }
 
-export async function getStaticProps() {
-  const url =
-    'https://raw.githubusercontent.com/indi-es/enlaces/main/README.md';
-  const res = await fetch(url);
-  const data = await res.text();
-
-  return {
-    props: { data },
-  };
-}
-
-Recursos.propTypes = {
-  data: PropTypes.string.isRequired,
-};
+Recursos.propTypes = {};
 
 export default Recursos;

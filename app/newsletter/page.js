@@ -2,16 +2,9 @@ import { getNewsletterPagesFormated } from 'utils/newsletter';
 
 import NewsletterView from 'views/newsletter';
 
-function Newsletter(props) {
-  return <NewsletterView {...props} />;
-}
-
-export async function getStaticProps() {
+async function Newsletter() {
   const items = await getNewsletterPagesFormated();
-
-  return {
-    props: { items },
-  };
+  return <NewsletterView items={items} />;
 }
 
 Newsletter.propTypes = {};

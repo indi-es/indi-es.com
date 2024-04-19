@@ -2,14 +2,7 @@ import EventsView from 'views/events';
 
 import { fetchDiscordEventsWithChannelName } from 'utils/discord';
 
-export default function Eventos(props) {
-  return <EventsView {...props} />;
-}
-
-export async function getStaticProps() {
+export default async function Eventos() {
   const events = await fetchDiscordEventsWithChannelName();
-
-  return {
-    props: { events },
-  };
+  return <EventsView events={events} />;
 }

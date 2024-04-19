@@ -7,7 +7,8 @@ import DiscordWidget from 'components/discord-widget';
 
 import style from './style.module.css';
 
-export default function Discord({ data }) {
+export default async function Discord() {
+  const data = await fetchDiscordWidget();
   return (
     <Page className={style.page}>
       <div className={`${style['discord-wrapper']} wrapper`}>
@@ -29,11 +30,3 @@ Discord.propTypes = {
 Discord.defaultProps = {
   data: null,
 };
-
-export async function getStaticProps() {
-  const data = await fetchDiscordWidget();
-
-  return {
-    props: { data },
-  };
-}

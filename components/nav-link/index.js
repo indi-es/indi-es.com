@@ -1,29 +1,29 @@
-import { useRouter } from 'next/router';
+'use client';
+
 import PropTypes from 'prop-types';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { cloneElement, Children } from 'react';
+import classNames from 'classnames';
 
-function NavLink({ children, activeClassName, exact, ...rest }) {
-  const { asPath, pathName } = useRouter();
-  const child = Children.only(children);
-  const childClassName = child.props.className || '';
-  const { href, as } = rest;
+function NavLink({
+  children,
+  activeClassName = '-active',
+  className,
+  exact,
+  ...props
+}) {
+  const pathname = usePathname();
+  const isActive = exact
+    ? pathname === props.href
+    : pathname.startsWith(props.href);
 
-  const check = exact ? asPath : pathName;
-
-  // pages/index.js will be matched via props.href
-  // pages/about.js will be matched via props.href
-  // pages/[slug].js will be matched via props.as
-  const className =
-    check === href || check === as
-      ? `${childClassName} ${activeClassName}`.trim()
-      : childClassName;
+  const customClassName = classNames(className, {
+    [activeClassName]: isActive,
+  });
 
   return (
-    <Link {...rest} legacyBehavior>
-      {cloneElement(child, {
-        className: className || null,
-      })}
+    <Link className={customClassName} {...props}>
+      {children}
     </Link>
   );
 }
@@ -31,13 +31,9 @@ function NavLink({ children, activeClassName, exact, ...rest }) {
 NavLink.propTypes = {
   children: PropTypes.node,
   activeClassName: PropTypes.string,
+  className: PropTypes.string,
   exact: PropTypes.bool,
-};
-
-NavLink.defaultProps = {
-  children: null,
-  activeClassName: '-active',
-  exact: false,
+  href: PropTypes.string,
 };
 
 export default NavLink;
