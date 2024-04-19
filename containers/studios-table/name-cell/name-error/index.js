@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { FiAlertCircle } from 'react-icons/fi';
-import Tooltip from '@reach/tooltip';
+import Tooltip from 'components/tooltip';
 
 import style from './style.module.css';
 

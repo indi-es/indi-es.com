@@ -21,7 +21,7 @@
     "@nivo/geo": "^0.68.0",
     "@nivo/pie": "^0.68.0",
     "@notionhq/client": "^0.4.12",
-    "@reach/tooltip": "^0.18.0",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "@tanstack/react-table": "^8.16.0",
     "classnames": "^2.5.1",
     "date-fns": "^2.29.3",

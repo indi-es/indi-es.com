@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Tooltip from '@reach/tooltip';
+import Tooltip from 'components/tooltip';
 
 import style from './style.module.css';
 
@@ -20,7 +20,7 @@ function TrafficLightIndicator({ data }) {
         label={`Marcamos manualmente como inactivos. ${lf.format(inactive)}`}
       >
         <div className={style['indicator-wrapper']}>
-          <span className={`${style.indicator}`} data-stat="danger" />
+          <span className={`${style.indicator}`} data-state="danger" />
           <span>{inactive.length}</span>
         </div>
       </Tooltip>

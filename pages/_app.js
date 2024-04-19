@@ -4,7 +4,6 @@ import { SessionProvider } from 'next-auth/react';
 
 import 'modern-css-reset';
 import 'leaflet/dist/leaflet.css';
-import '@reach/tooltip/styles.css';
 
 import 'styles/variables.css';
 import 'styles/globals.css';
