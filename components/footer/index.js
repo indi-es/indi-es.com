@@ -36,15 +36,19 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <NavLink href="/eventos" exact>
-              <span>Eventos pasados</span>
-              <FiCalendar />
+            <NavLink href="/eventos" activeClassName="-active" exact>
+              <a>
+                <span>Eventos pasados</span>
+                <FiCalendar />
+              </a>
             </NavLink>
           </li>
           <li>
-            <NavLink href="/brand" exact>
-              <span>Logos y emojis</span>
-              <FiSmile />
+            <NavLink href="/brand" activeClassName="-active" exact>
+              <a>
+                <span>Logos y emojis</span>
+                <FiSmile />
+              </a>
             </NavLink>
           </li>
           <li>

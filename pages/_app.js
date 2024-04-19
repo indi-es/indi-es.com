@@ -1,3 +1,4 @@
+/* eslint filenames/match-exported: 0 */
 import PropTypes from 'prop-types';
 import { SessionProvider } from 'next-auth/react';
 

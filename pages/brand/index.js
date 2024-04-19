@@ -1,4 +1,11 @@
-export const logos = [
+import classNames from 'classnames';
+
+import { Page } from 'components/layouts';
+import { FiDownload } from 'react-icons/fi';
+
+import style from './style.module.css';
+
+const logos = [
   {
     name: 'Logo [png]',
     description: 'Para fondos claros',
@@ -19,7 +26,7 @@ export const logos = [
   },
 ];
 
-export const emojis = [
+const emojis = [
   {
     name: 'Amigo',
     src: '/emojis/amigo.png',
@@ -165,3 +172,62 @@ export const emojis = [
     theme: 'light',
   },
 ];
+
+function Brand() {
+  const customClassName = classNames(style.page, {});
+
+  return (
+    <Page className={customClassName}>
+      <div className={`${style['brand-wrapper']} wrapper`}>
+        <header>
+          <h1>Logos</h1>
+        </header>
+        <div className={style['resources-grid']}>
+          {logos.map(({ name, src, description, theme }) => {
+            return (
+              <figure data-theme={theme}>
+                <div className={style['resource-img-wrapper']}>
+                  <img src={src} alt={name} />
+                </div>
+                <figcaption>
+                  <a href={src} download>
+                    <div>
+                      <span>{name}</span>
+                      {description ? <span>{description}</span> : null}
+                    </div>
+                    <FiDownload />
+                  </a>
+                </figcaption>
+              </figure>
+            );
+          })}
+        </div>
+        <header>
+          <h1>Emojis</h1>
+        </header>
+        <div className={style['resources-grid']} data-resource="emoji">
+          {emojis.map(({ name, src, description, theme }) => {
+            return (
+              <figure data-theme={theme}>
+                <div className={style['resource-img-wrapper']}>
+                  <img src={src} alt={name} />
+                </div>
+                <figcaption>
+                  <a href={src} download>
+                    <div>
+                      <span>{name}</span>
+                      {description ? <span>{description}</span> : null}
+                    </div>
+                    <FiDownload />
+                  </a>
+                </figcaption>
+              </figure>
+            );
+          })}
+        </div>
+      </div>
+    </Page>
+  );
+}
+
+export default Brand;

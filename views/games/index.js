@@ -1,7 +1,5 @@
-'use client';
-
 import PropTypes from 'prop-types';
-import { useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 import { Page } from 'components/layouts';
 
@@ -13,8 +11,8 @@ import GamesNotes from './games-notes';
 import style from './style.module.css';
 
 function Games({ data }) {
-  const searchParams = useSearchParams();
-  const vista = searchParams.get('vista') || 'tabla';
+  const router = useRouter();
+  const { vista = 'tabla' } = router.query;
   const isTable = vista === 'tabla';
   const isStats = vista === 'estadisticas';
 
@@ -39,5 +37,4 @@ Games.propTypes = {
     })
   ).isRequired,
 };
-
 export default Games;

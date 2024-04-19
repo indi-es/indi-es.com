@@ -22,23 +22,23 @@ export default function Header() {
         <nav className={style['nav-container']}>
           <ul className={style['nav-routes']}>
             <li>
-              <NavLink href="/discord" exact>
-                Discord
+              <NavLink href="/discord" activeClassName="-active" exact>
+                <a>Discord</a>
               </NavLink>
             </li>
             <li>
-              <NavLink href="/estudios" exact>
-                Estudios
+              <NavLink href="/estudios" activeClassName="-active" exact>
+                <a>Estudios</a>
               </NavLink>
             </li>
             <li>
-              <NavLink href="/juegos" exact>
-                Juegos
+              <NavLink href="/juegos" activeClassName="-active" exact>
+                <a>Juegos</a>
               </NavLink>
             </li>
             <li>
-              <NavLink href="/recursos" exact>
-                Recursos
+              <NavLink href="/recursos" activeClassName="-active" exact>
+                <a>Recursos</a>
               </NavLink>
             </li>
             <li>

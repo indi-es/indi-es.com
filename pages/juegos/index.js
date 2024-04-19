@@ -1,4 +1,10 @@
+import PropTypes from 'prop-types';
+
 import GamesView from 'views/games';
+
+function Juegos({ data }) {
+  return <GamesView data={data} />;
+}
 
 async function getGithubFile(url) {
   const res = await fetch(url);
@@ -6,12 +12,21 @@ async function getGithubFile(url) {
   return data;
 }
 
-async function Juegos() {
+export async function getStaticProps() {
   const baseUrl = `https://raw.githubusercontent.com/indi-es/juegos`;
   const { games: data } = await getGithubFile(`${baseUrl}/main/data.json`);
-  return <GamesView data={data} />;
+
+  return {
+    props: { data },
+  };
 }
 
-Juegos.propTypes = {};
+Juegos.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+    })
+  ).isRequired,
+};
 
 export default Juegos;
