@@ -52,7 +52,7 @@
   border-right: 2px solid var(--border);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (width <= 900px) {
   .header {
     flex-flow: column;
     align-items: flex-end;

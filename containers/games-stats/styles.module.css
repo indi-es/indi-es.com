@@ -34,7 +34,7 @@
   height: calc(100% - var(--margin-04));
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (width <= 900px) {
   .games-stats {
     display: grid;
     grid-template-columns: 1fr;

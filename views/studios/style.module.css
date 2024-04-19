@@ -6,7 +6,7 @@
   margin: auto;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (width <= 900px) {
   .content {
     margin-bottom: var(--margin-02);
   }

@@ -12,6 +12,7 @@ function WebCell({ cell: { getValue } }) {
       href={value}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Webpage"
     >
       <FiGlobe />
     </a>

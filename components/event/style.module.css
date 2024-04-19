@@ -83,7 +83,7 @@
   white-space: nowrap;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (width <= 700px) {
   .event {
     grid-template-columns: 1fr;
   }
@@ -98,6 +98,7 @@
   .event {
     --border-color: var(--bg-alt);
   }
+
   .event-badge {
     background: var(--bg-alt);
     color: var(--fg);

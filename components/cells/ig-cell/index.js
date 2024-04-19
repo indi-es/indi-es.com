@@ -11,6 +11,7 @@ function IgCell({ cell: { getValue } }) {
       className={style['ig-cell']}
       href={value}
       target="_blank"
+      aria-label="Instagram"
       rel="noopener noreferrer"
     >
       <FiInstagram />

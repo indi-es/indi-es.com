@@ -12,6 +12,7 @@ function TwCell({ cell: { getValue } }) {
       href={value}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Twitter"
     >
       <FaTwitter />
     </a>

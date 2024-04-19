@@ -20,7 +20,7 @@ function TrafficLightIndicator({ data }) {
         label={`Marcamos manualmente como inactivos. ${lf.format(inactive)}`}
       >
         <div className={style['indicator-wrapper']}>
-          <span className={`${style.indicator} ${style['-danger']}`} />
+          <span className={`${style.indicator}`} data-stat="danger" />
           <span>{inactive.length}</span>
         </div>
       </Tooltip>
@@ -31,13 +31,13 @@ function TrafficLightIndicator({ data }) {
           target="_blank"
           className={style['indicator-wrapper']}
         >
-          <span className={`${style.indicator} ${style['-warning']}`} />
+          <span className={`${style.indicator}`} data-state="warning" />
           <span>{warn.length}</span>
         </a>
       </Tooltip>
       <Tooltip label="Sin problemas.">
         <div className={style['indicator-wrapper']}>
-          <span className={`${style.indicator} ${style['-success']}`} />
+          <span className={`${style.indicator}`} data-state="success" />
           <span>{healthyCount}</span>
         </div>
       </Tooltip>

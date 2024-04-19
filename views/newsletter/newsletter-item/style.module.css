@@ -2,7 +2,6 @@
   background: var(--bg-alt);
   border-radius: var(--margin-01);
   border: 1px solid var(--fg-alt);
-  width: max-content;
   overflow: hidden;
   width: 100%;
   max-width: 600px;

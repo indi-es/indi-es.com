@@ -35,6 +35,7 @@
   color: var(--fg);
   margin: 0;
 }
+
 .table-header-wrapper[data-can-sort='true'] {
   cursor: pointer;
 }

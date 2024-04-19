@@ -78,7 +78,7 @@
 }
 
 .resources-grid figcaption a {
-  color: currentColor;
+  color: currentcolor;
   text-decoration: none;
   display: flex;
   flex-flow: row;

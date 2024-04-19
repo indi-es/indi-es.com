@@ -1,7 +1,3 @@
-.content {
-  margin-bottom: var(--margin-04);
-}
-
 .table {
   margin: auto;
 }
@@ -17,11 +13,11 @@
   display: block;
   width: 100%;
   max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto hidden;
+  margin-bottom: var(--margin-04);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (width <= 900px) {
   .content {
     margin-bottom: var(--margin-02);
   }

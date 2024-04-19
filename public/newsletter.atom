@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://indi-es.com/newsletter</id>
     <title>INDI·ES Newsletter</title>
-    <updated>2023-10-13T22:27:12.263Z</updated>
+    <updated>2024-04-19T17:14:55.841Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>INDI·ES</name>
@@ -12,6 +12,58 @@
     <link rel="alternate" href="https://indi-es.com"/>
     <link rel="self" href="https://indi-es.com/newsletter.atom"/>
     <subtitle>Bienvenidos al Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español.</subtitle>
+    <entry>
+        <title type="html"><![CDATA[01-12 Noviembre 2023]]></title>
+        <id>https://indies.notion.site/f1d3a7137e974d94bb62748ee5a6849b</id>
+        <link href="https://indies.notion.site/f1d3a7137e974d94bb62748ee5a6849b"/>
+        <updated>2023-11-12T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Bienvenidos al 00№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español.]]></summary>
+        <content type="html"><![CDATA[Bienvenidos al 00№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español. lee más en: https://indies.notion.site/f1d3a7137e974d94bb62748ee5a6849b]]></content>
+        <author>
+            <name>INDI·ES</name>
+            <email>hola@indi-es.com</email>
+            <uri>https://indi-es.com/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[23-31 Octubre 2023]]></title>
+        <id>https://indies.notion.site/1958c8e020194539b5ef0569cf5a8e32</id>
+        <link href="https://indies.notion.site/1958c8e020194539b5ef0569cf5a8e32"/>
+        <updated>2023-10-31T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Bienvenidos al 109№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español.]]></summary>
+        <content type="html"><![CDATA[Bienvenidos al 109№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español. lee más en: https://indies.notion.site/1958c8e020194539b5ef0569cf5a8e32]]></content>
+        <author>
+            <name>INDI·ES</name>
+            <email>hola@indi-es.com</email>
+            <uri>https://indi-es.com/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[16-22 Octubre 2023]]></title>
+        <id>https://indies.notion.site/b1664e63f2c248b8abcd8141e6ff3ec5</id>
+        <link href="https://indies.notion.site/b1664e63f2c248b8abcd8141e6ff3ec5"/>
+        <updated>2023-10-22T05:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Bienvenidos al 108№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español.]]></summary>
+        <content type="html"><![CDATA[Bienvenidos al 108№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español. lee más en: https://indies.notion.site/b1664e63f2c248b8abcd8141e6ff3ec5]]></content>
+        <author>
+            <name>INDI·ES</name>
+            <email>hola@indi-es.com</email>
+            <uri>https://indi-es.com/</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[09-15 Octubre 2023]]></title>
+        <id>https://indies.notion.site/4d3b76311fee4b099d6d5678ddadc6a0</id>
+        <link href="https://indies.notion.site/4d3b76311fee4b099d6d5678ddadc6a0"/>
+        <updated>2023-10-15T05:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Bienvenidos al 107№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español.]]></summary>
+        <content type="html"><![CDATA[Bienvenidos al 107№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español. lee más en: https://indies.notion.site/4d3b76311fee4b099d6d5678ddadc6a0]]></content>
+        <author>
+            <name>INDI·ES</name>
+            <email>hola@indi-es.com</email>
+            <uri>https://indi-es.com/</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[01-08 Octubre 2023]]></title>
         <id>https://indies.notion.site/89a837e1332349fba9e177e97ec9ee68</id>
@@ -1269,58 +1321,6 @@ https://github.com/indi-es/estudios/blob/main/contributing.md lee más en: https
         <link href="https://indies.notion.site/3a48e3c17083413896bb150a2eee2d9c"/>
         <updated>2021-02-07T06:00:00.000Z</updated>
         <content type="html"><![CDATA[ lee más en: https://indies.notion.site/3a48e3c17083413896bb150a2eee2d9c]]></content>
-        <author>
-            <name>INDI·ES</name>
-            <email>hola@indi-es.com</email>
-            <uri>https://indi-es.com/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[25-31 Enero 2021]]></title>
-        <id>https://indies.notion.site/20a01797f42140d3a7b7cca3159ed25b</id>
-        <link href="https://indies.notion.site/20a01797f42140d3a7b7cca3159ed25b"/>
-        <updated>2021-01-31T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Bienvenidos al 11№ Newsletter de INDI.ES, tenemos una pequeña página web! por ahora solo tiene links a las cosas que han salido de la comunidad, como una lista de estudios mexicanos en Github que cualquiera puede aportar, dentro del repositorio estamos discutiendo formatos y lineamentos para agregar más estudios, si te interesa apoyar te invitamos a participar.]]></summary>
-        <content type="html"><![CDATA[Bienvenidos al 11№ Newsletter de INDI.ES, tenemos una pequeña página web! por ahora solo tiene links a las cosas que han salido de la comunidad, como una lista de estudios mexicanos en Github que cualquiera puede aportar, dentro del repositorio estamos discutiendo formatos y lineamentos para agregar más estudios, si te interesa apoyar te invitamos a participar. lee más en: https://indies.notion.site/20a01797f42140d3a7b7cca3159ed25b]]></content>
-        <author>
-            <name>INDI·ES</name>
-            <email>hola@indi-es.com</email>
-            <uri>https://indi-es.com/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[18-24 Enero 2021]]></title>
-        <id>https://indies.notion.site/0983f69177eb4b01861d4c53b40d093b</id>
-        <link href="https://indies.notion.site/0983f69177eb4b01861d4c53b40d093b"/>
-        <updated>2021-01-24T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Bienvenidos al 10№ Newsletter de INDI.ES, esta semana empezamos la iniciativa #cafecito, de vez en cuando abriremos el café virtual para platicar sin ningún tema en especifico. El canal se abre de vez en cuando sin previo aviso pero todos los que lo vean están invitados a entrarle a la plática.]]></summary>
-        <content type="html"><![CDATA[Bienvenidos al 10№ Newsletter de INDI.ES, esta semana empezamos la iniciativa #cafecito, de vez en cuando abriremos el café virtual para platicar sin ningún tema en especifico. El canal se abre de vez en cuando sin previo aviso pero todos los que lo vean están invitados a entrarle a la plática. lee más en: https://indies.notion.site/0983f69177eb4b01861d4c53b40d093b]]></content>
-        <author>
-            <name>INDI·ES</name>
-            <email>hola@indi-es.com</email>
-            <uri>https://indi-es.com/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[11-17 Enero 2021]]></title>
-        <id>https://indies.notion.site/08cb3675812b4f028e954893afff4688</id>
-        <link href="https://indies.notion.site/08cb3675812b4f028e954893afff4688"/>
-        <updated>2021-01-17T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Bienvenidos al 09№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español.]]></summary>
-        <content type="html"><![CDATA[Bienvenidos al 09№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español. lee más en: https://indies.notion.site/08cb3675812b4f028e954893afff4688]]></content>
-        <author>
-            <name>INDI·ES</name>
-            <email>hola@indi-es.com</email>
-            <uri>https://indi-es.com/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[04-10 Enero 2021]]></title>
-        <id>https://indies.notion.site/2fe5f96ae2134502b932b36c0b598e90</id>
-        <link href="https://indies.notion.site/2fe5f96ae2134502b932b36c0b598e90"/>
-        <updated>2021-01-10T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Bienvenidos al 08№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español.]]></summary>
-        <content type="html"><![CDATA[Bienvenidos al 08№ Newsletter de INDI.ES donde compartimos lo mejor de la semana de la industria de desarrollo de juegos en Español. lee más en: https://indies.notion.site/2fe5f96ae2134502b932b36c0b598e90]]></content>
         <author>
             <name>INDI·ES</name>
             <email>hola@indi-es.com</email>

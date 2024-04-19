@@ -138,13 +138,13 @@ label strong {
   }
 }
 
-@media (min-width: 670px) {
+@media (width >= 670px) {
   [data-hide-desktop] {
     display: none !important;
   }
 }
 
-@media (max-width: 671px) {
+@media (width <= 671px) {
   [data-hide-mobile] {
     display: none !important;
   }

@@ -11,6 +11,7 @@ function FbCell({ cell: { getValue } }) {
       className={style['fb-cell']}
       href={value}
       target="_blank"
+      aria-label="Facebook"
       rel="noopener noreferrer"
     >
       <FaFacebookSquare />

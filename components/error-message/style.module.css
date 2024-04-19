@@ -34,6 +34,7 @@
     background: transparent;
     color: var(--fg);
   }
+
   .error-message::selection {
     background: var(--hl-01);
   }

@@ -2,8 +2,7 @@
   display: block;
   width: 100%;
   max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto hidden;
 }
 
 .table-container table {
@@ -32,16 +31,16 @@
   vertical-align: top;
 }
 
-.table-container th:last-child,
-.table-container td:last-child {
-  /* border-right: 0; */
-}
+/* .table-container th:last-child, 
+ .table-container td:last-child { 
+ border-right: 0; 
+ } */
 
-.table-container:not(.-loading) tr:hover {
-  /* background-color: var(--bg-alt); */
-}
+/* .table-container:not(.-loading) tr:hover { 
+background-color: var(--bg-alt); 
+} */
 
 .table-container th.-collapse,
 .table-container td.-collapse {
-  width: 0.0000000001%;
+  width: 0%;
 }

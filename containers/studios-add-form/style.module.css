@@ -16,6 +16,7 @@
   flex-flow: column;
   gap: var(--margin-01);
 }
+
 .studios-add-form-server-error {
   margin: auto;
   font-size: 1em;
@@ -61,7 +62,7 @@
   gap: var(--margin-01);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (width <= 800px) {
   .studios-add-form-where {
     flex-flow: column;
   }

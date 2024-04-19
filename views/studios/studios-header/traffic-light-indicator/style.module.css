@@ -29,15 +29,18 @@
   border-radius: 50%;
 }
 
-.indicator.-info {
+.indicator[data-state='info'] {
   background: var(--fg);
 }
-.indicator.-success {
+
+.indicator[data-state='success'] {
   background: var(--success);
 }
-.indicator.-warning {
+
+.indicator[data-state='warning'] {
   background: var(--warning);
 }
-.indicator.-danger {
+
+.indicator[data-state='danger'] {
   background: var(--danger);
 }

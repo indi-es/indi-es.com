@@ -9,7 +9,7 @@
   margin-top: var(--flow-space, 1em);
 }
 
-@media (min-width: 45em) {
+@media (width >= 45em) {
   .rich-text-container h1 {
     font-size: var(--size-800);
   }
