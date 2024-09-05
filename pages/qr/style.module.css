@@ -34,7 +34,8 @@
 }
 
 .qr-image-wrapper {
-  padding: var(--margin-01);
+  padding: var(--margin-02);
+  background: var(--fg);
   height: 100%;
   width: 100%;
   display: flex;
