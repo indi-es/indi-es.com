@@ -18,7 +18,7 @@ function DiscordWidget({
     'discord-widget-container',
     className
   );
-  const inviteUrl = invite
+  const inviteUrl = invite?.code
     ? `https://discord.com/invite/${invite.code}`
     : instantInvite;
   return (
