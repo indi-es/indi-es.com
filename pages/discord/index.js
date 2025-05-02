@@ -1,23 +1,26 @@
 import PropTypes from 'prop-types';
 
-import { fetchDiscordWidget } from 'utils/discord';
+import { createDiscordInvite, fetchDiscordWidget } from 'utils/discord';
 
 import { Page } from 'components/layouts';
 import DiscordWidget from 'components/discord-widget';
 
 import style from './style.module.css';
 
-export default function Discord({ data }) {
+export default function Discord({ data, invite }) {
   return (
     <Page className={style.page}>
       <div className={`${style['discord-wrapper']} wrapper`}>
-        {data ? <DiscordWidget {...data} /> : null}
+        {data ? <DiscordWidget {...data} invite={invite} /> : null}
       </div>
     </Page>
   );
 }
 
 Discord.propTypes = {
+  invite: PropTypes.shape({
+    code: PropTypes.string,
+  }),
   data: PropTypes.shape({
     name: PropTypes.string,
     members: PropTypes.arrayOf(PropTypes.shape({})),
@@ -27,13 +30,15 @@ Discord.propTypes = {
 };
 
 Discord.defaultProps = {
+  invite: null,
   data: null,
 };
 
 export async function getStaticProps() {
   const data = await fetchDiscordWidget();
+  const invite = await createDiscordInvite();
 
   return {
-    props: { data },
+    props: { data, invite },
   };
 }

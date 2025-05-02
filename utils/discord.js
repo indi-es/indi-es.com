@@ -1,5 +1,6 @@
 const API_URL = process.env.DISCORD_API_URL;
 const GUILD_ID = process.env.DISCORD_GUILD_ID;
+const CHANNEL_ID = process.env.DISCORD_CHANNEL_ID;
 const BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 
 function sleep(ms) {
@@ -12,6 +13,26 @@ export async function fetchDiscordWidget() {
   try {
     const url = `${API_URL}/guilds/${GUILD_ID}/widget.json`;
     const res = await fetch(url);
+    return res.json();
+  } catch (e) {
+    console.error('Error fetching widget', e);
+    return null;
+  }
+}
+
+export async function createDiscordInvite() {
+  try {
+    const url = `${API_URL}/channels/${CHANNEL_ID}/invites`;
+    const options = {
+      method: 'POST',
+      body: JSON.stringify({ max_age: 0, max_uses: 0 }),
+      headers: {
+        'Content-Type': 'application/json',
+        'User-Agent': 'DiscordBot ($url, $versionNumber)',
+        Authorization: `Bot ${BOT_TOKEN}`,
+      },
+    };
+    const res = await fetch(url, options);
     return res.json();
   } catch (e) {
     console.error('Error fetching widget', e);

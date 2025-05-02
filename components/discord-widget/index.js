@@ -9,7 +9,8 @@ import style from './style.module.css';
 function DiscordWidget({
   name,
   presence_count: online,
-  instant_invite: invite,
+  instant_invite: instantInvite,
+  invite,
   className,
 }) {
   const customClassName = classNames(
@@ -17,6 +18,9 @@ function DiscordWidget({
     'discord-widget-container',
     className
   );
+  const inviteUrl = invite
+    ? `https://discord.com/invite/${invite.code}`
+    : instantInvite;
   return (
     <article className={customClassName}>
       <header className={style['discord-widget-header']}>
@@ -29,7 +33,7 @@ function DiscordWidget({
       <footer className={style['discord-widget-footer']}>
         <Button
           className={style['join-server']}
-          href={invite}
+          href={inviteUrl}
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -45,11 +49,15 @@ DiscordWidget.propTypes = {
   name: PropTypes.string.isRequired,
   presence_count: PropTypes.number.isRequired,
   instant_invite: PropTypes.string.isRequired,
+  invite: PropTypes.shape({
+    code: PropTypes.string,
+  }),
   className: PropTypes.string,
 };
 
 DiscordWidget.defaultProps = {
   className: '',
+  invite: null,
 };
 
 export default DiscordWidget;
