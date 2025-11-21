@@ -10,6 +10,7 @@ Proyectos similares que nos hemos encontrado a lo largo del camino:
 
 - [deVuego](https://devuego.lat/bd/desarrolladores/?pais=MX)
 - [Directorio de empresas de gamedev](https://comohacervideojuegos.weebly.com/dir-empresas.html)
+- [Reporte VMX 2022](https://comohacervideojuegos.weebly.com/blog/archives/06-2024)
 - [Reporte VMX 2018-2019](https://comohacervideojuegos.weebly.com/blog/reporte-2018-2019)
 - [Gamedev Map](https://www.gamedevmap.com/index.php)
 - [Latam.vg](http://latam.vg/)
