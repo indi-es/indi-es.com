@@ -1144,7 +1144,7 @@
     "population_proper": "139169"
   },
   {
-    "city": "San Cristóbal",
+    "city": "San Cristóbal de Las Casas",
     "lat": "16.7367",
     "lng": "-92.6383",
     "country": "Mexico",
@@ -21907,6 +21907,61 @@
     "country": "Mexico",
     "iso2": "MX",
     "admin_name": "Chihuahua",
+    "capital": "minor",
+    "population": "",
+    "population_proper": ""
+  },
+  {
+    "city": "Atlacomulco",
+    "lat": "19.81411",
+    "lng": "-99.86121",
+    "country": "Mexico",
+    "iso2": "MX",
+    "admin_name": "Estado de México",
+    "capital": "minor",
+    "population": "",
+    "population_proper": ""
+  },
+  {
+    "city": "Brighton",
+    "lat": "50.820833333333",
+    "lng": "-0.1375",
+    "country": "Reino Unido",
+    "iso2": "GB",
+    "admin_name": "East Sussex",
+    "capital": "minor",
+    "population": "",
+    "population_proper": ""
+  },
+  {
+    "city": "Madrid",
+    "lat": "40.416944444444",
+    "lng": "-3.7033333333333",
+    "country": "España",
+    "iso2": "ES",
+    "admin_name": "España",
+    "capital": "minor",
+    "population": "",
+    "population_proper": ""
+  },
+  {
+    "city": "Tokyo",
+    "lat": "35.689444444444",
+    "lng": "139.69166666667",
+    "country": "Japón",
+    "iso2": "JP",
+    "admin_name": "Kantō",
+    "capital": "minor",
+    "population": "",
+    "population_proper": ""
+  },
+  {
+    "city": "Vancouver",
+    "lat": "49.260833333333,",
+    "lng": "-123.11388888889",
+    "country": "Canadá",
+    "iso2": "CA",
+    "admin_name": "Gran Vancouver",
     "capital": "minor",
     "population": "",
     "population_proper": ""

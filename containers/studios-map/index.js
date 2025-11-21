@@ -15,7 +15,6 @@ function getPosition(city) {
   });
 
   if (!res) {
-    console.warn(`City |${city}| not found on database`);
     return null;
   }
 
@@ -57,6 +56,18 @@ function StudiosMap({ studios, className }) {
   const markers = Object.entries(studiosByCity)
     .map(([key, value]) => {
       const position = getPosition(key);
+      if (!position) {
+        const formatter = new Intl.ListFormat('en', {
+          style: 'long',
+          type: 'conjunction',
+        });
+        const studiosName = value.map((item) => {
+          return item.name;
+        });
+        console.warn(
+          `City |${key}| with developers: ${formatter.format(studiosName)} was not found on database`
+        );
+      }
       return {
         city: key,
         position,
