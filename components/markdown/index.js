@@ -19,9 +19,4 @@ Markdown.propTypes = {
   className: PropTypes.string,
 };
 
-Markdown.defaultProps = {
-  children: null,
-  className: null,
-};
-
 export default Markdown;

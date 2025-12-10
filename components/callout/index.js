@@ -13,9 +13,4 @@ Callout.propTypes = {
   className: PropTypes.string,
 };
 
-Callout.defaultProps = {
-  children: null,
-  className: null,
-};
-
 export default Callout;

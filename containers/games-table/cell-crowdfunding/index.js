@@ -27,6 +27,4 @@ CellCrowdfunding.propTypes = {
   }).isRequired,
 };
 
-CellCrowdfunding.defaultProps = {};
-
 export default CellCrowdfunding;

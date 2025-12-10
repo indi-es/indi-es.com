@@ -98,8 +98,4 @@ StudiosStats.propTypes = {
   className: PropTypes.string,
 };
 
-StudiosStats.defaultProps = {
-  className: null,
-};
-
 export default StudiosStats;

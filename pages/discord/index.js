@@ -29,11 +29,6 @@ Discord.propTypes = {
   }),
 };
 
-Discord.defaultProps = {
-  invite: null,
-  data: null,
-};
-
 export async function getStaticProps() {
   const data = await fetchDiscordWidget();
   const invite = await createDiscordInvite();

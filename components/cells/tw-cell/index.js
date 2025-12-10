@@ -25,6 +25,4 @@ TwCell.propTypes = {
   }).isRequired,
 };
 
-TwCell.defaultProps = {};
-
 export default TwCell;

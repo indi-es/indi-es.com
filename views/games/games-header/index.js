@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import style from './styles.module.css';
 
-function GamesHeader({ isTable, isStats, data }) {
+function GamesHeader({ isTable = true, isStats, data }) {
   return (
     <header className={style.header}>
       <span className={style.info}>Total de juegos: {data.length}</span>
@@ -31,11 +31,6 @@ GamesHeader.propTypes = {
   isTable: PropTypes.bool,
   isStats: PropTypes.bool,
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-};
-
-GamesHeader.defaultProps = {
-  isTable: true,
-  isStats: false,
 };
 
 export default GamesHeader;

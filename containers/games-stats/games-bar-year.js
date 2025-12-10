@@ -48,8 +48,4 @@ GamesBarYear.propTypes = {
   keys: PropTypes.arrayOf(PropTypes.string),
 };
 
-GamesBarYear.defaultProps = {
-  keys: undefined,
-};
-
 export default GamesBarYear;

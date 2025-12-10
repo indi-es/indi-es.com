@@ -10,8 +10,4 @@ HeaderCenter.propTypes = {
   label: PropTypes.string,
 };
 
-HeaderCenter.defaultProps = {
-  label: null,
-};
-
 export default HeaderCenter;

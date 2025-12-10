@@ -10,8 +10,8 @@ function DiscordWidget({
   name,
   presence_count: online,
   instant_invite: instantInvite,
-  invite,
-  className,
+  invite = null,
+  className = '',
 }) {
   const customClassName = classNames(
     style['discord-widget-container'],
@@ -53,11 +53,6 @@ DiscordWidget.propTypes = {
     code: PropTypes.string,
   }),
   className: PropTypes.string,
-};
-
-DiscordWidget.defaultProps = {
-  className: '',
-  invite: null,
 };
 
 export default DiscordWidget;

@@ -14,12 +14,7 @@ function getUrl({ website, twitter, facebook, instagram }) {
   return null;
 }
 
-function NameCell({
-  cell: {
-    getValue,
-    row: { original },
-  },
-}) {
+function NameCell({ cell: { getValue, row: { original } } = {} }) {
   const value = getValue();
   if (!value) return null;
 
@@ -55,10 +50,6 @@ NameCell.propTypes = {
       }),
     }),
   }),
-};
-
-NameCell.defaultProps = {
-  cell: {},
 };
 
 export default NameCell;

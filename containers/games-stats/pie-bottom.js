@@ -38,6 +38,4 @@ PieBottom.propTypes = {
   headers: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-PieBottom.defaultProps = {};
-
 export default PieBottom;

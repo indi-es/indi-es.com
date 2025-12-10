@@ -16,7 +16,7 @@ function getResults(name, items) {
   return items.filter((item) => isSimilar(item.name, name)).splice(0, 3);
 }
 
-function StudiosAddFormResults({ name, items }) {
+function StudiosAddFormResults({ name = '', items }) {
   const results = getResults(name, items);
   if (results.length === 0) return null;
 
@@ -50,10 +50,6 @@ StudiosAddFormResults.propTypes = {
       name: PropTypes.string,
     })
   ).isRequired,
-};
-
-StudiosAddFormResults.defaultProps = {
-  name: '',
 };
 
 export default StudiosAddFormResults;

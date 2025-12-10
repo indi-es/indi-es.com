@@ -38,6 +38,4 @@ PieLeft.propTypes = {
   headers: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-PieLeft.defaultProps = {};
-
 export default PieLeft;

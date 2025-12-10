@@ -17,9 +17,4 @@ ErrorMessage.propTypes = {
   className: PropTypes.string,
 };
 
-ErrorMessage.defaultProps = {
-  children: null,
-  className: null,
-};
-
 export default ErrorMessage;

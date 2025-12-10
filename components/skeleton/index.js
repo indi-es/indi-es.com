@@ -13,8 +13,4 @@ Skeleton.propTypes = {
   className: PropTypes.string,
 };
 
-Skeleton.defaultProps = {
-  className: null,
-};
-
 export default Skeleton;

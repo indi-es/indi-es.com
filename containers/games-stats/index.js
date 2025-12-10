@@ -212,8 +212,4 @@ GamesStats.propTypes = {
   className: PropTypes.string,
 };
 
-GamesStats.defaultProps = {
-  className: null,
-};
-
 export default GamesStats;

@@ -114,8 +114,4 @@ StudiosMap.propTypes = {
   className: PropTypes.string,
 };
 
-StudiosMap.defaultProps = {
-  className: null,
-};
-
 export default StudiosMap;

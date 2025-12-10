@@ -46,6 +46,4 @@ CellPlatforms.propTypes = {
   }).isRequired,
 };
 
-CellPlatforms.defaultProps = {};
-
 export default CellPlatforms;

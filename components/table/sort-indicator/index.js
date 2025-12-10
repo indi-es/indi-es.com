@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { FiChevronUp, FiChevronDown } from 'react-icons/fi';
 
-function SortIndicator({ isSorted }) {
+function SortIndicator({ isSorted = false }) {
   if (!isSorted) return null;
 
   if (isSorted === 'asc') {
@@ -13,10 +13,6 @@ function SortIndicator({ isSorted }) {
 
 SortIndicator.propTypes = {
   isSorted: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-};
-
-SortIndicator.defaultProps = {
-  isSorted: false,
 };
 
 export default SortIndicator;

@@ -17,6 +17,4 @@ TimeCell.propTypes = {
   }).isRequired,
 };
 
-TimeCell.defaultProps = {};
-
 export default TimeCell;

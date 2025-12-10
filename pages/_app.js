@@ -25,9 +25,4 @@ App.propTypes = {
   pageProps: PropTypes.shape({ session: PropTypes.shape({}) }),
 };
 
-App.defaultProps = {
-  Component: null,
-  pageProps: null,
-};
-
 export default App;

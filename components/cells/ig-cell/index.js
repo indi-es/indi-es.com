@@ -25,6 +25,4 @@ IgCell.propTypes = {
   }).isRequired,
 };
 
-IgCell.defaultProps = {};
-
 export default IgCell;

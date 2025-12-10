@@ -25,6 +25,4 @@ FbCell.propTypes = {
   }).isRequired,
 };
 
-FbCell.defaultProps = {};
-
 export default FbCell;

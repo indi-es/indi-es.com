@@ -6,7 +6,7 @@ import Footer from 'components/footer';
 
 import style from './style.module.css';
 
-function Page({ header, footer, children, className, ...rest }) {
+function Page({ header = true, footer = true, children, className, ...rest }) {
   const title = 'INDI·ES';
   const description = 'Comunidad de desarrolladores de videojuegos en español';
   const url = 'https://indi-es.com';
@@ -92,14 +92,6 @@ Page.propTypes = {
   header: PropTypes.bool,
   footer: PropTypes.bool,
   css: PropTypes.shape({}),
-};
-
-Page.defaultProps = {
-  className: null,
-  header: true,
-  footer: true,
-  children: null,
-  css: null,
 };
 
 export default Page;

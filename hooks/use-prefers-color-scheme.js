@@ -31,6 +31,7 @@ const usePrefersColorScheme = () => {
 
       window.matchMedia(query`light`).addEventListener('change', onChangeLight);
     } catch (error) {
+      console.error(error);
       window
         .matchMedia(query`dark`)
         .addListener(() => setPreferredColorSchema(isDark ? 'light' : 'dark'));

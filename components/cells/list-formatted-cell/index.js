@@ -24,6 +24,4 @@ ListFormattedCell.propTypes = {
   }).isRequired,
 };
 
-ListFormattedCell.defaultProps = {};
-
 export default ListFormattedCell;

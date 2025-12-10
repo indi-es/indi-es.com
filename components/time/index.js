@@ -29,9 +29,4 @@ Time.propTypes = {
   formatStr: PropTypes.string,
 };
 
-Time.defaultProps = {
-  formatStr: undefined,
-  className: null,
-};
-
 export default Time;

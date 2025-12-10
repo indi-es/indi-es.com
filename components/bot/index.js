@@ -12,8 +12,4 @@ Bot.propTypes = {
   className: PropTypes.string,
 };
 
-Bot.defaultProps = {
-  className: null,
-};
-
 export default Bot;

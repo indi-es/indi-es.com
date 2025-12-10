@@ -12,7 +12,14 @@ import TableRow from './table-row';
 
 import style from './style.module.css';
 
-function Table({ className, initialSort, columns, data, loading, sortingFns }) {
+function Table({
+  className,
+  initialSort,
+  columns,
+  data,
+  loading,
+  sortingFns = {},
+}) {
   const customClassName = classNames(
     style['table-container'],
     'table-container',
@@ -56,13 +63,6 @@ Table.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   initialSort: PropTypes.arrayOf(PropTypes.shape({})),
   sortingFns: PropTypes.shape({}),
-};
-
-Table.defaultProps = {
-  loading: false,
-  className: null,
-  initialSort: null,
-  sortingFns: {},
 };
 
 export default Table;

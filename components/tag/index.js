@@ -10,8 +10,4 @@ Tag.propTypes = {
   children: PropTypes.node,
 };
 
-Tag.defaultProps = {
-  children: null,
-};
-
 export default Tag;

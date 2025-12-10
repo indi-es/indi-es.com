@@ -4,7 +4,7 @@ import Markdown from 'components/markdown';
 
 import style from './style.module.css';
 
-function NewsletterItem({ id, title, url, description, image }) {
+function NewsletterItem({ id, title, url, description, image = null }) {
   return (
     <article key={id} className={style['newsletter-item']}>
       <header className={style['newsletter-item-header']}>
@@ -49,7 +49,5 @@ NewsletterItem.propTypes = {
   image: PropTypes.string,
   url: PropTypes.string.isRequired,
 };
-
-NewsletterItem.defaultProps = { image: null };
 
 export default NewsletterItem;

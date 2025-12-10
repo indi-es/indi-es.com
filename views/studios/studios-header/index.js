@@ -8,7 +8,12 @@ import TrafficLightIndicator from './traffic-light-indicator';
 
 import style from './style.module.css';
 
-function StudiosHeader({ isTable, isMap, isStats, data }) {
+function StudiosHeader({
+  isTable = true,
+  isMap = false,
+  isStats = false,
+  data,
+}) {
   return (
     <header className={style.header}>
       <Button className={style.support} href="/estudios/agregar">
@@ -52,12 +57,6 @@ StudiosHeader.propTypes = {
       error: PropTypes.shape({}),
     })
   ).isRequired,
-};
-
-StudiosHeader.defaultProps = {
-  isTable: true,
-  isMap: false,
-  isStats: false,
 };
 
 export default StudiosHeader;

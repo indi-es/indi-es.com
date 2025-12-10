@@ -16,10 +16,6 @@ LinkButton.propTypes = {
   href: PropTypes.string.isRequired,
 };
 
-LinkButton.defaultProps = {
-  children: null,
-};
-
 function InputButton(props) {
   return <button type="button" {...props} />;
 }
@@ -45,12 +41,6 @@ Button.propTypes = {
   href: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
-};
-
-Button.defaultProps = {
-  href: null,
-  children: null,
-  className: null,
 };
 
 export default Button;

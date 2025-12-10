@@ -41,6 +41,4 @@ PieBig.propTypes = {
   headers: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-PieBig.defaultProps = {};
-
 export default PieBig;

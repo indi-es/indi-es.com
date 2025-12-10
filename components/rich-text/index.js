@@ -18,9 +18,4 @@ RichText.propTypes = {
   className: PropTypes.string,
 };
 
-RichText.defaultProps = {
-  children: null,
-  className: null,
-};
-
 export default RichText;

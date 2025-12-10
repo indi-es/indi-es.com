@@ -17,7 +17,7 @@ function groupByMonth(acc, curr) {
   return acc;
 }
 
-function Newsletter({ items }) {
+function Newsletter({ items = [] }) {
   const grouped = items.reduce(groupByMonth, {});
 
   return (
@@ -67,10 +67,6 @@ function Newsletter({ items }) {
 
 Newsletter.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({})),
-};
-
-Newsletter.defaultProps = {
-  items: [],
 };
 
 export default Newsletter;

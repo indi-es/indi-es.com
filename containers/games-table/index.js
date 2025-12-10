@@ -38,8 +38,4 @@ GamesTable.propTypes = {
   className: PropTypes.string,
 };
 
-GamesTable.defaultProps = {
-  className: null,
-};
-
 export default GamesTable;

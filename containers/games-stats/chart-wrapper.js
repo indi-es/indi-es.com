@@ -39,6 +39,4 @@ ChartWrapper.propTypes = {
   id: PropTypes.string.isRequired,
 };
 
-ChartWrapper.defaultProps = {};
-
 export default ChartWrapper;

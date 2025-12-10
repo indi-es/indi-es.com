@@ -120,11 +120,4 @@ Event.propTypes = {
   // channel_id: PropTypes.string.isRequired,
 };
 
-Event.defaultProps = {
-  scheduled_end_time: null,
-  // user_count: null,
-  image: null,
-  channel: null,
-};
-
 export default Event;

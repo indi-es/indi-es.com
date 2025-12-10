@@ -7,7 +7,7 @@ const options = {
   studio: 'Estudio',
 };
 
-function TypeCell({ cell: { value } }) {
+function TypeCell({ cell: { value } = { value: null } }) {
   if (!value) return null;
 
   const label = options[value];
@@ -21,12 +21,6 @@ TypeCell.propTypes = {
   cell: PropTypes.shape({
     value: PropTypes.string,
   }),
-};
-
-TypeCell.defaultProps = {
-  cell: {
-    value: null,
-  },
 };
 
 export default TypeCell;

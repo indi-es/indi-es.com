@@ -40,8 +40,4 @@ StudiosTable.propTypes = {
   className: PropTypes.string,
 };
 
-StudiosTable.defaultProps = {
-  className: null,
-};
-
 export default StudiosTable;

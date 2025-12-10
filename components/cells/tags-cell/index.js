@@ -4,7 +4,7 @@ import Tag from 'components/tag';
 
 import style from './style.module.css';
 
-function TagsCell({ cell: { value } }) {
+function TagsCell({ cell: { value } = {} }) {
   if (!value) return null;
 
   return (
@@ -20,12 +20,6 @@ TagsCell.propTypes = {
   cell: PropTypes.shape({
     value: PropTypes.arrayOf(PropTypes.string),
   }),
-};
-
-TagsCell.defaultProps = {
-  cell: {
-    value: null,
-  },
 };
 
 export default TagsCell;

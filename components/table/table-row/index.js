@@ -5,7 +5,7 @@ import Skeleton from 'components/skeleton';
 
 import style from './style.module.css';
 
-function TableRow({ row, loading }) {
+function TableRow({ row, loading = false }) {
   return (
     <tr className={style['table-row']}>
       {row.getVisibleCells().map((cell) => {
@@ -31,10 +31,6 @@ TableRow.propTypes = {
     getVisibleCells: PropTypes.func,
   }).isRequired,
   loading: PropTypes.bool,
-};
-
-TableRow.defaultProps = {
-  loading: false,
 };
 
 export default TableRow;

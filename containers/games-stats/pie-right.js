@@ -38,6 +38,4 @@ PieRight.propTypes = {
   headers: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-PieRight.defaultProps = {};
-
 export default PieRight;

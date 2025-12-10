@@ -25,6 +25,4 @@ WebCell.propTypes = {
   }).isRequired,
 };
 
-WebCell.defaultProps = {};
-
 export default WebCell;

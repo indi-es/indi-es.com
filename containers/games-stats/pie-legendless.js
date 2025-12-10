@@ -25,6 +25,4 @@ PieLegendless.propTypes = {
   headers: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-PieLegendless.defaultProps = {};
-
 export default PieLegendless;

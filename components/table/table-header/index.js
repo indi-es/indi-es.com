@@ -8,7 +8,7 @@ import SortIndicator from '../sort-indicator';
 
 import style from './style.module.css';
 
-function TableHeader({ className, headerGroups, loading }) {
+function TableHeader({ className, headerGroups, loading = false }) {
   const customClassName = classNames(
     style['table-header'],
     'table-header',
@@ -54,11 +54,6 @@ TableHeader.propTypes = {
   loading: PropTypes.bool,
   className: PropTypes.string,
   headerGroups: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-};
-
-TableHeader.defaultProps = {
-  loading: false,
-  className: null,
 };
 
 export default TableHeader;

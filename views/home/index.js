@@ -90,8 +90,4 @@ Home.propTypes = {
   }),
 };
 
-Home.defaultProps = {
-  widget: null,
-};
-
 export default Home;

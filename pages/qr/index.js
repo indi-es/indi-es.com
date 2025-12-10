@@ -56,10 +56,6 @@ QR.propTypes = {
   }),
 };
 
-QR.defaultProps = {
-  data: null,
-};
-
 export async function getStaticProps() {
   const data = await fetchDiscordWidget();
 

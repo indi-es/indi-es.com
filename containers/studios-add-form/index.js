@@ -38,7 +38,7 @@ const defaultValues = prod
       website: 'https://ellugar.co',
     };
 
-function StudiosAddForm({ items, onSubmit }) {
+function StudiosAddForm({ items, onSubmit = () => {} }) {
   const {
     register,
     handleSubmit,
@@ -229,10 +229,6 @@ StudiosAddForm.propTypes = {
     })
   ).isRequired,
   onSubmit: PropTypes.func,
-};
-
-StudiosAddForm.defaultProps = {
-  onSubmit: () => {},
 };
 
 export default StudiosAddForm;

@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { cloneElement, Children } from 'react';
 
-function NavLink({ children, activeClassName, exact, ...rest }) {
+function NavLink({
+  children,
+  activeClassName = '-active',
+  exact = false,
+  ...rest
+}) {
   const { asPath, pathName } = useRouter();
   const child = Children.only(children);
   const childClassName = child.props.className || '';
@@ -32,12 +37,6 @@ NavLink.propTypes = {
   children: PropTypes.node,
   activeClassName: PropTypes.string,
   exact: PropTypes.bool,
-};
-
-NavLink.defaultProps = {
-  children: null,
-  activeClassName: '-active',
-  exact: false,
 };
 
 export default NavLink;
