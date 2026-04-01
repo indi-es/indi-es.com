@@ -13,6 +13,10 @@
   justify-content: center;
 }
 
+.traffic-light-indicator button {
+  color: var(--fg);
+}
+
 .indicator-wrapper {
   display: flex;
   flex-flow: row nowrap;

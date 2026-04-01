@@ -3,8 +3,6 @@ import Tooltip from 'components/tooltip';
 
 import style from './style.module.css';
 
-const lf = new Intl.ListFormat('es-mx', { style: 'long' });
-
 function TrafficLightIndicator({ data }) {
   const healthyCount = data.filter((item) => item.error == null).length;
   const inactive = data
@@ -17,14 +15,36 @@ function TrafficLightIndicator({ data }) {
   return (
     <div className={style['traffic-light-indicator']}>
       <Tooltip
-        label={`Marcamos manualmente como inactivos. ${lf.format(inactive)}`}
+        className={style['traffic-light-indicator-trigger']}
+        label={
+          <div>
+            Marcamos manualmente como inactivos.
+            <ul>
+              {inactive.map((item) => {
+                return <li>{item}</li>;
+              })}
+            </ul>
+          </div>
+        }
       >
         <div className={style['indicator-wrapper']}>
           <span className={`${style.indicator}`} data-state="danger" />
           <span>{inactive.length}</span>
         </div>
       </Tooltip>
-      <Tooltip label={`Su página web responde con errores. ${lf.format(warn)}`}>
+      <Tooltip
+        className={style['traffic-light-indicator-trigger']}
+        label={
+          <div>
+            Su página web responde con errores.
+            <ul>
+              {warn.map((item) => {
+                return <li>{item}</li>;
+              })}
+            </ul>
+          </div>
+        }
+      >
         <a
           href="https://github.com/indi-es/estudios/blob/reachable-sites/errors.json"
           rel="noopener noreferrer"
@@ -35,13 +55,19 @@ function TrafficLightIndicator({ data }) {
           <span>{warn.length}</span>
         </a>
       </Tooltip>
-      <Tooltip label="Sin problemas.">
+      <Tooltip
+        label="Sin problemas."
+        className={style['traffic-light-indicator-trigger']}
+      >
         <div className={style['indicator-wrapper']}>
           <span className={`${style.indicator}`} data-state="success" />
           <span>{healthyCount}</span>
         </div>
       </Tooltip>
-      <Tooltip label={`${data.length} en total`}>
+      <Tooltip
+        label={`${data.length} en total`}
+        className={style['traffic-light-indicator-trigger']}
+      >
         <span>Estudios</span>
       </Tooltip>
     </div>
