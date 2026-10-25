@@ -1,4 +1,4 @@
-import { isFullBlock, isFullPage } from '@notionhq/client';
+import { isFullBlock, isFullDatabase, isFullPage } from '@notionhq/client';
 import type {
   ImageBlockObjectResponse,
   ListBlockChildrenResponse,
@@ -18,8 +18,16 @@ type NewsletterPage = PageObjectResponse & { blocks: NewsletterBlocks };
 
 export async function getNewsletterPages(): Promise<PageObjectResponse[]> {
   try {
-    const data = await notion.databases.query({
+    const database = await notion.databases.retrieve({
       database_id: NEWSLETTER_PAGE,
+    });
+    if (!isFullDatabase(database)) return [];
+
+    const [dataSource] = database.data_sources;
+    if (!dataSource) return [];
+
+    const data = await notion.dataSources.query({
+      data_source_id: dataSource.id,
     });
 
     const { results: items } = data;
@@ -66,8 +74,7 @@ export function getNewsletterPageDescription(blocks: NewsletterBlocks) {
   if (!block || !isFullBlock(block)) return null;
 
   const content = (block as unknown as Record<string, unknown>)[block.type] as
-    | { rich_text?: RichTextItemResponse[] }
-    | undefined;
+    { rich_text?: RichTextItemResponse[] } | undefined;
   const text = content?.rich_text;
   if (!text) return null;
 
