@@ -32,19 +32,19 @@ function StudiosHeader({
 
       <div className={style['actions-view']}>
         <Link
-          href="/estudios?vista=tabla"
+          href="/estudios"
           className={`${style.button} ${isTable ? style['-active'] : null}`}
         >
           <FiMenu />
         </Link>
         <Link
-          href="/estudios?vista=mapa"
+          href="/estudios/mapa"
           className={`${style.button} ${isMap ? style['-active'] : null}`}
         >
           <FiMap />
         </Link>
         <Link
-          href="/estudios?vista=estadisticas"
+          href="/estudios/estadisticas"
           className={`${style.button} ${isStats ? style['-active'] : null}`}
         >
           <FiBarChart2 />

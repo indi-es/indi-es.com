@@ -27,12 +27,12 @@ export default function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink href="/estudios" activeClassName="-active" exact>
+              <NavLink href="/estudios" activeClassName="-active" exact nested>
                 <a>Estudios</a>
               </NavLink>
             </li>
             <li>
-              <NavLink href="/juegos" activeClassName="-active" exact>
+              <NavLink href="/juegos" activeClassName="-active" exact nested>
                 <a>Juegos</a>
               </NavLink>
             </li>

@@ -26,3 +26,9 @@ export async function createGHIssue({
   }
   throw Error(`[${data.status}] ${data.statusText} ${JSON.stringify(json)}`);
 }
+
+export async function getGithubFile<T>(url: string): Promise<T> {
+  const res = await fetch(url);
+  const data = await res.json();
+  return data;
+}

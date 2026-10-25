@@ -18,13 +18,13 @@ function GamesHeader({ isTable = true, isStats, data }: GamesHeaderProps) {
 
       <div className={style['actions-view']}>
         <Link
-          href="/juegos?vista=tabla"
+          href="/juegos"
           className={`${style.button} ${isTable ? style['-active'] : null}`}
         >
           <FiMenu />
         </Link>
         <Link
-          href="/juegos?vista=estadisticas"
+          href="/juegos/estadisticas"
           className={`${style.button} ${isStats ? style['-active'] : null}`}
         >
           <FiBarChart2 />

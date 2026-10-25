@@ -1,5 +1,3 @@
-import { useRouter } from 'next/router';
-
 import { Page } from 'components/layouts';
 import type { Game } from 'types';
 
@@ -10,13 +8,14 @@ import GamesNotes from './games-notes';
 
 import style from './style.module.css';
 
+export type GamesVista = 'tabla' | 'estadisticas';
+
 type GamesProps = {
   data: Game[];
+  vista: GamesVista;
 };
 
-function Games({ data }: GamesProps) {
-  const router = useRouter();
-  const { vista = 'tabla' } = router.query;
+function Games({ data, vista }: GamesProps) {
   const isTable = vista === 'tabla';
   const isStats = vista === 'estadisticas';
 

@@ -1,6 +1,6 @@
 const theme = {
   background: 'var(--bg)',
-  textColor: 'var(--fg)',
+  text: { fill: 'var(--fg)' },
   legends: {
     text: { fill: 'var(--fg)' },
   },

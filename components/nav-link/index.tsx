@@ -8,12 +8,14 @@ type NavLinkProps = LinkProps & {
   children: ReactElement<{ className?: string }>;
   activeClassName?: string;
   exact?: boolean;
+  nested?: boolean;
 };
 
 function NavLink({
   children,
   activeClassName = '-active',
   exact = false,
+  nested = false,
   ...rest
 }: NavLinkProps) {
   const { asPath, pathname } = useRouter();
@@ -26,8 +28,9 @@ function NavLink({
   // pages/index.js will be matched via props.href
   // pages/about.js will be matched via props.href
   // pages/[slug].js will be matched via props.as
+  const isNested = nested && asPath.split(/[?#]/)[0].startsWith(`${href}/`);
   const className =
-    check === href || check === as
+    check === href || check === as || isNested
       ? `${childClassName} ${activeClassName}`.trim()
       : childClassName;
 

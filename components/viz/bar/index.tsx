@@ -1,14 +1,14 @@
+import { useEffect, useState } from 'react';
 import { ResponsiveBar } from '@nivo/bar';
 import type { BarDatum, ResponsiveBarSvgProps } from '@nivo/bar';
-import usePrefersColorScheme from 'hooks/use-prefers-color-scheme';
 
 import theme from '../theme';
 
-import { lightPatterns, darkPatterns } from '../patterns';
+import { themedPatterns } from '../patterns';
 
 function Bar<D extends BarDatum>(props: ResponsiveBarSvgProps<D>) {
-  const preferredColorSchema = usePrefersColorScheme();
-  const isDarkMode = preferredColorSchema === 'dark';
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => setIsMounted(true), []);
 
   return (
     <ResponsiveBar
@@ -21,9 +21,11 @@ function Bar<D extends BarDatum>(props: ResponsiveBarSvgProps<D>) {
       labelTextColor="var(--bg)"
       borderColor="var(--bg)"
       theme={theme}
-      defs={isDarkMode ? lightPatterns : darkPatterns}
-      colors={isDarkMode ? ['#fff'] : ['#000']}
-      animate
+      defs={themedPatterns}
+      colors={['var(--fg)']}
+      animate={isMounted}
+      defaultWidth={900}
+      defaultHeight={700}
       {...props}
     />
   );

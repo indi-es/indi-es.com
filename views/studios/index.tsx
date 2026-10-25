@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
 
 import { Page } from 'components/layouts';
 import type { Studio } from 'types';
@@ -16,14 +15,14 @@ const StudiosMap = dynamic(() => import('containers/studios-map'), {
   ssr: false,
 });
 
+export type StudiosVista = 'tabla' | 'mapa' | 'estadisticas';
+
 type StudiosProps = {
   data: Studio[];
+  vista: StudiosVista;
 };
 
-function Studios({ data }: StudiosProps) {
-  const router = useRouter();
-  const { vista = 'tabla' } = router.query;
-
+function Studios({ data, vista }: StudiosProps) {
   const isTable = vista === 'tabla';
   const isMap = vista === 'mapa';
   const isStats = vista === 'estadisticas';

@@ -89,13 +89,11 @@ const basePatterns = [
     background: 'inherit',
   },
 ];
-export const darkPatterns = basePatterns.map((item) => ({
+
+export const themedPatterns = basePatterns.map((item) => ({
   ...item,
-  color: 'rgba(255,255,255, 0.3)',
-}));
-export const lightPatterns = basePatterns.map((item) => ({
-  ...item,
-  color: 'rgba(0,0,0, 0.2)',
+  background: 'var(--fg)',
+  color: 'var(--chart-pattern)',
 }));
 
 const patterns = basePatterns.map((item) => ({ id: item.id }));

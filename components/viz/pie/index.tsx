@@ -1,17 +1,42 @@
 import { ResponsivePie } from '@nivo/pie';
 import type { MayHaveLabel } from '@nivo/pie';
-import usePrefersColorScheme from 'hooks/use-prefers-color-scheme';
 
 import theme from '../theme';
-import { lightPatterns, darkPatterns } from '../patterns';
+import { themedPatterns } from '../patterns';
 
 export type PieProps<D extends MayHaveLabel> = Parameters<
   typeof ResponsivePie<D>
 >[0];
 
+type LegendDatum = { id: string | number; label?: string | number };
+
+function getLegendData<D extends MayHaveLabel>({
+  data,
+  fill = [],
+}: PieProps<D>) {
+  return data.map((item) => {
+    const datum = item as unknown as LegendDatum;
+    const rule = fill.find(({ match }) =>
+      match === '*'
+        ? true
+        : typeof match === 'object' &&
+          Object.entries(match).every(
+            ([key, value]) => (datum as Record<string, unknown>)[key] === value
+          )
+    );
+    return {
+      id: datum.id,
+      label: datum.label ?? datum.id,
+      color: 'var(--fg)',
+      fill: rule ? `url(#${rule.id})` : undefined,
+    };
+  });
+}
+
 function Pie<D extends MayHaveLabel>(props: PieProps<D>) {
-  const preferredColorSchema = usePrefersColorScheme();
-  const isDarkMode = preferredColorSchema === 'dark';
+  const { legends } = props;
+  const legendData = legends ? getLegendData(props) : undefined;
+
   return (
     <ResponsivePie
       animate
@@ -28,10 +53,11 @@ function Pie<D extends MayHaveLabel>(props: PieProps<D>) {
       arcLinkLabelsColor="var(--fg)"
       arcLabelsSkipAngle={10}
       arcLabelsTextColor="var(--bg)"
-      defs={isDarkMode ? lightPatterns : darkPatterns}
-      colors={isDarkMode ? ['#fff'] : ['#000']}
+      defs={themedPatterns}
+      colors={['var(--fg)']}
       theme={theme}
       {...props}
+      legends={legends?.map((legend) => ({ data: legendData, ...legend }))}
     />
   );
 }
