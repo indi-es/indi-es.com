@@ -8,7 +8,7 @@ const filenames = require('eslint-plugin-filenames');
 const reactHooks = require('eslint-plugin-react-hooks');
 const tseslint = require('typescript-eslint');
 
-const { fixupPluginRules } = require('@eslint/compat');
+const { fixupConfigRules, fixupPluginRules } = require('@eslint/compat');
 
 const js = require('@eslint/js');
 
@@ -45,7 +45,10 @@ module.exports = defineConfig([
       },
     },
 
-    extends: [...compat.extends('airbnb'), ...compat.extends('prettier')],
+    extends: [
+      ...fixupConfigRules(compat.extends('airbnb')),
+      ...compat.extends('prettier'),
+    ],
 
     plugins: {
       prettier,
@@ -121,6 +124,7 @@ module.exports = defineConfig([
       'no-unused-vars': 'off',
       'no-use-before-define': 'off',
       'no-shadow': 'off',
+      'import/no-unresolved': 'off',
       '@typescript-eslint/no-shadow': 'error',
       '@typescript-eslint/no-use-before-define': 'error',
     },
