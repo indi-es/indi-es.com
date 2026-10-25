@@ -6,6 +6,7 @@ const globals = require('globals');
 const prettier = require('eslint-plugin-prettier');
 const filenames = require('eslint-plugin-filenames');
 const reactHooks = require('eslint-plugin-react-hooks');
+const tseslint = require('typescript-eslint');
 
 const { fixupPluginRules } = require('@eslint/compat');
 
@@ -20,7 +21,13 @@ const compat = new FlatCompat({
 });
 
 module.exports = defineConfig([
-  globalIgnores(['**/node_modules/', '.git/', '.next/', '.netlify/']),
+  globalIgnores([
+    '**/node_modules/',
+    '.git/',
+    '.next/',
+    '.netlify/',
+    'next-env.d.ts',
+  ]),
 
   {
     languageOptions: {
@@ -71,7 +78,18 @@ module.exports = defineConfig([
       'react/jsx-filename-extension': [
         1,
         {
-          extensions: ['.js', '.jsx'],
+          extensions: ['.jsx', '.tsx'],
+        },
+      ],
+
+      'import/extensions': [
+        'error',
+        'ignorePackages',
+        {
+          js: 'never',
+          jsx: 'never',
+          ts: 'never',
+          tsx: 'never',
         },
       ],
     },
@@ -80,8 +98,31 @@ module.exports = defineConfig([
       'import/resolver': {
         node: {
           paths: ['./'],
+          extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         },
       },
+    },
+  },
+
+  {
+    files: ['**/*.ts', '**/*.tsx'],
+
+    extends: [tseslint.configs.recommended],
+
+    languageOptions: {
+      parser: tseslint.parser,
+    },
+
+    rules: {
+      // Types replace prop-types
+      'react/prop-types': 'off',
+      // Handled by TypeScript / typescript-eslint
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+      'no-use-before-define': 'off',
+      'no-shadow': 'off',
+      '@typescript-eslint/no-shadow': 'error',
+      '@typescript-eslint/no-use-before-define': 'error',
     },
   },
 ]);
