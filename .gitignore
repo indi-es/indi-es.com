@@ -35,3 +35,4 @@ yarn-error.log*
 /tags
 .eslintcache
 *.tsbuildinfo
+/next-env.d.ts
