@@ -15,7 +15,11 @@ function Markdown({ children, className }: MarkdownProps) {
     className
   );
 
-  return <ReactMarkdown className={customClassName}>{children}</ReactMarkdown>;
+  return (
+    <div className={customClassName}>
+      <ReactMarkdown>{children}</ReactMarkdown>
+    </div>
+  );
 }
 
 export default Markdown;
