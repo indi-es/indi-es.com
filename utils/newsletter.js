@@ -5,28 +5,41 @@ import { generateRssFeed } from './rss';
 export const NEWSLETTER_PAGE = '820b50fe5398486cbd062603c3f4529b';
 
 export async function getNewsletterPages() {
-  const data = await notion.databases.query({
-    database_id: NEWSLETTER_PAGE,
-  });
+  try {
+    const data = await notion.databases.query({
+      database_id: NEWSLETTER_PAGE,
+    });
 
-  const { results: items } = data;
+    const { results: items } = data;
 
-  return items;
+    return items;
+  } catch (e) {
+    console.error('Error fetching newsletter pages', e);
+    return [];
+  }
 }
 
 export async function getNewsletterPagesWithContent() {
   const pages = await getNewsletterPages();
 
-  const blocks = await Promise.all(
+  const blocks = await Promise.allSettled(
     pages.map(({ id }) =>
       notion.blocks.children.list({ block_id: id, page_size: 10 })
     )
   );
 
   const items = pages.map((page, i) => {
+    const { status, value, reason } = blocks[i];
+    if (status === 'rejected') {
+      console.error(
+        `Error fetching newsletter page ${page.id} content`,
+        reason
+      );
+    }
+
     return {
       ...page,
-      blocks: blocks[i],
+      blocks: value || { results: [] },
     };
   });
 
@@ -36,7 +49,9 @@ export async function getNewsletterPagesWithContent() {
 export function getNewsletterPageDescription(blocks) {
   const { results } = blocks;
   const [block] = results;
-  const { rich_text: text } = block[block.type];
+  const text = block?.[block.type]?.rich_text;
+  if (!text) return null;
+
   const markdown = richTextToMarkdown(text);
   return markdown;
 }
@@ -111,8 +126,8 @@ export async function genNewsletterFeed() {
     return {
       url: item.url,
       title: item.title,
-      description: item.description,
-      content: `${item.description} lee más en: ${item.url}`,
+      description: item.description || item.title,
+      content: `${item.description || item.title} lee más en: ${item.url}`,
       date: item.endDate,
     };
   });
