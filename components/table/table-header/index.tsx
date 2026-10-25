@@ -6,15 +6,17 @@ import Skeleton from 'components/skeleton';
 
 import SortIndicator from '../sort-indicator';
 
+import type { Features } from '../features';
+
 import style from './style.module.css';
 
-type TableHeaderProps<TData> = {
-  headerGroups: HeaderGroup<TData>[];
+type TableHeaderProps<TData extends object> = {
+  headerGroups: HeaderGroup<Features, TData>[];
   className?: string;
   loading?: boolean;
 };
 
-function TableHeader<TData>({
+function TableHeader<TData extends object>({
   className,
   headerGroups,
   loading = false,

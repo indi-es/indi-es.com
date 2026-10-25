@@ -7,10 +7,8 @@ const formatter = new Intl.ListFormat('es-mx', {
   type: 'conjunction',
 });
 
-function ListFormattedCell({
-  cell: { getValue },
-}: CellProps<string[] | null | undefined>) {
-  const value = getValue();
+function ListFormattedCell({ cell }: CellProps<string[] | null | undefined>) {
+  const value = cell.getValue();
   if (!value) return null;
 
   return (

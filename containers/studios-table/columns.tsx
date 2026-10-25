@@ -2,12 +2,13 @@ import type { ColumnDef } from '@tanstack/react-table';
 
 import { FbCell, IgCell, TwCell, WebCell } from 'components/cells';
 import { HeaderCenter } from 'components/table-headers';
+import type { Features } from 'components/table/features';
 import type { Studio } from 'types';
 
 import NameCell from './name-cell';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const columns: ColumnDef<Studio, any>[] = [
+const columns: ColumnDef<Features, Studio, any>[] = [
   {
     header: 'Nombre',
     accessorKey: 'name',

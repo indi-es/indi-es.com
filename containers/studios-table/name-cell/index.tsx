@@ -27,15 +27,11 @@ type NameCellProps = {
   };
 };
 
-function NameCell({
-  cell: {
-    getValue,
-    row: { original },
-  },
-}: NameCellProps) {
-  const value = getValue();
+function NameCell({ cell }: NameCellProps) {
+  const value = cell.getValue();
   if (!value) return null;
 
+  const { original } = cell.row;
   const url = getUrl(original);
   const { error, tags } = original;
 

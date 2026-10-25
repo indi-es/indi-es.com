@@ -4,10 +4,8 @@ import type { CellProps } from '../types';
 
 import style from './style.module.css';
 
-function TimeCell({
-  cell: { getValue },
-}: CellProps<string | null | undefined>) {
-  const value = getValue();
+function TimeCell({ cell }: CellProps<string | null | undefined>) {
+  const value = cell.getValue();
   if (!value) return null;
 
   return <Time className={style['time-cell']}>{value}</Time>;

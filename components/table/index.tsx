@@ -1,34 +1,31 @@
 import React from 'react';
-import {
-  useReactTable,
-  getSortedRowModel,
-  getCoreRowModel,
-} from '@tanstack/react-table';
-import type { ColumnDef, SortingFn, SortingState } from '@tanstack/react-table';
+import { useTable } from '@tanstack/react-table';
+import type { ColumnDef, SortingState } from '@tanstack/react-table';
 import classNames from 'classnames';
+
+import { features } from './features';
+import type { Features } from './features';
 
 import TableHeader from './table-header';
 import TableRow from './table-row';
 
 import style from './style.module.css';
 
-type TableProps<TData> = {
+type TableProps<TData extends object> = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  columns: ColumnDef<TData, any>[];
+  columns: ColumnDef<Features, TData, any>[];
   data: TData[];
   className?: string;
   loading?: boolean;
   initialSort?: SortingState;
-  sortingFns?: Record<string, SortingFn<TData>>;
 };
 
-function Table<TData>({
+function Table<TData extends object>({
   className,
   initialSort = [],
   columns,
   data,
   loading,
-  sortingFns = {},
 }: TableProps<TData>) {
   const customClassName = classNames(
     style['table-container'],
@@ -40,16 +37,14 @@ function Table<TData>({
   );
   const [sorting, setSorting] = React.useState<SortingState>(initialSort);
 
-  const table = useReactTable({
+  const table = useTable({
+    features,
     columns,
     data,
-    sortingFns,
     state: {
       sorting,
     },
     onSortingChange: setSorting,
-    getCoreRowModel: getCoreRowModel(),
-    getSortedRowModel: getSortedRowModel(),
   });
 
   return (

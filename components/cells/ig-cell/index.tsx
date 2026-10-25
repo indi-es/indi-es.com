@@ -4,8 +4,8 @@ import type { CellProps } from '../types';
 
 import style from './style.module.css';
 
-function IgCell({ cell: { getValue } }: CellProps<string | null | undefined>) {
-  const value = getValue();
+function IgCell({ cell }: CellProps<string | null | undefined>) {
+  const value = cell.getValue();
   if (!value) return null;
   return (
     <a

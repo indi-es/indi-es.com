@@ -1,6 +1,7 @@
 import type { ColumnDef } from '@tanstack/react-table';
 
 import { TimeCell } from 'components/cells';
+import type { Features } from 'components/table/features';
 import type { Game, GameCrowdfunding } from 'types';
 
 import CellPlaforms from './cell-platforms';
@@ -23,40 +24,40 @@ function formatList(items: string[]) {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const columns: ColumnDef<Game, any>[] = [
+const columns: ColumnDef<Features, Game, any>[] = [
   {
     header: 'Nombre',
     accessorKey: 'name',
-    sortingFn: 'alphanumericCaseSensitive',
+    sortFn: 'alphanumericCaseSensitive',
   },
   {
     header: 'Género',
     id: 'genre',
     accessorFn: (row) => formatList(row.genre || []),
-    sortingFn: 'alphanumericCaseSensitive',
+    sortFn: 'alphanumericCaseSensitive',
   },
   {
     header: 'Desarrolladores',
     id: 'developers',
     accessorFn: (row) => formatList(row.developers || []),
-    sortingFn: 'alphanumericCaseSensitive',
+    sortFn: 'alphanumericCaseSensitive',
   },
   {
     header: 'Publisher',
     id: 'publishers',
     accessorFn: (row) => formatList(row.publishers || []),
-    sortingFn: 'alphanumericCaseSensitive',
+    sortFn: 'alphanumericCaseSensitive',
   },
   {
     header: 'Engine',
     accessorKey: 'engine',
-    sortingFn: 'alphanumericCaseSensitive',
+    sortFn: 'alphanumericCaseSensitive',
   },
   {
     header: 'Fecha de lanzamiento',
     accessorKey: 'date-launch',
     cell: TimeCell,
-    sortingFn: (rowA, rowB, columnId) => {
+    sortFn: (rowA, rowB, columnId) => {
       const valueA = rowA.getValue<string | null>(columnId);
       const valueB = rowB.getValue<string | null>(columnId);
 
@@ -77,7 +78,7 @@ const columns: ColumnDef<Game, any>[] = [
     header: 'Crowdfunding',
     accessorKey: 'crowdfunding',
     cell: CellCrowdfunding,
-    sortingFn: (rowA, rowB, columnId) => {
+    sortFn: (rowA, rowB, columnId) => {
       const a = getCrowdfundingSortValue(rowA.getValue(columnId));
       const b = getCrowdfundingSortValue(rowB.getValue(columnId));
 

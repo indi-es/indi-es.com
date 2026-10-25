@@ -8,10 +8,8 @@ const formatter = new Intl.ListFormat('es-mx', {
   type: 'conjunction',
 });
 
-function CellPlatforms({
-  cell: { getValue },
-}: CellProps<GamePlatform[] | null | undefined>) {
-  const value = getValue();
+function CellPlatforms({ cell }: CellProps<GamePlatform[] | null | undefined>) {
+  const value = cell.getValue();
   if (!value) return null;
 
   return (

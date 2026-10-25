@@ -4,9 +4,9 @@ import type { GameCrowdfunding } from 'types';
 import style from './style.module.css';
 
 function CellCrowdfunding({
-  cell: { getValue },
+  cell,
 }: CellProps<GameCrowdfunding | null | undefined>) {
-  const value = getValue();
+  const value = cell.getValue();
   if (!value) return null;
   if (value.url == null) return null;
 
