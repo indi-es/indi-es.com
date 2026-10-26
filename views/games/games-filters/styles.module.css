@@ -1,0 +1,105 @@
+.filters {
+  margin-bottom: var(--margin-02);
+  border: 2px solid var(--bg-alt);
+  border-radius: var(--margin-01);
+}
+
+.summary {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: var(--margin-h) var(--margin-02);
+  cursor: pointer;
+  padding: var(--margin-h) var(--margin-02);
+}
+
+.summary::before {
+  content: '▶';
+  font-size: 0.75em;
+}
+
+.filters[open] > .summary::before {
+  content: '▼';
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.applied {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--margin-q) var(--margin-02);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--margin-01) var(--margin-02);
+  padding: var(--margin-01) var(--margin-02) var(--margin-02);
+}
+
+.field {
+  display: flex;
+  flex-flow: column;
+  gap: var(--margin-q);
+  min-width: 0;
+}
+
+.field input,
+.field select {
+  width: 100%;
+}
+
+/* match the global input styles */
+.field select {
+  background: var(--bg);
+  color: var(--fg);
+  border: 2px solid var(--bg-alt);
+  border-radius: var(--margin-01);
+  padding: var(--margin-q) var(--margin-01);
+}
+
+.field select:focus {
+  border-color: var(--fg-alt);
+}
+
+.range {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--margin-01) var(--margin-02);
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.range legend {
+  padding: 0;
+  margin-bottom: var(--margin-q);
+}
+
+.actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  gap: var(--margin-01);
+}
+
+.clear {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.clear:hover {
+  color: var(--fg);
+}
+
+.summary .clear {
+  margin-left: auto;
+}
