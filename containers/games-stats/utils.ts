@@ -15,6 +15,10 @@ export type PieChartProps = {
   headers: string[];
 };
 
+export function hasEntries(data: { value: number }[]) {
+  return data.some((item) => item.value > 0);
+}
+
 export function getYears(items: Game[]) {
   return [
     ...new Set(
